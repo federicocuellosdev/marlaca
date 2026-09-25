@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marlaca Stays — Invertir en villas en Lombok</title>
+<meta name="description" content="Villas en operación en Kuta, Lombok. Marlaca construye, entrega y opera; tú cobras tu parte de la renta en euros. Villa completa desde 165.000 € o participación desde 36.800 €.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Marlaca Stays — Una villa que genera ingresos sin que tengas que gestionar nada">
+<meta property="og:description" content="Villa completa desde 165.000 € o participación desde 36.800 €. Habla 30 minutos con Lucía.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0E1A18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E1A18'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23EDEFEA' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+<style>
+:root{
+  --paper:#FAF5EF;
+  --surface:#FFFFFF;
+  --ink:#2C1810;
+  --deep:#160A04;
+  --deep-2:#24120A;
+  --muted:#7A6255;
+  --line:#E7DCCE;
+  --moss:#9C542C;
+  --moss-soft:#F5EAE1;
+  --on-accent:#FFFFFF;
+  --flag:#A33B2A;
+  --flag-soft:#F8ECE8;
+  --on-deep:#F6EEE6;
+  --on-deep-muted:rgba(246,238,230,.60);
+  --on-deep-line:rgba(246,238,230,.18);
+  --redact:#E2D6C8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#14100D;
+    --surface:#1E1814;
+    --ink:#F2E9DF;
+    --deep:#0D0805;
+    --deep-2:#1A120C;
+    --muted:#A6917F;
+    --line:#35291F;
+    --moss:#D4956A;
+    --moss-soft:#2A1D15;
+    --on-accent:#23150C;
+    --flag:#D08A72;
+    --flag-soft:#241814;
+    --on-deep:#F2E9DF;
+    --on-deep-muted:rgba(242,233,223,.58);
+    --on-deep-line:rgba(242,233,223,.16);
+    --redact:#3A2C22;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#14100D;
+  --surface:#1E1814;
+  --ink:#F2E9DF;
+  --deep:#0D0805;
+  --deep-2:#1A120C;
+  --muted:#A6917F;
+  --line:#35291F;
+  --moss:#D4956A;
+  --moss-soft:#2A1D15;
+  --on-accent:#23150C;
+  --flag:#D08A72;
+  --flag-soft:#241814;
+  --on-deep:#F2E9DF;
+  --on-deep-muted:rgba(242,233,223,.58);
+  --on-deep-line:rgba(242,233,223,.16);
+  --redact:#3A2C22;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,sans-serif;
+  font-weight:300;
+  font-size:1rem;
+  line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Playfair Display',Georgia,'Times New Roman',serif;font-weight:500;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+
+.eyebrow{
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+  font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);
+}
+.mono{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-variant-numeric:tabular-nums}
+
+/* ---------- layout ---------- */
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+.band{padding-block:clamp(3.5rem,8vw,6.5rem);border-top:1px solid var(--line)}
+.band.dark{background:var(--deep);color:var(--on-deep);border-top:none}
+.band.dark .eyebrow{color:var(--on-deep-muted)}
+.measure{max-width:62ch}
+.lead{font-size:clamp(1.05rem,1.9vw,1.24rem);line-height:1.66;color:var(--ink)}
+.band.dark .lead{color:var(--on-deep)}
+.sub{color:var(--muted)}
+.band.dark .sub{color:var(--on-deep-muted)}
+h2{font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1.18;letter-spacing:-.015em;margin-bottom:1.1rem}
+h3{font-size:1.05rem;font-weight:600;letter-spacing:-.005em}
+.stack{display:flex;flex-direction:column;gap:1.2rem}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:60;
+  background:color-mix(in srgb,var(--paper) 92%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{max-width:1080px;margin:0 auto;padding:.8rem 20px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:baseline;gap:.6rem;min-width:0}
+.brand-name{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;letter-spacing:-.01em}
+.brand-line{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.btn{
+  display:inline-block;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.72rem;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  padding:.72rem 1.3rem;border:1px solid var(--moss);background:var(--moss);color:var(--on-accent);
+  transition:opacity .15s;white-space:nowrap;cursor:pointer;
+}
+.btn:hover{opacity:.87}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--ink);opacity:1}
+.band.dark .btn-ghost,.hero .btn-ghost{color:var(--on-deep);border-color:var(--on-deep-line)}
+.nav .btn{padding:.6rem 1rem;font-size:.68rem}
+
+/* ---------- hero ---------- */
+.hero{background:var(--deep);color:var(--on-deep);padding-block:clamp(3rem,7vw,5.5rem) clamp(2rem,4vw,3rem)}
+.hero h1{
+  font-size:clamp(2.1rem,5.4vw,3.9rem);line-height:1.08;letter-spacing:-.025em;font-weight:500;
+  max-width:19ch;
+}
+.hero .lead{max-width:52ch;margin-top:1.4rem;color:var(--on-deep-muted)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin-top:2.2rem}
+.hero-note{width:100%;margin-top:.2rem;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.7rem;letter-spacing:.06em;color:var(--on-deep-muted)}
+.facts{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--on-deep-line);
+  border-top:1px solid var(--on-deep-line);margin-top:clamp(2.5rem,5vw,3.6rem);
+}
+.fact{background:var(--deep);padding:1.4rem 1.1rem 0}
+.fact .v{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.1;display:block;font-variant-numeric:tabular-nums}
+.fact .k{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;letter-spacing:.08em;line-height:1.5;color:var(--on-deep-muted);margin-top:.5rem;display:block}
+
+/* ---------- comparison ---------- */
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.col{background:var(--surface);padding:1.7rem 1.5rem}
+.col h3{margin-bottom:1rem}
+.col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.7rem}
+.col li{font-size:.92rem;line-height:1.6;padding-left:1.1rem;position:relative;color:var(--muted)}
+.col li::before{content:'';position:absolute;left:0;top:.62em;width:5px;height:1px;background:var(--muted)}
+.col.accent{background:var(--moss-soft)}
+.col.accent li{color:var(--ink)}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.step{background:var(--surface);padding:1.8rem 1.5rem;display:flex;flex-direction:column;gap:.75rem}
+.step-n{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.7rem;letter-spacing:.14em;color:var(--moss)}
+.step p{font-size:.92rem;color:var(--muted);line-height:1.62}
+
+/* ---------- cascade ---------- */
+.cascade{margin-top:2rem;border:1px solid var(--on-deep-line)}
+.row{display:grid;grid-template-columns:1fr 132px;align-items:center;gap:1rem;padding:.95rem 1.2rem;border-bottom:1px solid var(--on-deep-line)}
+.row:last-child{border-bottom:none}
+.row .lbl{font-size:.92rem;line-height:1.45}
+.row .lbl small{display:block;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;letter-spacing:.06em;color:var(--on-deep-muted);margin-top:.2rem}
+.redact{height:14px;background:repeating-linear-gradient(135deg,var(--redact) 0 3px,transparent 3px 6px);border:1px solid var(--on-deep-line)}
+.row.total{background:var(--deep-2)}
+.row.total .lbl{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem}
+.row.total .redact{height:18px}
+
+/* ---------- promise table ---------- */
+.promise{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.promise-head{background:var(--surface);padding:1rem 1.4rem}
+.promise-head .eyebrow{color:var(--moss)}
+.promise-head.no .eyebrow{color:var(--flag)}
+.promise-cell{background:var(--surface);padding:1.1rem 1.4rem;font-size:.92rem;line-height:1.6}
+.promise-cell.no{color:var(--muted)}
+
+/* ---------- units ---------- */
+.units{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.unit{background:var(--surface);padding:1.7rem 1.5rem;display:flex;flex-direction:column;gap:.55rem}
+.unit .price{font-family:'Playfair Display',Georgia,serif;font-size:1.8rem;font-variant-numeric:tabular-nums;line-height:1.1}
+.unit .meta{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.7rem;letter-spacing:.07em;color:var(--muted)}
+
+/* ---------- process list ---------- */
+.proc{list-style:none;margin:2rem 0 0;padding:0;border-top:1px solid var(--line)}
+.proc li{display:grid;grid-template-columns:2.4rem 1fr;gap:1rem;padding:1.05rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.proc .n{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.72rem;color:var(--moss);letter-spacing:.08em}
+.proc .t{font-size:.95rem;line-height:1.6}
+.proc .t b{font-weight:600}
+.proc .t span{color:var(--muted)}
+
+/* ---------- photo slot ---------- */
+.slot{
+  border:1px dashed var(--line);background:var(--surface);
+  aspect-ratio:16/7;max-width:100%;display:flex;align-items:center;justify-content:center;
+  padding:1.5rem;text-align:center;margin-top:2rem;
+}
+.slot span{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.72rem;letter-spacing:.08em;color:var(--muted);max-width:44ch;line-height:1.7}
+
+/* ---------- form ---------- */
+.form{background:var(--surface);border:1px solid var(--line);padding:clamp(1.4rem,3vw,2.2rem);margin-top:2rem}
+.field{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1.1rem}
+.field label{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.tel select{
+  font-family:inherit;font-size:.95rem;color:var(--ink);background:var(--paper);
+  border:1px solid var(--line);padding:.7rem .8rem;width:100%;
+}
+.field input:focus,.field select:focus{outline:2px solid var(--moss);outline-offset:1px;border-color:var(--moss)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-note{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;line-height:1.7;color:var(--muted);margin-top:1rem}
+.form-ok{margin-top:1rem;padding:.9rem 1rem;background:var(--moss-soft);border-left:2px solid var(--moss);font-size:.9rem}
+
+/* ---------- pending annotations ---------- */
+.pending{
+  border-left:2px solid var(--flag);background:var(--flag-soft);
+  padding:.85rem 1.1rem;margin-top:1.4rem;
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.72rem;line-height:1.7;color:var(--flag);
+}
+.pending b{font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.66rem;display:block;margin-bottom:.2rem}
+.toggle{
+  position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:70;
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;
+  background:var(--ink);color:var(--paper);border:none;padding:.62rem .9rem;cursor:pointer;
+}
+.toggle:focus-visible{outline:2px solid var(--moss);outline-offset:2px}
+
+/* ---------- footer ---------- */
+.foot{border-top:1px solid var(--line);padding-block:2.4rem;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.06em;color:var(--muted);line-height:1.9}
+.endorse{display:flex;align-items:baseline;gap:.5rem;margin-bottom:1rem}
+.endorse .by{font-family:'Plus Jakarta Sans',sans-serif;font-size:.72rem;letter-spacing:.06em}
+.endorse .m{font-family:'Playfair Display',Georgia,serif;font-size:1rem;letter-spacing:-.01em;color:var(--ink)}
+
+@media (max-width:820px){
+  .facts{grid-template-columns:1fr 1fr}
+  .steps,.cols2,.promise,.units,.form-row{grid-template-columns:1fr}
+  .promise-head{border-bottom:none}
+  .brand-line{display:none}
+}
+@media (max-width:460px){
+  .row{grid-template-columns:1fr 86px;gap:.7rem}
+  .nav .btn{padding:.55rem .8rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- v2: options ---------- */
+.options{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.opt{background:var(--surface);padding:clamp(1.5rem,3vw,2.2rem);display:flex;flex-direction:column;gap:.9rem}
+.opt .price{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,4vw,2.8rem);line-height:1.05;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.opt .price small{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.35rem}
+.opt ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.opt li{font-size:.92rem;line-height:1.55;color:var(--muted);padding-left:1.1rem;position:relative}
+.opt li::before{content:'';position:absolute;left:0;top:.62em;width:5px;height:1px;background:var(--muted)}
+.opt .btn{align-self:flex-start;margin-top:.4rem}
+
+/* ---------- v2: proof ---------- */
+.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--on-deep-line);border:1px solid var(--on-deep-line);margin-top:2rem}
+.pf{background:var(--deep);padding:1.6rem 1.3rem;display:flex;flex-direction:column;gap:.45rem}
+.pf .v{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,4.4vw,3rem);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.pf .k{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.07em;line-height:1.55;color:var(--on-deep-muted)}
+.src{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.05em;color:var(--on-deep-muted);margin-top:1rem}
+
+/* ---------- v2: circuit ---------- */
+.circuit{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.cc{background:var(--surface);padding:1.6rem 1.4rem;display:flex;flex-direction:column;gap:.55rem}
+.cc p{font-size:.92rem;color:var(--muted);line-height:1.6}
+.cc .tag{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--moss)}
+
+/* ---------- v2: milestones ---------- */
+.miles{list-style:none;margin:2rem 0 0;padding:0;border-top:1px solid var(--on-deep-line)}
+.miles li{display:grid;grid-template-columns:9rem 1fr auto;gap:1.2rem;align-items:baseline;padding:1.05rem 0;border-bottom:1px solid var(--on-deep-line)}
+.miles .p{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem}
+.respaldo{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem 1.4rem;margin-top:1.8rem;padding:1.1rem 1.4rem;
+  background:var(--on-deep);border-radius:var(--r,12px);text-decoration:none;color:#27392f;transition:transform .3s ease}
+.respaldo:hover{transform:translateY(-2px)}
+.respaldo img{height:clamp(38px,5vw,46px);width:auto;display:block}
+.respaldo-by,.respaldo-url{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.respaldo-url{margin-left:auto}
+@media (prefers-reduced-motion:reduce){.respaldo{transition:none}.respaldo:hover{transform:none}}
+.miles .d{font-size:.92rem;color:var(--on-deep-muted);line-height:1.55}
+.miles .s{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .55rem;border:1px solid var(--on-deep-line);white-space:nowrap}
+.miles .s.live{border-color:var(--moss);color:var(--moss)}
+
+/* ---------- v2: honesty strip ---------- */
+.strip{display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:start;border-left:2px solid var(--moss);padding:.4rem 0 .4rem 1.4rem}
+.strip p{font-size:clamp(1.05rem,1.9vw,1.2rem);line-height:1.6}
+.strip p span{color:var(--muted)}
+
+/* ---------- v2: after-form steps ---------- */
+.next{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.next li{background:var(--paper);padding:1.1rem 1.1rem;font-size:.88rem;line-height:1.55;color:var(--muted)}
+.next li b{display:block;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--moss);font-weight:500;margin-bottom:.35rem}
+.form-sep{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line);padding-top:1.1rem;margin:.4rem 0 1rem}
+.form-row.three{grid-template-columns:1fr 1fr 1fr}
+
+@media (max-width:820px){
+  .options,.circuit,.next,.form-row.three{grid-template-columns:1fr}
+  .proof{grid-template-columns:1fr 1fr}
+  .miles li{grid-template-columns:1fr auto}
+  .miles .d{grid-column:1 / -1;grid-row:2}
+}
+
+/* ---------- onboarding quiz ---------- */
+.tel{display:flex;gap:0;min-width:0}
+.tel select{flex:0 0 auto;width:auto;border-right:none;padding-right:.4rem;cursor:pointer}
+.tel input{flex:1;min-width:0}
+.quiz{background:var(--surface);border:1px solid var(--line);padding:clamp(1.4rem,3.5vw,2.6rem);margin-top:2rem;max-width:760px}
+.quiz-top{display:flex;align-items:center;gap:1rem;margin-bottom:1.6rem}
+.quiz-count{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.quiz-bar{flex:1;height:2px;background:var(--line)}
+.quiz-bar span{display:block;height:100%;width:0;background:var(--moss);transition:width .35s ease}
+.qstep{border:none;margin:0;padding:0;min-width:0}
+.qstep legend{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.25;letter-spacing:-.01em;padding:0;margin-bottom:1.2rem;text-wrap:balance}
+.qopts{display:grid;gap:.6rem}
+.qopt{position:relative;display:block;cursor:pointer}
+.qopt input{position:absolute;opacity:0;pointer-events:none}
+.qopt span{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;padding:1rem 1.15rem;border:1px solid var(--line);background:var(--paper);font-size:.98rem;font-weight:400;transition:border-color .15s,background .15s}
+.qopt small{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.06em;color:var(--muted)}
+.qopt:hover span{border-color:var(--moss)}
+.qopt input:focus-visible + span{outline:2px solid var(--moss);outline-offset:2px}
+.qopt input:checked + span{border-color:var(--moss);background:var(--moss-soft)}
+.qhint{color:var(--muted);font-size:.92rem;margin:-.4rem 0 1.2rem}
+.field em{font-style:normal;text-transform:none;letter-spacing:0;opacity:.8}
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:1.4rem;min-height:1.6rem}
+.qback{background:none;border:none;padding:0;cursor:pointer;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.72rem;letter-spacing:.08em;color:var(--muted)}
+.qback:hover{color:var(--ink)}
+.qback:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+.qtime{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.06em;color:var(--muted);margin-left:auto}
+.qerr{margin-top:1rem;padding:.8rem 1rem;background:var(--flag-soft);border-left:2px solid var(--flag);font-size:.9rem;color:var(--ink)}
+.qdone{display:flex;flex-direction:column;gap:.7rem;padding:.4rem 0}
+.qdone h3{font-size:clamp(1.3rem,2.6vw,1.7rem);font-weight:500}
+.qdone p{color:var(--muted);max-width:52ch}
+@media (prefers-reduced-motion:reduce){.quiz-bar span{transition:none}}
+</style>
+<style>html{scroll-behavior:smooth}img{max-width:100%}[hidden]{display:none!important}.btn:disabled{opacity:.6;cursor:default}
+/* ---------- v5: hero con imagen ---------- */
+.hero-img,.cta-img{position:relative;background:var(--deep);color:var(--on-deep);display:flex;align-items:flex-end;min-height:clamp(420px,70vh,640px);overflow:hidden}
+.cta-img{min-height:clamp(340px,52vh,480px)}
+.hero-img>img,.cta-img>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,10,4,.30) 0%,rgba(22,10,4,.52) 45%,rgba(22,10,4,.88) 100%)}
+.hero-copy{position:relative;padding-block:clamp(2.4rem,6vw,4.2rem)}
+.hero-img h1{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(2.1rem,5.4vw,3.9rem);line-height:1.08;letter-spacing:-.025em;max-width:19ch;margin-top:1.1rem}
+.hero-copy .lead{max-width:52ch;margin-top:1.2rem;color:var(--on-deep-muted)}
+.eyebrow-w{color:rgba(237,239,234,.72)}
+.slot-empty{display:flex;align-items:center;justify-content:center;text-align:center;padding:1.2rem;min-height:180px;height:100%;background:var(--surface);border:1px dashed var(--line);font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.06em;color:var(--muted);line-height:1.7}
+.about-img .slot-empty{background:var(--deep-2);border-color:var(--on-deep-line);color:var(--on-deep-muted)}
+.hero-img .slot-empty,.cta-img .slot-empty{position:absolute;inset:0;background:var(--deep-2);border-color:var(--on-deep-line);color:var(--on-deep-muted);align-items:flex-start;justify-content:flex-start;padding:1rem;opacity:.45;text-align:left}
+.hero-img .btn-ghost,.cta-img .btn-ghost{color:var(--on-deep);border-color:var(--on-deep-line)}
+
+/* ---------- v5: franja de datos ---------- */
+.strip-band{background:var(--deep);color:var(--on-deep);padding-block:clamp(1.75rem,4.5vw,3.25rem) clamp(2rem,4vw,3rem)}
+.strip-band .facts{margin-top:0;border-top:1px solid var(--on-deep-line)}
+
+/* ---------- v5: tarjetas de opción con foto ---------- */
+.options{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.opt{background:var(--surface);display:flex;flex-direction:column}
+.opt-img{aspect-ratio:16/10;overflow:hidden;background:var(--paper)}
+.opt-img img{width:100%;height:100%;object-fit:cover;display:block}
+.opt-body{padding:clamp(1.4rem,3vw,2rem);display:flex;flex-direction:column;gap:.9rem;flex:1}
+.opt .price{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.8rem,3.6vw,2.5rem);line-height:1.05;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.opt .price small{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.35rem}
+.opt ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.opt li{font-size:.92rem;line-height:1.55;color:var(--muted);padding-left:1.1rem;position:relative}
+.opt li::before{content:'';position:absolute;left:0;top:.62em;width:5px;height:1px;background:var(--muted)}
+.opt .btn{align-self:flex-start;margin-top:.4rem}
+
+/* ---------- v5: circuito con fotos ---------- */
+.circuit{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2rem}
+.cc{background:var(--surface);display:flex;flex-direction:column;gap:.55rem;padding-bottom:1.6rem}
+.cc-img{aspect-ratio:4/3;overflow:hidden;background:var(--paper);margin-bottom:.6rem}
+.cc-img img{width:100%;height:100%;object-fit:cover;display:block}
+.cc .tag,.cc h3,.cc p{padding-inline:1.4rem}
+.cc .tag{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--moss)}
+.cc p{font-size:.92rem;color:var(--muted);line-height:1.6}
+
+/* ---------- v5: quién está detrás ---------- */
+.about{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.about-img{aspect-ratio:4/5;overflow:hidden;background:var(--deep-2);border:1px solid var(--on-deep-line)}
+.about-img img{width:100%;height:100%;object-fit:cover;display:block}
+.about-copy .miles{margin-top:1.8rem}
+
+/* ---------- v5: FAQ ---------- */
+.faq{margin-top:2rem;border-top:1px solid var(--line);max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:1.15rem 2.4rem 1.15rem 0;font-size:1.02rem;position:relative;font-weight:400}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';position:absolute;right:.4rem;top:1rem;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--moss);font-size:1.1rem}
+.faq details[open] summary::after{content:'–'}
+.faq summary:focus-visible{outline:2px solid var(--moss);outline-offset:2px}
+.faq p{padding:0 2.4rem 1.3rem 0;color:var(--muted);font-size:.95rem;line-height:1.7;max-width:62ch}
+
+@media (max-width:820px){
+  .options,.circuit,.about{grid-template-columns:1fr}
+  .about-img{aspect-ratio:3/2;max-width:100%}
+}
+
+/* ---------- identidad Marlaca ---------- */
+.btn,.field input,.field select,.tel select,.tel input{border-radius:6px}
+.opt,.cc,.about-img,.opt-img,.cc-img,.slot-empty,.quiz,.form{border-radius:10px;overflow:hidden}
+.options,.circuit,.steps,.promise,.units,.next,.facts,.proof{border-radius:10px;overflow:hidden}
+h1,h2,h3,.price,.fact .v,.pf .v,.miles .p,.brand-name,.endorse .m{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
+.eyebrow,.step-n,.tag,.qtime,.quiz-count,.miles .s,.fact .k,.pf .k,.src,.form-note,.field label,.opt .price small,.brand-line,.back-link,.foot{font-weight:500;letter-spacing:.1em}
+.hero-shade{background:linear-gradient(180deg,rgba(22,10,4,.18) 0%,rgba(22,10,4,.36) 48%,rgba(22,10,4,.76) 100%),linear-gradient(100deg,rgba(22,10,4,.56) 0%,rgba(22,10,4,.20) 62%,rgba(22,10,4,0) 100%)}
+.hero-copy .eyebrow-w,.hero-img h1,.cta-img h2,.hero-copy .lead{text-shadow:0 1px 2px rgba(10,4,1,.45),0 4px 22px rgba(10,4,1,.55)}
+.step-n{font-variant-numeric:tabular-nums}
+/* ---------- v6: hero con video y movimiento ---------- */
+.hero-media{position:absolute;inset:-8% 0 -8% 0;will-change:transform}
+.hero-media>img,.hero-media>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero-media>video{opacity:0;transition:opacity 1.2s ease;z-index:1}
+.hero-media>video.on{opacity:1}
+.hero-img>.hero-shade,.cta-img>.hero-shade{z-index:2}
+.hero-img .wrap,.cta-img .wrap{z-index:3}
+@keyframes respira{from{transform:scale(1)}to{transform:scale(1.09)}}
+.hero-media>img{animation:respira 26s ease-in-out infinite alternate}
+.hero-scroll{position:absolute;left:50%;bottom:1.1rem;transform:translateX(-50%);z-index:3;
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(246,238,230,.62);display:flex;flex-direction:column;align-items:center;gap:.45rem}
+.hero-scroll i{display:block;width:1px;height:26px;background:linear-gradient(180deg,rgba(246,238,230,.55),rgba(246,238,230,0));animation:baja 2.6s ease-in-out infinite}
+@keyframes baja{0%,100%{opacity:.25;transform:translateY(-4px)}50%{opacity:1;transform:translateY(2px)}}
+
+/* ---------- v6: aparecer al hacer scroll ---------- */
+.rise{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.7,.3,1)}
+.rise.seen{opacity:1;transform:none}
+.rise.d1{transition-delay:.08s}.rise.d2{transition-delay:.16s}.rise.d3{transition-delay:.24s}
+
+/* ---------- v6: bloque de mercado ---------- */
+.mkt{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--on-deep-line);border:1px solid var(--on-deep-line);border-radius:10px;overflow:hidden;margin-top:2.2rem}
+.mk{background:var(--deep);padding:1.7rem 1.3rem;display:flex;flex-direction:column;gap:.5rem}
+.mk .v{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.9rem,4vw,2.7rem);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.mk .k{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.73rem;line-height:1.55;letter-spacing:.02em;color:var(--on-deep-muted)}
+.mk .k b{color:var(--on-deep);font-weight:500}
+sup.ref{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.58rem;letter-spacing:.04em;color:var(--moss);margin-left:.18em;vertical-align:super}
+
+/* ---------- v6: hitos ---------- */
+.tline{list-style:none;margin:2.4rem 0 0;padding:0;border-top:1px solid var(--on-deep-line)}
+.tline li{display:grid;grid-template-columns:5.5rem 1fr;gap:1.4rem;padding:1.1rem 0;border-bottom:1px solid var(--on-deep-line);align-items:baseline}
+.tline .y{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;color:var(--moss);font-variant-numeric:tabular-nums}
+.tline .t{font-size:.95rem;line-height:1.62;color:var(--on-deep-muted)}
+.tline .t b{color:var(--on-deep);font-weight:500}
+
+/* ---------- v6: fuentes ---------- */
+.srcs{margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--on-deep-line);
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;line-height:1.85;color:var(--on-deep-muted)}
+.srcs b{color:var(--moss);font-weight:500}
+.srcs a{color:inherit;text-underline-offset:2px}
+.band .srcs{border-color:var(--line);color:var(--muted)}
+
+/* ---------- v6: el recorrido de cada euro ---------- */
+.flow{margin-top:2.4rem;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start;gap:0}
+.fx{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.3rem 1.2rem;display:flex;flex-direction:column;gap:.4rem;min-width:0}
+.fx .lbl{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--moss)}
+.fx .big{font-family:'Playfair Display',Georgia,serif;font-size:1.12rem;line-height:1.25}
+.fx p{font-size:.86rem;line-height:1.55;color:var(--muted)}
+.fx.split{background:var(--moss-soft);border-color:var(--moss)}
+.farrow{display:flex;align-items:flex-start;justify-content:center;padding:4.1rem .9rem 0;color:var(--moss);font-size:1.1rem;line-height:1}
+.fsplit{display:grid;grid-template-rows:1fr 1fr;gap:.6rem}
+.fnote{margin-top:1.1rem;font-size:.86rem;color:var(--muted);line-height:1.7;max-width:70ch}
+
+@media (max-width:980px){
+  .mkt{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px) and (pointer:coarse){
+  .hero-scroll{display:none}
+}
+@media (max-width:820px){
+  .flow{grid-template-columns:1fr;gap:.6rem}
+  .farrow{padding:.1rem 0;transform:rotate(90deg)}
+  .tline li{grid-template-columns:1fr;gap:.25rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-media>img{animation:none}
+  .hero-scroll i{animation:none}
+  .rise{opacity:1;transform:none;transition:none}
+}
+/* ================= v7: jerarquía y dinamismo ================= */
+
+/* --- barra de progreso de lectura --- */
+.prog{position:fixed;top:0;left:0;height:2px;width:0;z-index:90;background:var(--moss);
+  transition:width .12s linear;box-shadow:0 0 12px rgba(156,84,44,.55)}
+
+/* --- nav que se achica al bajar --- */
+.nav{transition:padding .25s ease,box-shadow .25s ease,background .25s ease}
+.nav.min .nav-in{padding-block:.5rem}
+.nav.min{box-shadow:0 1px 0 var(--line),0 10px 30px -22px rgba(22,10,4,.5)}
+.nav-in{transition:padding .25s ease}
+
+/* --- tipografía: más jerarquía --- */
+h2{font-size:clamp(2rem,4.6vw,3.25rem);line-height:1.1;letter-spacing:-.025em;margin-bottom:1.2rem}
+h2.display{font-size:clamp(2.3rem,5.6vw,4rem);line-height:1.05;letter-spacing:-.03em}
+.lead{font-size:clamp(1.08rem,2vw,1.3rem);line-height:1.62}
+.eyebrow{display:inline-flex;align-items:center;gap:.65rem;font-size:.72rem;letter-spacing:.16em}
+.eyebrow::before{content:'';width:26px;height:1px;background:var(--moss);flex:none}
+.band.dark .eyebrow::before{background:var(--moss)}
+.eyebrow-w::before{background:rgba(246,238,230,.5)}
+
+/* --- resaltado que se dibuja al entrar en pantalla --- */
+.hl{position:relative;display:inline;background-image:linear-gradient(var(--moss-soft),var(--moss-soft));
+  background-repeat:no-repeat;background-position:0 92%;background-size:0 .30em;
+  transition:background-size .85s cubic-bezier(.22,.7,.3,1) .2s;padding-inline:.06em}
+.seen .hl,.hl.seen{background-size:100% .30em}
+.band.dark .hl{background-image:linear-gradient(rgba(212,149,106,.22),rgba(212,149,106,.22))}
+
+/* --- números: más grandes y con acento --- */
+.fact{padding:1.6rem 1.1rem .2rem;position:relative}
+.fact .v{font-size:clamp(1.9rem,4.2vw,2.9rem);letter-spacing:-.02em}
+.fact::before{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:var(--moss);
+  transition:width .9s cubic-bezier(.22,.7,.3,1)}
+.facts.seen .fact::before{width:38px}
+.facts.seen .fact:nth-child(2)::before{transition-delay:.1s}
+.facts.seen .fact:nth-child(3)::before{transition-delay:.2s}
+.facts.seen .fact:nth-child(4)::before{transition-delay:.3s}
+.pf .v{font-size:clamp(2.2rem,5vw,3.4rem)}
+.mk .v{font-size:clamp(2.1rem,4.6vw,3rem)}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:'tnum'}
+
+/* --- contraste Bali / Lombok --- */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--on-deep-line);
+  border:1px solid var(--on-deep-line);border-radius:10px;overflow:hidden;margin-top:2rem}
+.vsc{background:var(--deep-2);padding:1.9rem 1.5rem;display:flex;flex-direction:column;gap:.55rem}
+.vsc.now{background:var(--deep)}
+.vsc .tag{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.64rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--moss)}
+.vsc .v{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.1rem,4.8vw,3.1rem);line-height:1;
+  letter-spacing:-.025em;font-variant-numeric:tabular-nums}
+.vsc .k{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.78rem;line-height:1.6;color:var(--on-deep-muted)}
+.vsbar{height:6px;border-radius:3px;background:var(--on-deep-line);overflow:hidden;margin-top:.5rem}
+.vsbar i{display:block;height:100%;width:0;background:var(--moss);border-radius:3px;
+  transition:width 1.4s cubic-bezier(.22,.7,.3,1) .25s}
+.vs.seen .vsbar i{width:var(--w)}
+.vsnote{margin-top:1rem;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.74rem;
+  line-height:1.75;color:var(--on-deep-muted);max-width:74ch;border-left:2px solid var(--moss);padding-left:.9rem}
+
+/* --- tarjetas que reaccionan --- */
+.opt,.cc,.fx,.mk,.step{transition:transform .3s cubic-bezier(.22,.7,.3,1),box-shadow .3s ease,border-color .3s ease}
+.opt:hover,.cc:hover,.step:hover{transform:translateY(-3px);box-shadow:0 18px 40px -30px rgba(22,10,4,.65);z-index:2;position:relative}
+.fx:hover{transform:translateY(-3px);border-color:var(--moss)}
+.opt-img img,.cc-img img,.about-img img{transition:transform 1.1s cubic-bezier(.22,.7,.3,1)}
+.opt:hover .opt-img img,.cc:hover .cc-img img{transform:scale(1.04)}
+
+/* --- las fotos aparecen con un barrido --- */
+.wipe{clip-path:inset(0 0 100% 0);transition:clip-path 1s cubic-bezier(.22,.7,.3,1)}
+.wipe.seen{clip-path:inset(0 0 0 0)}
+
+/* --- la regla, como cita --- */
+.strip{border-left-width:3px;padding-block:.8rem}
+.strip p{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.25rem,2.6vw,1.75rem);line-height:1.38;font-weight:500}
+.strip p span{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.92rem;line-height:1.7;
+  display:block;margin-top:.9rem;font-weight:300;color:var(--muted)}
+
+/* --- FAQ con más aire --- */
+.faq summary{font-size:1.08rem;padding-block:1.3rem}
+.faq details[open] summary{color:var(--moss)}
+
+/* --- retrato de Lucía --- */
+.about-img{position:relative}
+.about-cap{position:absolute;left:0;right:0;bottom:0;padding:1.6rem 1.2rem .9rem;
+  background:linear-gradient(180deg,rgba(13,8,5,0),rgba(13,8,5,.82));
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(246,238,230,.82)}
+
+@media (max-width:820px){
+  .vs{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .hl{background-size:100% .30em;transition:none}
+  .vsbar i{transition:none;width:var(--w)}
+  .fact::before{transition:none;width:38px}
+  .wipe{clip-path:none;transition:none}
+  .opt:hover,.cc:hover,.step:hover,.fx:hover{transform:none}
+  .prog{transition:none}
+}
+/* ================= v8: el bloque de mercado respira ================= */
+
+/* --- banda con foto de la isla --- */
+.photo-band{position:relative;overflow:hidden;background:var(--deep);color:var(--on-deep);
+  display:flex;align-items:flex-end;min-height:clamp(380px,58vh,560px)}
+.pb-media{position:absolute;inset:-6% 0;will-change:transform}
+.pb-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.pb-shade{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(22,10,4,.10) 0%,rgba(22,10,4,.28) 42%,rgba(22,10,4,.80) 100%),
+             linear-gradient(90deg,rgba(22,10,4,.50) 0%,rgba(22,10,4,.12) 55%,rgba(22,10,4,0) 100%)}
+.pb-copy{position:relative;z-index:2;padding-block:clamp(2.6rem,6vw,4.4rem)}
+.pb-copy h2{color:var(--on-deep);max-width:15ch;margin-top:1.1rem;
+  text-shadow:0 1px 2px rgba(10,4,1,.4),0 4px 22px rgba(10,4,1,.5)}
+.pb-copy .lead{color:rgba(246,238,230,.88);max-width:46ch;margin-top:1.1rem;
+  text-shadow:0 1px 2px rgba(10,4,1,.4),0 3px 18px rgba(10,4,1,.45)}
+.pb-cap{position:absolute;right:20px;bottom:.9rem;z-index:2;
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.62rem;letter-spacing:.12em;
+  text-transform:uppercase;color:rgba(246,238,230,.6)}
+.photo-band .hl{background-image:linear-gradient(rgba(212,149,106,.3),rgba(212,149,106,.3))}
+
+/* --- versión clara de las tarjetas de dato --- */
+.mkt.claro{background:var(--line);border-color:var(--line)}
+.mkt.claro .mk{background:var(--surface);position:relative;padding-top:1.9rem}
+.mkt.claro .mk::before{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:var(--moss);
+  transition:width .9s cubic-bezier(.22,.7,.3,1)}
+.mkt.claro.seen .mk::before{width:34px}
+.mkt.claro.seen .mk:nth-child(2)::before{transition-delay:.1s}
+.mkt.claro.seen .mk:nth-child(3)::before{transition-delay:.2s}
+.mkt.claro.seen .mk:nth-child(4)::before{transition-delay:.3s}
+.mkt.claro .mk .v{color:var(--ink)}
+.mkt.claro .mk .k{color:var(--muted);font-size:.78rem;line-height:1.62}
+.mkt.claro .mk .k b{color:var(--ink);font-weight:500}
+
+/* --- versión clara del contraste --- */
+.vs.claro{background:var(--line);border-color:var(--line)}
+.vs.claro .vsc{background:var(--surface)}
+.vs.claro .vsc.now{background:var(--moss-soft)}
+.vs.claro .vsc .v{color:var(--ink)}
+.vs.claro .vsc .k{color:var(--muted);font-size:.8rem}
+.vs.claro .vsc .k b{color:var(--ink)}
+.vs.claro .vsbar{background:var(--line)}
+.vs.claro .vsc.now .vsbar{background:rgba(156,84,44,.18)}
+.vsnote.claro{color:var(--muted)}
+
+/* --- versión clara de los hitos --- */
+.tline.claro{border-top-color:var(--line)}
+.tline.claro li{border-bottom-color:var(--line)}
+.tline.claro .t{color:var(--muted)}
+.tline.claro .t b{color:var(--ink)}
+
+@media (max-width:820px){
+  .pb-cap{display:none}
+  .photo-band{min-height:clamp(340px,52vh,460px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .mkt.claro .mk::before{transition:none;width:34px}
+}
+/* ================= v9: menú de secciones y jerarquía de tarjetas ================= */
+
+/* --- menú en la cabecera --- */
+.nav-in{gap:1.8rem}
+.menu{display:flex;align-items:center;gap:1.3rem;margin-left:auto;margin-right:.4rem}
+.menu a{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.74rem;font-weight:500;
+  letter-spacing:.04em;text-decoration:none;color:var(--muted);white-space:nowrap;position:relative;
+  padding-block:.35rem;transition:color .2s ease}
+.menu a::after{content:'';position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--moss);
+  transition:right .25s cubic-bezier(.22,.7,.3,1)}
+.menu a:hover{color:var(--ink)}
+.menu a:hover::after,.menu a.aqui::after{right:0}
+.menu a.aqui{color:var(--ink)}
+.menu a:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+.nav .btn{margin-left:0}
+section[id]{scroll-margin-top:72px}
+.brand-line,.brand-sep{display:none}
+@media (max-width:1100px){ .menu{gap:1rem} .menu a{font-size:.69rem} }
+@media (max-width:920px){ .menu{display:none} .brand-line{display:inline} }
+@media (max-width:640px){ .brand-line{display:none} }
+
+/* --- jerarquía dentro de las tarjetas --- */
+.cc,.step{gap:.4rem}
+.cc .tag,.step .step-n{font-size:.63rem;letter-spacing:.16em;color:var(--moss);font-weight:500}
+.cc h3,.step h3,.fx .big{font-family:'Playfair Display',Georgia,serif;font-weight:500;
+  font-size:clamp(1.25rem,2.1vw,1.5rem);line-height:1.2;letter-spacing:-.015em}
+.cc h3{margin-top:.15rem}
+.cc p,.step p{margin-top:.5rem;font-size:.94rem;line-height:1.66}
+.cc .tag{padding-top:.3rem}
+.step{gap:.35rem}
+.step h3{margin-top:.15rem}
+.opt .price small{font-size:.63rem;letter-spacing:.16em}
+/* ==================================================================
+   v10 · estética 2026: tarjetas flotantes, esquinas blandas,
+   revelados con desenfoque y menos líneas de un píxel.
+   Este bloque va último: reescribe lo anterior a propósito.
+   ================================================================== */
+
+:root{
+  --paper:#F1EEE9;
+  --surface:#FBFAF8;
+  --ink:#24211F;
+  --deep:#22201E;
+  --deep-2:#2C2926;
+  --muted:#7C736B;
+  --line:#E2DCD3;
+  --moss:#A8582C;
+  --moss-soft:#F3E9E1;
+  --on-deep:#F4F0EA;
+  --on-deep-muted:rgba(244,240,234,.62);
+  --on-deep-line:rgba(244,240,234,.14);
+  --r:20px;
+  --r-s:14px;
+  --sombra:0 1px 2px rgba(36,33,31,.04),0 12px 32px -24px rgba(36,33,31,.28);
+  --sombra-alta:0 2px 4px rgba(36,33,31,.05),0 26px 50px -30px rgba(36,33,31,.38);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#16140F;--surface:#1E1B17;--ink:#F2EDE5;--deep:#111009;--deep-2:#1B1814;
+    --muted:#A2958A;--line:#332C25;--moss:#D9976B;--moss-soft:#2A1F17;
+    --sombra:0 1px 2px rgba(0,0,0,.4),0 12px 32px -24px rgba(0,0,0,.8);
+    --sombra-alta:0 2px 4px rgba(0,0,0,.5),0 26px 50px -30px rgba(0,0,0,.9);
+  }
+}
+
+/* ---------- revelado con desenfoque ---------- */
+.rise{opacity:0;transform:translateY(22px);filter:blur(10px);
+  transition:opacity .9s cubic-bezier(.22,.7,.3,1),transform .9s cubic-bezier(.22,.7,.3,1),filter .9s ease}
+.rise.seen{opacity:1;transform:none;filter:none}
+
+/* ---------- cabecera ---------- */
+.nav{background:color-mix(in srgb,var(--paper) 88%,transparent);border-bottom:none}
+.nav.min{box-shadow:0 12px 30px -28px rgba(36,33,31,.6)}
+.nav-in{padding-block:1rem}
+.brand{align-items:center;gap:.85rem;text-decoration:none;color:inherit}
+.brand:focus-visible{outline:2px solid var(--moss);outline-offset:4px;border-radius:6px}
+.centrado h2{max-width:24ch;margin-inline:auto}
+.marca{display:flex;flex-direction:column;line-height:1}
+.marca b{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:1.02rem;letter-spacing:.16em;text-transform:uppercase}
+.marca i{font-style:normal;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.54rem;
+  letter-spacing:.42em;text-transform:uppercase;color:var(--muted);margin-top:.18rem;padding-left:.16em}
+.brand-sep{width:1px;height:24px;background:var(--line)}
+.brand-line{font-size:.6rem;letter-spacing:.22em}
+
+/* ---------- botones tipo píldora ---------- */
+.btn{border-radius:999px;border:1px solid transparent;background:var(--ink);color:var(--paper);
+  padding:.62rem .5rem .62rem 1.3rem;font-size:.78rem;font-weight:500;letter-spacing:.005em;
+  text-transform:none;display:inline-flex;align-items:center;gap:.7rem;
+  transition:transform .25s cubic-bezier(.22,.7,.3,1),box-shadow .25s ease,background .2s ease}
+.btn::after{content:'↗';display:grid;place-items:center;width:1.85rem;height:1.85rem;border-radius:999px;
+  background:var(--paper);color:var(--ink);font-size:.82rem;line-height:1;flex:none;
+  transition:transform .3s cubic-bezier(.22,.7,.3,1)}
+.btn:hover{opacity:1;transform:translateY(-2px);box-shadow:var(--sombra-alta)}
+.btn:hover::after{transform:translate(2px,-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost::after{background:var(--ink);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--ink)}
+.hero-img .btn-ghost,.cta-img .btn-ghost,.band.dark .btn-ghost{color:var(--on-deep);border-color:rgba(244,240,234,.32)}
+.hero-img .btn-ghost::after,.cta-img .btn-ghost::after,.band.dark .btn-ghost::after{background:var(--on-deep);color:var(--deep)}
+.nav .btn{padding:.5rem .42rem .5rem 1.05rem;font-size:.74rem}
+.nav .btn::after{width:1.6rem;height:1.6rem;font-size:.74rem}
+
+/* ---------- etiqueta de sección, centrada y decorada ---------- */
+.eyebrow{font-size:.68rem;letter-spacing:.2em;color:var(--muted)}
+.eyebrow::before{width:34px;opacity:.7}
+.eyebrow.centro{justify-content:center;width:100%;gap:.9rem}
+.eyebrow.centro::before,.eyebrow.centro::after{content:'';width:clamp(28px,7vw,72px);height:1px;
+  background:linear-gradient(90deg,transparent,var(--moss));opacity:.8;flex:none}
+.eyebrow.centro::after{background:linear-gradient(90deg,var(--moss),transparent)}
+.centrado{text-align:center;margin-inline:auto}
+.centrado .lead{margin-inline:auto}
+
+/* ---------- rejillas: de líneas de 1px a tarjetas flotantes ---------- */
+.options,.circuit,.steps,.mkt,.vs,.promise,.units,.next,.cols2{
+  background:transparent;border:none;border-radius:0;gap:clamp(.9rem,1.6vw,1.15rem)}
+.opt,.cc,.step,.mk,.vsc,.col,.unit,.promise-cell,.promise-head,.next li,.fx{
+  border:1px solid var(--line);border-radius:var(--r);background:var(--surface);box-shadow:var(--sombra);
+  overflow:hidden}
+.opt:hover,.cc:hover,.step:hover,.fx:hover{transform:translateY(-4px);box-shadow:var(--sombra-alta)}
+.mkt.claro .mk,.vs.claro .vsc{background:var(--surface)}
+/* .mkt.claro (y .vs.claro) traían el fondo/borde de la rejilla de 1px, que con
+   más especificidad que la regla de arriba dejaba una franja beige detrás */
+.mkt.claro,.vs.claro{background:transparent;border:none}
+.vs.claro .vsc.now{background:var(--moss-soft);border-color:rgba(168,88,44,.24)}
+.opt-img,.cc-img{border-radius:var(--r-s);margin:.7rem .7rem 0}
+.cc-img{margin-bottom:.9rem}
+.cc .tag,.cc h3,.cc p{padding-inline:1.5rem}
+.step{padding:1.7rem 1.6rem}
+.fx{padding:1.5rem 1.4rem}
+
+/* franja de datos oscura → tarjetas sobre el fondo oscuro */
+.facts{background:transparent;border-top:none;gap:clamp(.7rem,1.3vw,1rem)}
+.fact{background:rgba(244,240,234,.055);border:1px solid var(--on-deep-line);border-radius:var(--r);
+  padding:1.5rem 1.3rem 1.6rem}
+.fact::before{left:1.3rem;top:0}
+.facts.seen .fact::before{width:30px}
+
+/* ---------- bento de la villa en operación ---------- */
+.bento{display:grid;grid-template-columns:1fr minmax(0,.86fr) 1fr;
+  grid-template-rows:auto auto;gap:clamp(.9rem,1.6vw,1.15rem);margin-top:2.4rem}
+.bt{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.7rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;gap:2.2rem;
+  box-shadow:var(--sombra);min-height:clamp(180px,20vw,215px);
+  transition:transform .3s cubic-bezier(.22,.7,.3,1),box-shadow .3s ease}
+.bt:hover{transform:translateY(-4px);box-shadow:var(--sombra-alta)}
+.bt .v{font-family:'Playfair Display',Georgia,serif;font-weight:500;
+  font-size:clamp(2.1rem,4.2vw,3rem);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.bt .k{font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;line-height:1.3}
+.bt .k small{display:block;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.76rem;
+  color:var(--muted);margin-top:.3rem;letter-spacing:.01em}
+.bento-foto{grid-column:2;grid-row:1 / span 2;border-radius:var(--r);overflow:hidden;background:var(--paper);
+  box-shadow:var(--sombra);min-height:100%}
+.bento-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.pie{margin-top:1.4rem;text-align:center;font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+  font-size:.76rem;color:var(--muted)}
+
+/* ---------- pasos con navegador pegajoso ---------- */
+.pasos{display:grid;grid-template-columns:minmax(0,240px) minmax(0,1fr);
+  gap:clamp(1.5rem,4vw,4rem);margin-top:2.6rem;align-items:start}
+.pasos-nav{position:sticky;top:92px;display:flex;flex-direction:column;gap:.55rem}
+.pasos-nav button{all:unset;cursor:pointer;display:flex;align-items:center;gap:.75rem;
+  padding:.85rem 1.1rem;border-radius:999px;background:var(--surface);border:1px solid var(--line);
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.95rem;color:var(--ink);
+  transition:background .3s ease,color .3s ease,transform .3s ease}
+.pasos-nav button::before{content:'';width:6px;height:6px;background:currentColor;flex:none}
+.pasos-nav button:hover{transform:translateX(3px)}
+.pasos-nav button.aqui{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.pasos-nav button:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+.pasos-lista{display:flex;flex-direction:column;gap:clamp(1rem,2vw,1.4rem)}
+.paso{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--sombra);padding:.8rem .8rem 1.7rem;scroll-margin-top:96px}
+.paso figure{margin:0;border-radius:var(--r-s);overflow:hidden;aspect-ratio:16/9;background:var(--paper)}
+.paso figure img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 1.1s cubic-bezier(.22,.7,.3,1)}
+.paso:hover figure img{transform:scale(1.03)}
+.paso .n{display:block;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:1.3rem 0 .35rem;padding-inline:.8rem}
+.paso h3{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(1.4rem,2.6vw,1.9rem);
+  letter-spacing:-.015em;padding-inline:.8rem}
+.paso p{margin-top:.6rem;color:var(--muted);font-size:.98rem;line-height:1.68;max-width:60ch;padding-inline:.8rem}
+
+/* ---------- reseñas ---------- */
+.plataformas{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.9rem,1.6vw,1.15rem);margin-top:2.4rem}
+.plat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--sombra);padding:1.7rem 1.6rem;display:flex;flex-direction:column;gap:.45rem}
+.plat .quien{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted)}
+.plat .nota{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,4vw,2.7rem);line-height:1;
+  letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.plat .det{font-size:.88rem;color:var(--muted);line-height:1.6}
+.plat a{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.8rem;color:var(--moss);
+  text-decoration:none;margin-top:.4rem;display:inline-flex;gap:.35rem;align-items:center}
+.plat a:hover{text-decoration:underline;text-underline-offset:3px}
+
+.opiniones{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.9rem,1.6vw,1.15rem);margin-top:clamp(.9rem,1.6vw,1.15rem)}
+.op{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sombra);
+  padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:.9rem;
+  transition:transform .3s cubic-bezier(.22,.7,.3,1),box-shadow .3s ease}
+.op:hover{transform:translateY(-4px);box-shadow:var(--sombra-alta)}
+.op .comilla{font-family:'Playfair Display',Georgia,serif;font-size:2.4rem;line-height:.6;color:var(--moss);
+  opacity:.4;height:1rem}
+.op blockquote{margin:0;font-size:.97rem;line-height:1.68;color:var(--ink)}
+.op figcaption{margin-top:auto;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.78rem;color:var(--muted)}
+.op figcaption b{display:block;color:var(--ink);font-weight:500;font-size:.88rem;margin-bottom:.1rem}
+.op .trad{font-size:.84rem;color:var(--muted);line-height:1.6;border-left:2px solid var(--line);padding-left:.8rem}
+
+/* ---------- retoques de piezas existentes ---------- */
+.band{border-top:none}
+.quiz,.form,.about-img,.slot-empty,.faq details,.strip{border-radius:var(--r)}
+.about-img{box-shadow:var(--sombra-alta);border:none}
+.faq{border-top:none;display:flex;flex-direction:column;gap:.7rem}
+.faq details{background:var(--surface);border:1px solid var(--line);box-shadow:var(--sombra);
+  padding:.2rem 1.4rem;transition:box-shadow .3s ease}
+.faq details[open]{box-shadow:var(--sombra-alta)}
+.faq summary{padding:1.15rem 2.2rem 1.15rem 0}
+.faq summary::after{right:.2rem;top:1.1rem}
+.faq p{padding:0 2.2rem 1.2rem 0}
+.strip{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--moss);
+  box-shadow:var(--sombra);padding:1.6rem 1.8rem}
+.vsbar{border-radius:999px}
+.tline.claro li,.tline li{border-bottom-color:var(--line)}
+.foot{border-top:1px solid var(--line)}
+.hero-img .hero-copy{padding-bottom:clamp(5rem,10vw,8rem)}
+.hero-img{min-height:clamp(480px,78vh,720px)}
+.prog{background:var(--moss);box-shadow:0 0 14px rgba(168,88,44,.5)}
+
+/* ---------- marca de agua del hero ---------- */
+.hero-marca{position:absolute;left:50%;bottom:clamp(.9rem,2.2vh,1.8rem);transform:translateX(-50%);z-index:2;font-family:'Playfair Display',Georgia,serif;font-weight:500;line-height:1;font-size:clamp(1.6rem,5.2vw,4.4rem);letter-spacing:.38em;text-indent:.38em;text-transform:uppercase;color:rgba(244,240,234,.2);white-space:nowrap;pointer-events:none}
+.hero-scroll{display:none}
+
+@media (max-width:980px){
+  .bento{grid-template-columns:1fr 1fr}
+  .bento-foto{grid-row:auto;grid-column:1 / -1 !important;aspect-ratio:16/9;min-height:0}
+  .opiniones{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .pasos{grid-template-columns:1fr}
+  .pasos-nav{position:static;flex-direction:row;overflow-x:auto;padding-bottom:.3rem;
+    scrollbar-width:none;margin-bottom:.4rem}
+  .pasos-nav::-webkit-scrollbar{display:none}
+  .pasos-nav button{white-space:nowrap;font-size:.88rem;padding:.7rem .95rem}
+  .plataformas,.opiniones{grid-template-columns:1fr}
+  .bento{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .rise{opacity:1;transform:none;filter:none;transition:none}
+  .btn:hover,.opt:hover,.cc:hover,.step:hover,.fx:hover,.bt:hover,.op:hover{transform:none}
+  .paso:hover figure img{transform:none}
+}
+/* ==================================================================
+   v11 · maquinaria comercial: prueba social, tira de fotos,
+   escasez, calculadora y CTA flotante. Identidad Marlaca intacta.
+   ================================================================== */
+
+/* ---------- barra de prueba social ---------- */
+.social{background:var(--deep);color:var(--on-deep);overflow:hidden;position:relative;z-index:70}
+.social-in{display:flex;gap:2.4rem;align-items:center;justify-content:center;
+  padding:.62rem 20px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.7rem;
+  letter-spacing:.06em;color:var(--on-deep-muted);white-space:nowrap}
+.social-in b{color:var(--on-deep);font-weight:500}
+.social-in span{display:inline-flex;align-items:center;gap:.45rem}
+.social-in i{font-style:normal;color:var(--moss)}
+.nav{top:0}
+@media (max-width:820px){
+  .social-in{justify-content:flex-start;overflow-x:auto;scrollbar-width:none;gap:1.6rem}
+  .social-in::-webkit-scrollbar{display:none}
+}
+
+/* ---------- tira de fotos en movimiento ---------- */
+.tira{overflow:hidden;background:var(--paper);padding-block:clamp(1.6rem,3vw,2.4rem);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.tira-fila{display:flex;gap:clamp(.7rem,1.4vw,1rem);width:max-content;
+  animation:corre 52s linear infinite}
+.tira-fila.atras{animation-direction:reverse;animation-duration:64s;margin-top:clamp(.7rem,1.4vw,1rem)}
+.tira:hover .tira-fila{animation-play-state:paused}
+@keyframes corre{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.tira figure{margin:0;position:relative;width:clamp(150px,17vw,228px);aspect-ratio:3/4;
+  border-radius:var(--r-s);overflow:hidden;background:var(--line);flex:none;box-shadow:var(--sombra)}
+.tira img{width:100%;height:100%;object-fit:cover;display:block}
+.tira figcaption{position:absolute;left:.55rem;top:.55rem;display:inline-flex;align-items:center;gap:.35rem;
+  padding:.28rem .55rem;border-radius:999px;background:rgba(22,20,18,.62);backdrop-filter:blur(6px);
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.58rem;letter-spacing:.11em;
+  text-transform:uppercase;color:#F4F0EA}
+.tira figcaption::before{content:'';width:5px;height:5px;border-radius:999px;background:#7FB069}
+
+/* ---------- insignias de confianza ---------- */
+.sellos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(.8rem,1.5vw,1.1rem);margin-top:2.2rem}
+.sello{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sombra);
+  padding:1.2rem 1.3rem;display:flex;align-items:center;gap:1rem}
+.sello .nota{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;line-height:1;
+  letter-spacing:-.02em;color:var(--moss);flex:none;font-variant-numeric:tabular-nums}
+.sello .t{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.9rem;font-weight:500;line-height:1.3}
+.sello .t small{display:block;font-weight:400;font-size:.72rem;letter-spacing:.04em;color:var(--muted);margin-top:.22rem;text-transform:uppercase}
+
+/* ---------- escasez en las tarjetas ---------- */
+.opt{position:relative}
+.quedan{position:absolute;right:1.15rem;top:1.15rem;z-index:3;display:inline-flex;align-items:center;gap:.4rem;
+  padding:.35rem .7rem;border-radius:999px;background:var(--flag);color:#FFF;
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.62rem;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;box-shadow:0 6px 18px -8px rgba(163,59,42,.7)}
+.quedan::before{content:'';width:5px;height:5px;border-radius:999px;background:#FFF;
+  animation:late 2.2s ease-in-out infinite}
+@keyframes late{0%,100%{opacity:.35}50%{opacity:1}}
+.estado{position:absolute;left:1.15rem;top:1.15rem;z-index:3;padding:.35rem .7rem;border-radius:999px;
+  background:rgba(22,20,18,.62);backdrop-filter:blur(6px);color:#F4F0EA;
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.62rem;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase}
+
+/* ---------- calculadora ---------- */
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+  gap:clamp(1.2rem,3vw,2.6rem);margin-top:2.6rem;align-items:start}
+.calc-izq{padding-top:.4rem}
+.calc-fila{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:.7rem}
+.calc .et{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--muted)}
+.calc-fila .val{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.5rem,3vw,2rem);
+  line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+input[type=range].slider{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:999px;
+  background:linear-gradient(90deg,var(--moss) var(--p,20%),var(--line) var(--p,20%));outline:none;cursor:pointer;margin:.4rem 0 1.4rem}
+input[type=range].slider::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:999px;
+  background:var(--moss);border:3px solid var(--surface);box-shadow:0 4px 14px -4px rgba(168,88,44,.8);cursor:grab}
+input[type=range].slider::-moz-range-thumb{width:22px;height:22px;border-radius:999px;background:var(--moss);
+  border:3px solid var(--surface);box-shadow:0 4px 14px -4px rgba(168,88,44,.8);cursor:grab}
+input[type=range].slider:focus-visible{outline:2px solid var(--moss);outline-offset:6px}
+.calc-refs{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.3rem}
+.calc-refs button{all:unset;cursor:pointer;padding:.55rem .9rem;border-radius:999px;border:1px solid var(--line);
+  background:var(--surface);font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.78rem;color:var(--ink);
+  transition:background .25s ease,color .25s ease,border-color .25s ease}
+.calc-refs button:hover{border-color:var(--moss)}
+.calc-refs button.aqui{background:var(--moss);color:#FFF;border-color:var(--moss)}
+.calc-refs button:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+.calc-nota{margin-top:1.4rem;font-size:.82rem;line-height:1.72;color:var(--muted);max-width:46ch}
+.calc-der{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--sombra-alta);padding:clamp(1.5rem,3vw,2.2rem)}
+.calc-hero{display:flex;align-items:baseline;gap:.35rem}
+.calc-hero .n{font-family:'Playfair Display',Georgia,serif;font-size:clamp(3rem,7vw,4.6rem);line-height:.95;
+  letter-spacing:-.03em;color:var(--moss);font-variant-numeric:tabular-nums}
+.calc-hero .u{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:1.05rem;color:var(--muted)}
+.calc-sub{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);margin-top:.5rem}
+.calc-tres{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1.5rem}
+.calc-tres div{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-s);padding:1rem .95rem}
+.calc-tres b{display:block;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:1.18rem;
+  letter-spacing:-.015em;font-variant-numeric:tabular-nums}
+.calc-tres small{display:block;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;
+  line-height:1.45;color:var(--muted);margin-top:.35rem}
+.calc-aviso{margin-top:1.3rem;padding:.9rem 1.1rem;border-radius:var(--r-s);background:var(--moss-soft);
+  border-left:2px solid var(--moss);font-size:.85rem;line-height:1.65}
+.calc-der .btn{width:100%;justify-content:space-between;margin-top:1.3rem}
+
+/* ---------- CTA flotante ---------- */
+.flota{position:fixed;right:clamp(14px,2.5vw,26px);bottom:clamp(14px,2.5vw,26px);z-index:80;
+  opacity:0;transform:translateY(14px) scale(.96);pointer-events:none;
+  transition:opacity .4s ease,transform .4s cubic-bezier(.22,.7,.3,1);box-shadow:var(--sombra-alta)}
+.flota.on{opacity:1;transform:none;pointer-events:auto}
+
+/* ---------- aviso legal ---------- */
+.legal{display:block;margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid var(--line);
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;line-height:1.85;color:var(--muted);max-width:none}
+
+@media (max-width:900px){
+  .sellos{grid-template-columns:1fr}
+  .calc{grid-template-columns:1fr}
+  .calc-tres{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .tira-fila{animation:none}
+  .tira{overflow-x:auto}
+  .quedan::before{animation:none;opacity:1}
+  .flota{transition:none}
+}
+/* ==================================================================
+   v12 · menú móvil, mapa de Lombok, bloques de confianza y pie nuevo
+   ================================================================== */
+
+/* ---------- etiqueta del hero, en blanco ---------- */
+.eyebrow-w{color:#FFF}
+.eyebrow-w::before{background:rgba(255,255,255,.75)}
+
+/* ---------- menú móvil ---------- */
+.hamb{all:unset;display:none;cursor:pointer;width:42px;height:42px;border-radius:999px;
+  border:1px solid var(--line);align-items:center;justify-content:center;flex:none;background:var(--surface);box-sizing:border-box}
+.hamb span{display:block;width:17px;height:1.5px;background:var(--ink);border-radius:2px;position:relative;
+  transition:transform .3s cubic-bezier(.22,.7,.3,1),opacity .2s ease}
+.hamb span::before,.hamb span::after{content:'';position:absolute;left:0;width:17px;height:1.5px;
+  background:var(--ink);border-radius:2px;transition:transform .3s cubic-bezier(.22,.7,.3,1)}
+.hamb span::before{top:-5.5px}.hamb span::after{top:5.5px}
+.hamb[aria-expanded="true"] span{transform:rotate(45deg)}
+.hamb[aria-expanded="true"] span::before{transform:translateY(5.5px) rotate(-90deg)}
+.hamb[aria-expanded="true"] span::after{opacity:0}
+.hamb:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+.panel{position:fixed;left:0;right:0;z-index:65;background:var(--paper);
+  border-bottom:1px solid var(--line);box-shadow:var(--sombra-alta);
+  padding:.6rem 20px 1.3rem;display:none;flex-direction:column;
+  max-height:calc(100dvh - 120px);overflow-y:auto}
+.panel.on{display:flex;animation:baja-panel .32s cubic-bezier(.22,.7,.3,1)}
+@keyframes baja-panel{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.panel a{padding:.95rem .2rem;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:1.02rem}
+.panel a:last-of-type{border-bottom:none}
+.panel a.btn{margin-top:1rem;justify-content:space-between;color:var(--paper);border-bottom:none;padding:.72rem .5rem .72rem 1.4rem}
+@media (max-width:920px){
+  .hamb{display:flex}
+  .nav-in{gap:.8rem}
+  .nav .btn{display:none}
+}
+
+/* ---------- comparativa de ocupación ---------- */
+.vsocu{display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(.8rem,2vw,1.4rem);align-items:center;
+  margin-top:1.6rem;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1.3rem 1.4rem}
+.vsocu .lado{display:flex;flex-direction:column;gap:.3rem}
+.vsocu .lado b{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(1.5rem,3vw,2rem);
+  line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.vsocu .lado small{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.72rem;letter-spacing:.06em;
+  color:var(--muted);line-height:1.45}
+.vsocu .delta{text-align:center;padding:.5rem .9rem;border-radius:999px;background:var(--moss);color:#FFF;
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.78rem;font-weight:500;white-space:nowrap}
+
+/* ---------- mapa / infraestructura ---------- */
+.mapa{position:relative;overflow:hidden;border-radius:var(--r);margin-top:2.4rem;min-height:clamp(380px,46vw,520px);
+  display:flex;align-items:flex-end;box-shadow:var(--sombra-alta)}
+.mapa>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mapa .capa{position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,20,18,.28),rgba(22,20,18,.82))}
+.mapa-in{position:relative;z-index:2;width:100%;padding:clamp(1.3rem,3vw,2rem)}
+.mapa-tit{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:#FFF;
+  font-size:clamp(1.3rem,2.6vw,1.8rem);line-height:1.25;max-width:20ch;margin-bottom:1.2rem;
+  text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem}
+.chip{background:rgba(251,250,248,.94);backdrop-filter:blur(8px);border-radius:var(--r-s);padding:.9rem 1rem;
+  display:flex;flex-direction:column;gap:.18rem}
+.chip b{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.86rem;font-weight:500;line-height:1.3;color:var(--ink)}
+.chip small{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.72rem;color:var(--moss);letter-spacing:.04em}
+
+/* ---------- vídeo de la zona ---------- */
+.zona-video{position:relative;border-radius:var(--r);overflow:hidden;margin-top:2rem;background:var(--deep-2);
+  aspect-ratio:16/9;box-shadow:var(--sombra-alta)}
+.zona-video video,.zona-video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.zona-video figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:1.6rem 1.2rem .9rem;
+  background:linear-gradient(180deg,rgba(13,8,5,0),rgba(13,8,5,.8));
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(244,240,234,.85)}
+
+/* ---------- cómo se protege tu dinero ---------- */
+.escudos{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.9rem,1.6vw,1.15rem);margin-top:2.4rem}
+.esc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sombra);
+  padding:1.6rem 1.5rem;display:flex;flex-direction:column;gap:.55rem;
+  transition:transform .3s cubic-bezier(.22,.7,.3,1),box-shadow .3s ease}
+.esc:hover{transform:translateY(-4px);box-shadow:var(--sombra-alta)}
+.esc .ic{width:38px;height:38px;border-radius:999px;background:var(--moss-soft);color:var(--moss);
+  display:grid;place-items:center;font-size:1rem;margin-bottom:.35rem}
+.esc h3{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:1.2rem;letter-spacing:-.01em}
+.esc p{font-size:.93rem;line-height:1.68;color:var(--muted)}
+
+/* ---------- invertimos en nuestro propio negocio ---------- */
+.piel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(1.4rem,4vw,3.4rem);align-items:center}
+.piel-caja{background:var(--moss-soft);border:1px solid rgba(168,88,44,.25);border-radius:var(--r);
+  padding:clamp(1.5rem,3vw,2.2rem);display:flex;flex-direction:column;gap:.9rem}
+.piel-caja .gr{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(2.4rem,5vw,3.4rem);
+  line-height:1;letter-spacing:-.02em;color:var(--moss)}
+.piel-caja p{font-size:.95rem;line-height:1.68}
+
+/* ---------- pie de página ---------- */
+.foot{padding-block:clamp(2.6rem,5vw,4rem) 2.2rem}
+.pie-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.1fr;gap:clamp(1.4rem,3vw,2.6rem);margin-bottom:2.4rem}
+.pie-grid h4{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.66rem;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--moss);margin:0 0 .8rem}
+.pie-grid p,.pie-grid a{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.86rem;line-height:1.75;
+  color:var(--muted);text-decoration:none;display:block;letter-spacing:0}
+.pie-grid a:hover{color:var(--ink)}
+.pie-grid .marca-pie b{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:1.3rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink);display:block}
+.pie-grid .marca-pie i{font-style:normal;font-size:.56rem;letter-spacing:.42em;text-transform:uppercase;color:var(--muted)}
+.redes{display:flex;gap:.5rem;margin-top:.9rem}
+.redes a{width:44px;height:44px;border-radius:999px;border:1px solid var(--line);background:var(--surface);
+  display:grid;place-items:center;font-size:.78rem;color:var(--muted);transition:border-color .25s,color .25s}
+.redes a:hover{border-color:var(--moss);color:var(--moss)}
+.sellos-pie{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.4rem}
+.sp{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .8rem;border-radius:999px;
+  border:1px solid var(--line);background:var(--surface);text-decoration:none}
+.sp b{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:.98rem;color:var(--ink);letter-spacing:0}
+.sp span{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.68rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted)}
+.sp:hover{border-color:var(--moss)}
+.pendiente{color:var(--flag);font-style:normal}
+
+@media (max-width:980px){
+  .chips{grid-template-columns:1fr 1fr}
+  .pie-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .strip{grid-template-columns:1fr;gap:.7rem;padding:1.3rem 1.3rem 1.4rem}
+  .strip .eyebrow{padding-top:0}
+  .strip p{font-size:1.18rem}
+  .piel,.vsocu{grid-template-columns:1fr}
+  .vsocu .delta{justify-self:start}
+  .pie-grid{grid-template-columns:1fr;gap:1.8rem}
+}
+
+/* ==================================================================
+   v13 · optimización mobile: menos alto de página, tarjetas en
+   carrusel horizontal con scroll-snap donde hay varios ítems iguales,
+   secciones más compactas y objetivos táctiles ≥44px. Solo cambia
+   presentación: mismo contenido, mismos IDs, mismos textos.
+   ================================================================== */
+
+/* pista de que hay más tarjetas para deslizar (solo mobile, ver abajo) */
+.swipe-hint{
+  display:none;margin:.6rem 0 0;text-align:right;
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:.7rem;
+  letter-spacing:.06em;color:var(--muted);
+}
+
+@media (max-width:820px){
+  /* menos aire por sección: la página deja de sentirse interminable */
+  .band{padding-block:clamp(1.1rem,5.7vw,1.7rem)}
+  .hero-img{min-height:min(74svh,520px)}
+  .hero-img .hero-copy{padding-bottom:clamp(2.2rem,7vw,3.4rem)}
+  .photo-band{min-height:clamp(280px,44vh,380px)}
+  .cta-img{min-height:clamp(280px,42vh,360px)}
+  .cta-img .hero-copy{padding-block:clamp(1.8rem,5vw,2.4rem)}
+  .propio .piel-caja{padding:1.3rem 1.3rem 1.5rem}
+  .fact{padding:1.1rem 1rem 1.2rem}
+  h2{margin-bottom:.85rem}
+  /* menos separación antes de cada grupo de tarjetas */
+  .options,.circuit,.opiniones,.escudos,.mkt,.pasos,.vs,.flow,.bento,
+  .sellos,.plataformas{margin-top:1.3rem}
+
+  /* tarjetas con varios ítems iguales -> carrusel horizontal con snap,
+     en vez de apilarlas: mismo contenido, una fracción del alto.
+     scroll-padding-inline es CLAVE: sin ella, el navegador hace snap
+     mandatory al primer ítem ignorando el padding del contenedor y la
+     primera tarjeta queda pegada al borde en vez de alineada con el
+     título de la sección. */
+  .options,.circuit,.opiniones,.escudos,.mkt{
+    display:flex;flex-direction:row;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;margin-inline:-20px;padding:.2rem 20px 1rem;
+    scroll-padding-inline:20px;scrollbar-width:none;gap:.9rem;
+  }
+  .options::-webkit-scrollbar,.circuit::-webkit-scrollbar,.opiniones::-webkit-scrollbar,
+  .escudos::-webkit-scrollbar,.mkt::-webkit-scrollbar{display:none}
+  .options>*,.circuit>*,.opiniones>*,.escudos>*,.mkt>*{scroll-snap-align:start;scroll-snap-stop:always}
+  .options>*{flex:0 0 87%}
+  .circuit>*,.opiniones>*{flex:0 0 82%}
+  .escudos>*,.mkt>*{flex:0 0 84%}
+
+  /* los tres pasos (Compras · Operamos · Cobras) pasan a carrusel;
+     el navegador lateral ya se convierte en pestañas horizontales */
+  .pasos-lista{
+    display:flex;flex-direction:row;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;margin-inline:-20px;padding:.2rem 20px 1rem;
+    scroll-padding-inline:20px;scrollbar-width:none;gap:1rem;
+  }
+  .pasos-lista::-webkit-scrollbar{display:none}
+  .paso{flex:0 0 84%;scroll-snap-align:start;scroll-snap-stop:always}
+
+  /* pista de deslizamiento visible solo donde hay carrusel */
+  .swipe-hint{display:block}
+
+  /* "Cómo se protege tu dinero": textos largos -> carrusel de una tarjeta
+     ancha y legible por vez, en vez de una mini-grid de 2 columnas
+     angosta y apretada */
+  .esc{padding:1.4rem 1.4rem 1.6rem}
+  .esc h3{font-size:1.1rem}
+
+  /* imágenes más cortas en mobile: menos alto sin recortar el mensaje */
+  .about-img{aspect-ratio:16/9}
+  .opt-img{aspect-ratio:16/9}
+  .cc-img{aspect-ratio:16/10}
+  .mapa{min-height:clamp(240px,54vw,340px)}
+
+  /* "Números de una villa en operación": la foto va primero, a todo el
+     ancho, y las 4 estadísticas quedan en un 2x2 limpio sin huecos */
+  .bento{grid-template-columns:1fr 1fr}
+  .bento-foto{grid-column:1 / -1 !important;grid-row:auto;order:-1;aspect-ratio:16/9;min-height:0}
+
+  /* mismo criterio en tarjetas de stats/badges cortas: 2 columnas */
+  .plataformas{grid-template-columns:1fr 1fr}
+  .sellos{grid-template-columns:1fr 1fr}
+
+  /* "El reparto de cada euro": de 4 cajas + 2 flechas apiladas a un 2x2
+     compacto. El orden (01·02·03·04) ya cuenta la secuencia sin flechas */
+  .flow{grid-template-columns:1fr 1fr;gap:.7rem}
+  .farrow{display:none}
+  .fsplit{display:contents}
+  .fx{padding:1.1rem 1.05rem}
+
+  /* "Bali es el mercado maduro": las 2 tarjetas de comparación van
+     lado a lado en vez de apiladas */
+  .vs{grid-template-columns:1fr 1fr}
+  .vsc{padding:1.3rem 1.1rem}
+  /* cifras de 7 dígitos no entran en media columna con el tamaño base */
+  .vsc .v{font-size:clamp(1.45rem,7.2vw,2rem)}
+  .bt .v{font-size:clamp(1.7rem,8vw,2.3rem)}
+  .bt{gap:1.2rem;min-height:0}
+
+  /* hitos: año y texto en la misma fila en vez de año-arriba/texto-abajo */
+  .tline li{grid-template-columns:3.4rem 1fr;gap:.8rem;padding:.85rem 0}
+
+  /* evita el "grid blowout": los ítems de grid no encogen por debajo de su
+     contenido si no se fuerza min-width:0, y eso puede desbordar la página */
+  .esc,.bt,.plat,.sello,.mk,.opt,.cc,.paso,.op,.vsc{min-width:0}
+  .sello{flex-wrap:wrap}
+
+  /* objetivos táctiles ≥44px */
+  .btn{min-height:44px}
+  .hamb{width:44px;height:44px}
+  .flota{bottom:calc(clamp(14px,2.5vw,26px) + env(safe-area-inset-bottom,0px))}
+
+  /* slider de la calculadora: más fácil de arrastrar con el dedo */
+  input[type=range].slider{height:8px}
+  input[type=range].slider::-webkit-slider-thumb{width:28px;height:28px}
+  input[type=range].slider::-moz-range-thumb{width:28px;height:28px}
+  .calc-refs button{padding:.68rem 1rem}
+  .calc-der{padding:1.3rem 1.3rem 1.5rem}
+  .calc-tres{gap:.5rem}
+  .calc-tres div{padding:.8rem .75rem}
+
+  /* relleno interno más justo en tarjetas cortas: menos alto sin perder
+     ni una palabra del contenido */
+  .bt{padding:1.3rem 1.2rem}
+  .mk{padding:1.3rem 1.1rem}
+  .opt-body{padding:1.2rem 1.3rem 1.5rem}
+  .plat{padding:1.2rem 1.2rem}
+  .sello{padding:.95rem 1rem}
+  .op{padding:1.3rem 1.3rem}
+  .faq{gap:.5rem}
+  .faq summary{padding-block:1rem}
+  .foot{padding-block:clamp(2rem,7vw,2.6rem) 1.8rem}
+  .pie-grid{gap:1.4rem;margin-bottom:1.6rem}
+  .miles li{padding:.8rem 0}
+  .about-copy .miles{margin-top:1.3rem}
+  .calc{gap:1.2rem}
+  .calc-nota{margin-top:1rem}
+  .calc-aviso{margin-top:1rem;padding:.8rem 1rem}
+  .calc-der .btn{margin-top:1rem}
+
+  /* la tira de fotos decorativas baja un poco de tamaño: sigue mostrando
+     las mismas 10 villas, solo ocupa menos alto */
+  .tira{padding-block:1.1rem}
+  .tira-fila{gap:.6rem}
+  .tira figure{width:clamp(120px,30vw,170px)}
+  /* segunda fila del desfile decorativo (mismas villas, sin caption
+     distinta) se oculta en mobile: es puro adorno, no información */
+  .tira-fila.atras{display:none}
+
+  /* pie de página: marca y contacto a todo el ancho (el mail y el
+     WhatsApp no entran en media columna sin partirse); oficinas y
+     valoraciones, que son cortas, lado a lado */
+  .pie-grid{grid-template-columns:1fr 1fr;gap:1.5rem 1rem}
+  .pie-grid>div:nth-child(-n+2){grid-column:1 / -1}
+  .pie-grid p{overflow-wrap:anywhere}
+}
+/* reseñas en mobile: las fichas de Booking/Tripadvisor y las opiniones
+   pasan a UN solo carrusel (antes eran dos bloques apilados), y los
+   sellos quedan en una fila de 3 en vez de un 2x2 con hueco */
+@media (max-width:820px){
+  .res-deck{display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;margin:1rem -20px 0;padding:.2rem 20px 1rem;
+    scroll-padding-inline:20px;gap:.9rem;scrollbar-width:none;align-items:flex-start}
+  .res-deck::-webkit-scrollbar{display:none}
+  .res-deck .plataformas,.res-deck .opiniones{display:contents}
+  .res-deck .plat,.res-deck .op{flex:0 0 82%;min-width:0;margin:0;scroll-snap-align:start;scroll-snap-stop:always}
+  /* primero las opiniones (el contenido de la sección), después las fichas */
+  .res-deck .plat{order:1}
+  .res-deck .op{padding:1.15rem 1.2rem;gap:.7rem}
+  .res-deck .op blockquote{font-size:.9rem;line-height:1.58}
+  .res-deck .op .trad{font-size:.74rem;line-height:1.5}
+  .res-deck .op .comilla{font-size:1.9rem}
+  .sellos{grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
+  .sello{padding:.8rem .7rem;flex-direction:column;align-items:flex-start;gap:.35rem}
+  .sello .nota{font-size:1.35rem}
+  .sello .t{font-size:.8rem}
+  .sello .t small{font-size:.62rem;letter-spacing:.03em}
+}
+@media (prefers-reduced-motion:reduce){.res-deck{scroll-behavior:auto}}
+@media (max-width:480px){
+  .options>*{flex:0 0 92%}
+  .circuit>*,.opiniones>*,.paso,.esc,.mk{flex:0 0 90%}
+}
+@media (prefers-reduced-motion:reduce){
+  .options,.circuit,.opiniones,.pasos-lista,.escudos,.mkt{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="social">
+  <div class="social-in">
+    <span><i>★</i> <b>9,3 / 10</b> en Booking · 156 opiniones</span>
+    <span><i>★</i> <b>4,8 / 5</b> en Airbnb</span>
+    <span><b>N.º 1</b> de 14 alojamientos en Pujut</span>
+    <span><b>4 etapas</b> construidas en Kuta</span>
+    <span><b>21 personas</b> operando en la isla</span>
+  </div>
+</div>
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#hero" aria-label="Marlaca Stays, inicio">
+      <span class="marca"><b>Marlaca</b><i>Stays</i></span>
+      <span class="brand-sep" aria-hidden="true"></span>
+      <span class="brand-line">Lombok · Indonesia</span>
+    </a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#opciones">Cómo invertir</a>
+      <a href="#prueba">Los números</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#datos">Lombok</a>
+      <a href="#proteccion">Confianza</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <button class="hamb" id="hamb" type="button" aria-expanded="false" aria-controls="panel" aria-label="Abrir el menú"><span></span></button>
+    <a class="btn" href="agendar/">Reserva tu llamada</a>
+  </div>
+</header>
+<nav class="panel" id="panel" aria-label="Secciones">
+  <a href="#opciones">Cómo invertir</a>
+  <a href="#prueba">Los números</a>
+  <a href="#calculadora">Calculadora</a>
+  <a href="#mercado">Lombok</a>
+  <a href="#proteccion">Cómo se protege tu dinero</a>
+  <a href="#resenas">Reseñas</a>
+  <a href="#faq">Preguntas</a>
+  <a class="btn" href="agendar/">Reserva tu llamada gratuita</a>
+</nav>
+
+<!-- 01 · HERO -->
+<section class="hero-img" id="hero">
+  <div class="hero-media" id="heroMedia">
+    <img class="slot-img" src="img/hero.jpg" alt="Villa de Marlaca en operación, Kuta, Lombok" data-slot="img/hero.jpg">
+    <video id="heroVideo" muted loop playsinline preload="none" aria-hidden="true"
+           data-mp4="video/hero.mp4" data-webm="video/hero.webm"></video>
+  </div>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-copy">
+    <span class="eyebrow eyebrow-w">Villas en operación · Kuta, Lombok</span>
+    <h1>Una villa que genera ingresos sin que tengas que gestionar nada.</h1>
+    <p class="lead">Marlaca la construye, la entrega y la opera. Tú cobras tu parte de la explotación,
+      en euros, desde España.</p>
+    <div class="hero-cta">
+      <a class="btn" href="agendar/">Reserva tu llamada gratuita</a>
+      <a class="btn btn-ghost" href="#calculadora">Calcula tu rentabilidad</a>
+      <span class="hero-note">30 minutos · sin compromiso</span>
+    </div>
+  </div>
+  <span class="hero-marca" aria-hidden="true">Marlaca</span>
+  <span class="hero-scroll" aria-hidden="true"><i></i>Sigue bajando</span>
+</section>
+
+<!-- 02 · FRANJA DE DATOS -->
+<section class="strip-band">
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact"><span class="v num" data-count="92.6" data-dec="1" data-suf="%">92,6%</span><span class="k">ocupación de Villa Nina<br>en 2025</span></div>
+      <div class="fact"><span class="v num" data-count="9" data-dec="1" data-suf=" / 10">9,0 / 10</span><span class="k">valoración<br>en Booking</span></div>
+      <div class="fact"><span class="v num" data-count="4.8" data-dec="1" data-suf=" / 5">4,8 / 5</span><span class="k">valoración<br>en Airbnb</span></div>
+      <div class="fact"><span class="v">~1 año</span><span class="k">de la compra<br>a la entrega</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · POR QUÉ LOMBOK · banda con la isla -->
+<section class="photo-band" id="mercado">
+  <div class="pb-media" id="pbMedia">
+    <img src="img/lombok.jpg" alt="Arrozales, palmeras y cerros de Lombok vistos desde una villa de Marlaca" loading="lazy" decoding="async">
+  </div>
+  <div class="pb-shade"></div>
+  <div class="wrap pb-copy">
+    <span class="eyebrow eyebrow-w">El mercado</span>
+    <h2 class="display">Lombok está donde estaba <span class="hl">Bali antes de ser Bali</span>.</h2>
+    <p class="lead">La isla de al lado, a media hora de vuelo. Aeropuerto internacional, zona económica
+      especial y un circuito de MotoGP a quince minutos de Kuta.</p>
+  </div>
+  <span class="pb-cap">La vista desde una villa de Marlaca</span>
+</section>
+
+<!-- 03b · LO QUE YA ESTÁ EN PIE -->
+<section class="tira" aria-label="Villas de Marlaca ya construidas y en operación">
+  <div class="tira-fila">
+    <figure><img src="img/tira/01.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure><img src="img/tira/02.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure><img src="img/tira/03.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure><img src="img/tira/04.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure><img src="img/tira/05.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure aria-hidden="true"><img src="img/tira/01.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure aria-hidden="true"><img src="img/tira/02.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure aria-hidden="true"><img src="img/tira/03.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure aria-hidden="true"><img src="img/tira/04.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure aria-hidden="true"><img src="img/tira/05.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+  </div>
+  <div class="tira-fila atras">
+    <figure><img src="img/tira/06.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure><img src="img/tira/07.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure><img src="img/tira/08.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure><img src="img/tira/09.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure><img src="img/tira/10.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure aria-hidden="true"><img src="img/tira/06.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure aria-hidden="true"><img src="img/tira/07.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure aria-hidden="true"><img src="img/tira/08.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure aria-hidden="true"><img src="img/tira/09.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+    <figure aria-hidden="true"><img src="img/tira/10.jpg" alt="" loading="lazy" decoding="async"><figcaption>En operación</figcaption></figure>
+  </div>
+</section>
+
+<!-- 04 · DOS FORMAS DE INVERTIR -->
+<section class="band" id="opciones">
+  <div class="wrap">
+    <span class="eyebrow">Dos formas de invertir</span>
+    <h2 style="margin-top:1.2rem;max-width:20ch">Elige <span class="hl">cuánto invertir</span>. Lo demás funciona igual.</h2>
+    <p class="lead sub measure">La misma operación, el mismo equipo y la misma liquidación. Una villa
+      entera o una participación junto a otros inversores: cambia el importe, no cómo funciona.</p>
+    <div class="options">
+      <article class="opt">
+        <span class="estado">Plazas limitadas</span>
+        <div class="opt-img"><img class="slot-img wipe" src="img/card-participacion.jpg" alt="Dormitorio de una villa de Marlaca con vista a la piscina" data-slot="img/card-participacion.jpg — dormitorio con vista a la piscina" loading="lazy" decoding="async"></div>
+        <div class="opt-body">
+          <div class="price"><small>Una participación</small>desde 36.800&nbsp;€</div>
+          <ul>
+            <li>Entras junto a otros inversores en villas gestionadas por Marlaca</li>
+            <li>Cobras la renta en proporción a tu participación</li>
+            <li>Una entrada más asequible para conocer el producto</li>
+          </ul>
+          <a class="btn" href="agendar/?opcion=participacion">Quiero una participación</a>
+        </div>
+      </article>
+      <article class="opt">
+        <span class="estado">En venta · Marlaca IV</span>
+        <span class="quedan">8 disponibles</span>
+        <div class="opt-img"><img class="slot-img wipe" src="img/card-villa-completa.jpg" alt="Salón de una villa completa de Marlaca abierto a la piscina" data-slot="img/card-villa-completa.jpg — salón abierto a la piscina" loading="lazy" decoding="async"></div>
+        <div class="opt-body">
+          <div class="price"><small>Villa completa</small>desde 165.000&nbsp;€</div>
+          <ul>
+            <li>Una villa de Marlaca IV, terminada y equipada</li>
+            <li>Todos los ingresos de tu villa, una vez descontados la operación y el fee de gestión</li>
+            <li>Entrega estimada en 2027</li>
+          </ul>
+          <a class="btn" href="agendar/?opcion=villa">Quiero la villa completa</a>
+        </div>
+      </article>
+    </div>
+    <p class="swipe-hint" aria-hidden="true">Desliza para ver más →</p>
+  </div>
+</section>
+
+<!-- 05 · CÓMO FUNCIONA -->
+<section class="band" id="funciona" style="padding-top:clamp(1.6rem,3vw,2.6rem)">
+  <div class="wrap">
+    <div class="centrado measure rise">
+      <span class="eyebrow centro">Cómo funciona</span>
+      <h2 style="margin-top:1.3rem">Tres pasos, y solo el primero depende de ti.</h2>
+    </div>
+
+    <div class="pasos">
+      <div class="pasos-nav" role="tablist" aria-label="Los tres pasos">
+        <button type="button" data-paso="paso-1" class="aqui">Compras</button>
+        <button type="button" data-paso="paso-2">Operamos</button>
+        <button type="button" data-paso="paso-3">Cobras</button>
+      </div>
+      <div class="pasos-lista">
+        <article class="paso rise" id="paso-1">
+          <figure><img src="img/villa-completa.jpg" alt="Villa de Marlaca terminada, con piscina y deck" loading="lazy" decoding="async"></figure>
+          <span class="n">Paso 1</span>
+          <h3>Compras</h3>
+          <p>Una villa, o una parte, construida por la constructora propia de Marlaca. Antes de firmar
+            repasamos contigo la estructura de compra y toda la documentación.</p>
+        </article>
+        <article class="paso rise" id="paso-2">
+          <figure><img src="img/circuito-operacion.jpg" alt="Habitación preparada por el equipo de operación" loading="lazy" decoding="async"></figure>
+          <span class="n">Paso 2</span>
+          <h3>Operamos</h3>
+          <p>Toda la gestión resuelta: canales de venta, precios, limpieza, desayuno, mantenimiento
+            24 h y atención al huésped. El fee de gestión es del 20% sobre el GOP, y figura en el contrato.</p>
+        </article>
+        <article class="paso rise" id="paso-3">
+          <figure><img src="img/participacion.jpg" alt="Salón de una villa de Marlaca en operación" loading="lazy" decoding="async"></figure>
+          <span class="n">Paso 3</span>
+          <h3>Cobras</h3>
+          <p>Liquidación en euros, con el detalle de la explotación. Sin huéspedes, proveedores ni
+            incidencias que gestionar desde España.</p>
+        </article>
+      </div>
+      <p class="swipe-hint" aria-hidden="true">Desliza para ver más →</p>
+    </div>
+  </div>
+</section>
+
+<!-- 06 · EL RECORRIDO DE CADA EURO -->
+<section class="band" id="reparto">
+  <div class="wrap">
+    <span class="eyebrow rise">El reparto</span>
+    <div class="measure rise" style="margin-top:1.2rem">
+      <h2 class="display">Qué pasa con <span class="hl">cada euro</span> que entra en la villa.</h2>
+      <p class="lead sub">La pregunta que hace todo inversor serio antes que cualquier otra. La estructura
+        es esta, y está en el contrato.</p>
+    </div>
+
+    <div class="flow rise">
+      <div class="fx">
+        <span class="lbl">01 · Entra</span>
+        <span class="big">Lo que factura tu villa</span>
+        <p>Noches vendidas en Booking, Airbnb y canal directo, más los extras que consume el huésped.</p>
+      </div>
+      <div class="farrow" aria-hidden="true">→</div>
+      <div class="fx">
+        <span class="lbl">02 · Se descuenta</span>
+        <span class="big">El coste de operarla</span>
+        <p>Limpieza, desayuno, mantenimiento, servicios, comisiones de plataforma y el equipo en la isla.</p>
+      </div>
+      <div class="farrow" aria-hidden="true">→</div>
+      <div class="fsplit">
+        <div class="fx split">
+          <span class="lbl">03 · Marlaca</span>
+          <span class="big">20% del GOP</span>
+          <p>Es el fee de gestión. Solo se cobra sobre lo que queda después de operar: si la villa no genera, Marlaca tampoco.</p>
+        </div>
+        <div class="fx split">
+          <span class="lbl">04 · Tú</span>
+          <span class="big">El resto, en euros</span>
+          <p>Con la liquidación detallada de tu villa: lo que facturó, lo que costó y lo que queda.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="fnote">GOP es el resultado bruto de explotación: lo que queda de la facturación después de
+      los costes de operar la villa, antes de impuestos y amortizaciones. El objetivo de rentabilidad que
+      publicamos se calcula sobre esta estructura; en la llamada repasamos un ejercicio completo de una villa
+      real, con cada descuento nombrado y sus supuestos a la vista.</p>
+  </div>
+</section>
+
+<!-- 07 · LA PRUEBA · Villa Nina -->
+<section class="band" id="prueba" style="background:var(--surface)">
+  <div class="wrap">
+    <div class="centrado measure rise">
+      <span class="eyebrow centro">Números de una villa en operación</span>
+      <h2 class="display" style="margin-top:1.3rem"><span class="hl">Así opera</span> una villa que ya construimos.</h2>
+    </div>
+
+    <div class="bento rise">
+      <div class="bt"><span class="v num" data-count="92.6" data-dec="1" data-suf="%">92,6%</span>
+        <span class="k">ocupación anual<small>mercado de Lombok: 64%</small></span></div>
+      <div class="bento-foto"><img src="img/prueba.jpg" alt="Galería de una villa de Marlaca en operación" loading="lazy" decoding="async"></div>
+      <div class="bt"><span class="v num" data-count="104">104</span>
+        <span class="k">reservas en el año<small>cada una con su ID</small></span></div>
+      <div class="bt"><span class="v num" data-count="338">338</span>
+        <span class="k">noches vendidas<small>de 365</small></span></div>
+      <div class="bt"><span class="v">9,0<small style="font-size:.5em;color:var(--muted)">/10</small> · 4,8<small style="font-size:.5em;color:var(--muted)">/5</small></span>
+        <span class="k">valoración en<small>Booking · Airbnb</small></span></div>
+    </div>
+
+    <div class="vsocu rise">
+      <div class="lado"><b class="num">92,6%</b><small>Villa Nina · ejercicio 2025</small></div>
+      <div class="delta">+28,6 puntos · un 45% más</div>
+      <div class="lado"><b class="num" style="color:var(--muted)">64%</b><small>media del mercado de Lombok</small></div>
+    </div>
+    <p class="pie">Villa Nina · ejercicio 2025 · datos del sistema de reservas. Valoraciones verificables en cada plataforma.</p>
+  </div>
+</section>
+
+<!-- 07b · LA CALCULADORA -->
+<section class="band" id="calculadora">
+  <div class="wrap">
+    <div class="centrado measure rise">
+      <span class="eyebrow centro">La calculadora</span>
+      <h2 class="display" style="margin-top:1.3rem">Calcula lo que <span class="hl">renta tu capital</span> en Lombok.</h2>
+    </div>
+
+    <div class="calc rise">
+      <div class="calc-izq">
+        <div class="calc-fila">
+          <span class="et">Capital a invertir</span>
+          <span class="val num" id="c-cap">165.000 €</span>
+        </div>
+        <input class="slider" type="range" id="c-rango" min="36800" max="500000" step="100" value="165000"
+               aria-label="Capital a invertir en euros">
+        <span class="et" style="display:block;margin-bottom:.5rem">Punto de partida</span>
+        <div class="calc-refs" id="c-refs">
+          <button type="button" data-v="36800">Participación · 36.800 €</button>
+          <button type="button" data-v="165000" class="aqui">Villa completa · 165.000 €</button>
+          <button type="button" data-v="330000">Dos villas · 330.000 €</button>
+        </div>
+        <p class="calc-nota">Una estimación al <b id="c-tasa">14%</b> anual, el objetivo de rentabilidad que
+          publica Marlaca. No es una garantía ni una proyección de tu villa: el desglose exacto, con los
+          ingresos y los costes reales de la unidad que elijas, se repasa en la llamada.</p>
+      </div>
+
+      <div class="calc-der">
+        <div class="calc-hero"><span class="n num" id="c-mes">1.925</span><span class="u">€/mes</span></div>
+        <p class="calc-sub">Renta mensual estimada, que te liquidamos nosotros</p>
+        <div class="calc-tres">
+          <div><b class="num" id="c-anio">23.100 €</b><small>al año</small></div>
+          <div><b class="num" id="c-diez">231.000 €</b><small>renta acumulada en 10 años</small></div>
+          <div><b class="num" id="c-rec">~7,1 años</b><small>y recuperas tu inversión</small></div>
+        </div>
+        <p class="calc-aviso">Y a partir de ahí, <b>todo es beneficio</b>. La villa sigue siendo tuya:
+          la vendes o la sigues alquilando.</p>
+        <a class="btn" href="agendar/?de=calculadora">Reserva tu llamada y ve tu desglose</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 · LOS NÚMEROS DEL DESTINO -->
+<section class="band" id="datos" style="background:var(--surface)">
+  <div class="wrap">
+    <div class="centrado measure rise">
+      <span class="eyebrow centro">Los números del destino</span>
+      <h2 style="margin-top:1.3rem">Y ahora sí, por qué Lombok.</h2>
+      <p class="lead sub">Ninguno de estos números lo decimos nosotros. Son públicos, y cada uno lleva
+        su fuente al pie.</p>
+    </div>
+
+    <div class="mkt claro">
+      <div class="mk"><span class="v num" data-count="2.09" data-dec="2" data-suf=" M">2,09 M</span><span class="k">visitas a Nusa Tenggara Occidental
+        <b>hasta octubre de 2025</b>. El turismo extranjero creció <b>19,0%</b> en el acumulado del año<sup class="ref">1</sup></span></div>
+      <div class="mk"><span class="v num" data-count="140324">140.324</span><span class="k">espectadores en el MotoGP de
+        Mandalika 2025: <b>récord desde 2022</b> y 15,7% más que el año anterior<sup class="ref">2</sup></span></div>
+      <div class="mk"><span class="v num" data-count="93" data-suf="%">93%</span><span class="k">de ocupación hotelera en toda la isla
+        durante ese fin de semana, con <b>44 vuelos extra</b> operados<sup class="ref">2</sup></span></div>
+      <div class="mk"><span class="v num" data-count="19010">19.010</span><span class="k">empleos creados por la Zona
+        Económica Especial de Mandalika, con <b>Rp 5,7 billones</b> de inversión ejecutada<sup class="ref">2</sup></span></div>
+    </div>
+    <p class="swipe-hint" aria-hidden="true">Desliza para ver más →</p>
+  </div>
+</section>
+
+<!-- 08b · LA ZONA -->
+<section class="band" id="zona" style="background:var(--surface)">
+  <div class="wrap">
+    <div class="centrado measure rise">
+      <span class="eyebrow centro">La zona</span>
+      <h2 style="margin-top:1.3rem">Infraestructura nueva, y todavía sin la saturación de Bali.</h2>
+      <p class="lead sub">Kuta está en el sur de Lombok, el vértice donde el Estado concentró la inversión:
+        aeropuerto internacional, carretera nueva hasta el circuito y una costa que aún se puede caminar
+        sin esquivar a nadie.</p>
+    </div>
+
+    <div class="mapa rise">
+      <img src="img/lombok.jpg" alt="Vista del sur de Lombok desde una villa de Marlaca" loading="lazy" decoding="async">
+      <div class="capa"></div>
+      <div class="mapa-in">
+        <p class="mapa-tit">Todo lo que importa, a menos de media hora de la villa.</p>
+        <div class="chips">
+          <div class="chip"><b>Aeropuerto internacional</b><small>a 20 minutos</small></div>
+          <div class="chip"><b>Circuito de Mandalika</b><small>a 15 minutos</small></div>
+          <div class="chip"><b>Playas de Kuta y Tanjung Aan</b><small>a pie</small></div>
+          <div class="chip"><b>Bali</b><small>media hora de vuelo</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 · LA REFERENCIA DE AL LADO -->
+<section class="band">
+  <div class="wrap">
+    <span class="eyebrow centro rise">La referencia de al lado</span>
+    <div class="measure rise" style="margin-top:1.2rem">
+      <h2>Bali es el mercado maduro. Lombok todavía no.</h2>
+      <p class="lead sub">Esa es toda la tesis: misma zona, mismo mar, aeropuerto internacional propio,
+        y una diferencia de escala que se ve en un solo número.</p>
+    </div>
+
+    <div class="vs claro">
+      <div class="vsc">
+        <span class="tag">Bali · 2025</span>
+        <span class="v num" data-count="6948754">6.948.754</span>
+        <span class="k">llegadas de turistas <b>internacionales</b> en el año, un 9,7% más que en 2024<sup class="ref">3</sup></span>
+        <span class="vsbar" style="--w:100%"><i></i></span>
+      </div>
+      <div class="vsc now">
+        <span class="tag">Lombok y Sumbawa · ene–oct 2025</span>
+        <span class="v num" data-count="2090000">2.090.000</span>
+        <span class="k">visitas <b>totales</b>, extranjeras y nacionales, en diez meses<sup class="ref">1</sup></span>
+        <span class="vsbar" style="--w:30%"><i></i></span>
+      </div>
+    </div>
+    <figure class="zona-video rise">
+      <video muted loop playsinline preload="none" poster="img/zona.jpg" aria-label="Imágenes del sur de Lombok"
+             data-mp4="video/zona.mp4" data-webm="video/zona.webm" id="zonaVideo"></video>
+      <figcaption>El sur de Lombok, desde las villas de Marlaca</figcaption>
+    </figure>
+    <p class="vsnote claro">Los dos números no miden lo mismo: el de Bali cuenta solo extranjeros en doce
+      meses y el de Lombok cuenta todas las visitas en diez. Sirven para ver la diferencia de escala
+      entre una isla madura y una que todavía no lo es, no para dividir uno por el otro.</p>
+  </div>
+</section>
+
+<!-- 10 · LOS HITOS -->
+<section class="band" style="background:var(--surface)">
+  <div class="wrap">
+    <span class="eyebrow centro rise">Lo que cambió en cuatro años</span>
+    <ol class="tline claro rise" style="margin-top:1.8rem">
+      <li><span class="y">2022</span><span class="t">Se corre el <b>primer MotoGP</b> en el circuito de
+        Mandalika, a quince minutos de Kuta.<sup class="ref">4</sup></span></li>
+      <li><span class="y">2025</span><span class="t">El Gran Premio bate su récord de público y mueve
+        <b>289 millones de dólares</b> en un fin de semana.<sup class="ref">2</sup></span></li>
+      <li><span class="y">2026</span><span class="t">Lion Air abre el <b>vuelo directo Lombok–Kuala
+        Lumpur</b>, que conecta la isla con más de cuarenta ciudades sin pasar por Bali.<sup class="ref">5</sup></span></li>
+      <li><span class="y">Hoy</span><span class="t">Marlaca construye y opera en Kuta desde antes de todo
+        esto. <b>Cuatro etapas</b>, dos ya entregadas y en operación.</span></li>
+    </ol>
+
+    <p class="srcs">
+      <b>1.</b> Dinas Pariwisata de Nusa Tenggara Barat, diciembre de 2025 · <b>2.</b> The Jakarta Post,
+      «Mandalika MotoGP draws record crowd, $289m economic boost», octubre de 2025 · <b>3.</b> BPS
+      Provinsi Bali, informe de turismo de diciembre de 2025, publicado en febrero de 2026 ·
+      <b>4.</b> Mandalika International Street Circuit · <b>5.</b> Lion Air, junio de 2026.<br>
+      Los datos describen el destino y su infraestructura. No son una proyección de resultados de
+      ninguna inversión ni una promesa de rentabilidad.
+    </p>
+  </div>
+</section>
+
+<!-- 11 · TODO EL CIRCUITO -->
+<section class="band" id="circuito">
+  <div class="wrap">
+    <span class="eyebrow">Todo el circuito, resuelto</span>
+    <div class="measure" style="margin-top:1.2rem">
+      <h2>Invertir a 12.000 km funciona si alguien conoce la zona desde dentro.</h2>
+      <p class="lead sub">Marlaca no comercializa proyectos de terceros: encuentra el terreno, diseña,
+        construye, entrega y opera. Toda la cadena en una sola mano, en la isla.</p>
+    </div>
+    <div class="circuit">
+      <article class="cc">
+        <div class="cc-img"><img class="slot-img wipe" src="img/circuito-zona.jpg" alt="Kuta, Lombok" data-slot="img/circuito-zona.jpg — paisaje o calle de Kuta" loading="lazy" decoding="async"></div>
+        <span class="tag">Conocimiento de la zona</span>
+        <h3>Vivimos allí</h3>
+        <p>Lucía lleva once años en Lombok. Sabe dónde se alquila, dónde no, y con quién se construye.</p>
+      </article>
+      <article class="cc">
+        <div class="cc-img"><img class="slot-img wipe" src="img/circuito-obra.jpg" alt="Obra de Marlaca" data-slot="img/circuito-obra.jpg — obra o detalle constructivo" loading="lazy" decoding="async"></div>
+        <span class="tag">Construcción</span>
+        <h3>Constructora propia</h3>
+        <p>Equipo indonesio formado en Australia, con un arquitecto y constructoras aliadas con años de
+          experiencia en la isla.</p>
+      </article>
+      <article class="cc">
+        <div class="cc-img"><img class="slot-img wipe" src="img/circuito-operacion.jpg" alt="Equipo de operación de Marlaca" data-slot="img/circuito-operacion.jpg — desayuno, limpieza o equipo (shooting villa Valentina)" loading="lazy" decoding="async"></div>
+        <span class="tag">Operación</span>
+        <h3>21 personas en la isla</h3>
+        <p>Recepción, limpieza, mantenimiento 24 h y gestión de canales. La villa trabaja todo el año.</p>
+      </article>
+    </div>
+    <p class="swipe-hint" aria-hidden="true">Desliza para ver más →</p>
+  </div>
+</section>
+
+<!-- 12 · QUIÉN ESTÁ DETRÁS -->
+<section class="band dark" id="equipo">
+  <div class="wrap">
+    <div class="about">
+      <div class="about-img wipe"><img class="slot-img" src="img/lucia.jpg" alt="Lucía Miranda, fundadora de Marlaca" data-slot="img/lucia.jpg" loading="lazy" decoding="async"><span class="about-cap">Lucía Miranda · Kuta, Lombok</span></div>
+      <div class="about-copy">
+        <span class="eyebrow">Quién está detrás</span>
+        <h2 style="margin-top:1rem">Lucía Miranda, fundadora. Y lo que ya está construido.</h2>
+        <p class="lead sub">Hispanohablante, once años en Lombok y la persona con la que hablas en la
+          llamada. Marlaca no es un fondo ni una comercializadora: es una desarrolladora con constructora
+          propia, oficina en Kuta y 21 personas en operación.</p>
+        <ul class="miles">
+          <li><span class="p">Marlaca I</span><span class="d">Kuta · villas en operación</span><span class="s live">En operación</span></li>
+          <li><span class="p">Marlaca II</span><span class="d">Kuta · entregado en 2026</span><span class="s live">En operación</span></li>
+          <li><span class="p">Marlaca III</span><span class="d">7 villas · entrega diciembre 2026</span><span class="s">Vendido</span></li>
+          <li><span class="p">Marlaca IV</span><span class="d">20 villas · entrega 2027</span><span class="s">En venta</span></li>
+        </ul>
+        <a class="respaldo" href="https://www.marlacarealestate.com/es" target="_blank" rel="noopener">
+          <span class="respaldo-by">Una línea de</span>
+          <img src="img/marlaca-real-estate-logo.webp" alt="Marlaca Villas Lombok" width="720" height="167" loading="lazy" decoding="async">
+          <span class="respaldo-url">marlacarealestate.com <span aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12b · CÓMO SE PROTEGE TU DINERO -->
+<section class="band" id="proteccion">
+  <div class="wrap">
+    <div class="centrado measure rise">
+      <span class="eyebrow centro">Invierte con confianza</span>
+      <h2 class="display" style="margin-top:1.3rem">Cómo se <span class="hl">protege tu dinero</span>.</h2>
+      <p class="lead sub">Invertir a 12.000 km da vértigo, y con razón. Esto es lo que hay del otro lado.</p>
+    </div>
+
+    <div class="escudos rise">
+      <article class="esc">
+        <span class="ic" aria-hidden="true">◆</span>
+        <h3>Quien construye es quien responde</h3>
+        <p>Marlaca no comercializa proyectos de terceros. Encuentra el terreno, diseña, construye, entrega
+          y opera con constructora propia y oficina en Kuta. No hay un intermediario al que reclamarle.</p>
+      </article>
+      <article class="esc">
+        <span class="ic" aria-hidden="true">◆</span>
+        <h3>Toda la documentación, antes de firmar</h3>
+        <p>La estructura de compra y el contrato se repasan contigo antes de cualquier firma, y te
+          recomendamos revisarlos con un asesor legal independiente. Si algo no te cuadra, no firmas.</p>
+      </article>
+      <article class="esc">
+        <span class="ic" aria-hidden="true">◆</span>
+        <h3>Marlaca cobra solo si tu villa genera</h3>
+        <p>El fee de gestión es el 20% del GOP, es decir de lo que queda después de operar. No es una cuota
+          fija: si la villa no produce, Marlaca tampoco cobra. Está escrito en el contrato.</p>
+      </article>
+      <article class="esc">
+        <span class="ic" aria-hidden="true">◆</span>
+        <h3>Cuatro etapas construidas y entregadas</h3>
+        <p>Marlaca I y II ya están entregadas y operando, Marlaca III se entrega en diciembre de 2026 y
+          Marlaca IV en 2027. No es el primer proyecto: es el cuarto.</p>
+      </article>
+    </div>
+    <p class="swipe-hint" aria-hidden="true">Desliza para ver más →</p>
+  </div>
+</section>
+
+<!-- 12c · INVERTIMOS EN NUESTRO PROPIO NEGOCIO -->
+<section class="band" id="propio" style="background:var(--surface)">
+  <div class="wrap">
+    <div class="piel rise">
+      <div>
+        <span class="eyebrow">El mejor aval</span>
+        <h2 style="margin-top:1.2rem;max-width:20ch">Invertimos en nuestro propio negocio.</h2>
+        <p class="lead sub">La prueba más honesta de que una desarrolladora cree en lo que vende no es lo
+          que dice en una llamada: es cuánto de su propio dinero deja dentro. Marlaca no se queda solo con
+          la gestión. Se queda con unidades.</p>
+      </div>
+      <div class="piel-caja">
+        <span class="gr">1 unidad</span>
+        <p><b>como mínimo, en cada desarrollo.</b> Marlaca conserva al menos una villa propia en cada etapa
+          que construye, y la opera dentro de la misma cartera que la tuya.</p>
+        <p>Eso significa que el equipo que fija los precios, elige los canales y decide el mantenimiento
+          está apostando su propio capital a las mismas decisiones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 · RESEÑAS -->
+<section class="band" id="resenas">
+  <div class="wrap">
+    <div class="centrado measure rise">
+      <span class="eyebrow centro">Reseñas</span>
+      <h2 style="margin-top:1.3rem">Lo que dicen los huéspedes.</h2>
+      <p class="lead sub">No tenemos testimonios de inversores todavía. Lo que sí hay son opiniones de
+        quienes se alojaron, publicadas en las plataformas y verificables por cualquiera.</p>
+    </div>
+
+    <div class="sellos rise">
+      <div class="sello"><span class="nota">9,3</span><span class="t">Booking.com<small>Fantástico · 156 opiniones</small></span></div>
+      <div class="sello"><span class="nota">4,8</span><span class="t">Tripadvisor<small>N.º 1 de 14 en Pujut</small></span></div>
+      <div class="sello"><span class="nota">21</span><span class="t">Personas en la isla<small>Operación propia todo el año</small></span></div>
+    </div>
+
+    <div class="res-deck">
+    <div class="plataformas rise">
+      <div class="plat">
+        <span class="quien">Booking.com</span>
+        <span class="nota">9,3 <small style="font-size:.4em;color:var(--muted)">/ 10</small></span>
+        <span class="det">Fantástico · 156 opiniones</span>
+        <a href="https://www.booking.com/" target="_blank" rel="noopener">Ver la ficha original →</a>
+      </div>
+      <div class="plat">
+        <span class="quien">Tripadvisor</span>
+        <span class="nota">4,8 <small style="font-size:.4em;color:var(--muted)">/ 5</small></span>
+        <span class="det">Excelente · 8 opiniones · N.º 1 de 14 B&amp;B y hostales en Pujut</span>
+        <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener">Ver la ficha original →</a>
+      </div>
+    </div>
+
+    <div class="opiniones rise">
+      <figure class="op">
+        <span class="comilla" aria-hidden="true">“</span>
+        <blockquote>«La villa es de ensueño, amplia, limpia, su personal atento y siempre online vía
+          WhatsApp, te facilitan todo… es un alojamiento que RECOMIENDO».</blockquote>
+        <figcaption><b>Jordi</b>España · Booking.com</figcaption>
+      </figure>
+      <figure class="op">
+        <span class="comilla" aria-hidden="true">“</span>
+        <blockquote>«La habitación es espectacular y el trato del personal cercano y profesional. Dan
+          facilidades para todo: moto, desayuno…».</blockquote>
+        <figcaption><b>Imanol</b>España · Booking.com</figcaption>
+      </figure>
+      <figure class="op">
+        <span class="comilla" aria-hidden="true">“</span>
+        <blockquote>«Villa fantásticamente bonita, muy grande, cómoda y limpia. Cocina estupenda, tres
+          dormitorios amplios y dos baños. Zona exterior muy agradable, con piscina limpia. Una
+          recomendación absoluta».</blockquote>
+        <p class="trad">Traducida automáticamente por Tripadvisor desde su idioma original.</p>
+        <figcaption><b>Dieter B.</b>Tripadvisor · febrero de 2025</figcaption>
+      </figure>
+    </div>
+    </div>
+    <p class="swipe-hint" aria-hidden="true">Desliza para ver más →</p>
+
+    <p class="pie">Opiniones publicadas por los huéspedes en Booking.com y Tripadvisor sobre las villas
+      de Marlaca en Lombok. Reproducidas tal como aparecen en cada plataforma.</p>
+  </div>
+</section>
+
+<!-- 14 · LA REGLA -->
+<section class="band" style="background:var(--surface)">
+  <div class="wrap">
+    <div class="strip">
+      <span class="eyebrow" style="padding-top:.35rem">Nuestra regla</span>
+      <p>El 14% es un objetivo, no una promesa. <span>Sale de cómo opera hoy nuestra cartera en Kuta, y en la
+        llamada lo abrimos entero: ingresos, costes, fee y lo que queda, con sus supuestos delante. Lo que no
+        vas a encontrar aquí es una revalorización prometida ni un número sin la cuenta que lo sostiene.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 15 · PREGUNTAS -->
+<section class="band" id="faq">
+  <div class="wrap">
+    <span class="eyebrow">Antes de la llamada</span>
+    <h2 style="margin-top:1.2rem;max-width:20ch">Lo que pregunta todo inversor.</h2>
+    <div class="faq">
+      <details>
+        <summary>¿Qué rentabilidad puedo esperar?</summary>
+        <p>El objetivo que publicamos es del 14% anual, y la calculadora de esta página lo aplica sobre el
+          capital que elijas. Es un objetivo basado en cómo opera hoy la cartera que gestionamos en Kuta, no
+          una garantía. En la llamada repasamos la operación real de una villa durante un ejercicio completo,
+          con cada descuento nombrado, para que veas de dónde sale ese número y con qué supuestos.</p>
+      </details>
+      <details>
+        <summary>¿Cómo se compra desde España?</summary>
+        <p>Te explicamos la estructura completa de la operación y la documentación antes de que firmes
+          nada, y te recomendamos que la revises con asesoramiento legal independiente. Es el paso donde
+          más acompañamos.</p>
+      </details>
+      <details>
+        <summary>¿Quién se ocupa de la villa mientras yo estoy en España?</summary>
+        <p>El equipo de Marlaca en la isla: 21 personas entre recepción, limpieza, mantenimiento 24 h y
+          gestión de canales. Tú no tratas con huéspedes ni con proveedores.</p>
+      </details>
+      <details>
+        <summary>¿Cómo y cuándo cobro?</summary>
+        <p>Recibes una liquidación en euros con el detalle de la explotación de tu villa: lo que facturó,
+          lo que costó operarla y lo que queda para ti.</p>
+      </details>
+      <details>
+        <summary>¿Puedo vender la villa más adelante?</summary>
+        <p>Es un activo de horizonte largo. Hoy no existe un mercado secundario establecido en la isla, así
+          que no es una inversión para entrar y salir en dos o tres años. Preferimos decirlo antes que
+          después.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto tarda en entregarse?</summary>
+        <p>Alrededor de un año desde la compra. Marlaca III se entrega en diciembre de 2026 y Marlaca IV
+          en 2027. Los plazos y las condiciones de entrega van por escrito en el contrato.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 16 · CIERRE -->
+<section class="cta-img">
+  <img class="slot-img" src="img/cierre.jpg" alt="Villa de Marlaca al atardecer" data-slot="img/cierre.jpg — piscina o exterior, horizontal" loading="lazy" decoding="async">
+  <div class="hero-shade"></div>
+  <div class="wrap hero-copy">
+    <span class="eyebrow eyebrow-w">Siguiente paso</span>
+    <h2 style="color:var(--on-deep)">30 minutos con Lucía, y sales sabiendo si esto es para ti.</h2>
+    <p class="lead" style="color:var(--on-deep-muted);max-width:52ch">Tres preguntas de un clic y tus
+      datos. Un minuto. Te escribimos por WhatsApp para concertar la llamada el día que mejor te venga.</p>
+    <div class="hero-cta"><a class="btn" href="agendar/">Reserva tu llamada gratuita</a></div>
+  </div>
+</section>
+
+<a class="btn flota" id="flota" href="agendar/">Reserva tu llamada gratuita</a>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="pie-grid">
+      <div>
+        <div class="marca-pie"><b>Marlaca</b><i>Stays</i></div>
+        <p style="margin-top:.7rem">Villas en operación en Kuta, Lombok.<br>Construimos, entregamos y operamos.</p>
+        <div class="redes">
+          <a href="https://www.instagram.com/marlacavillaslombok/" target="_blank" rel="noopener" aria-label="Instagram de Marlaca" title="Instagram">
+            <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/6281937535573" target="_blank" rel="noopener" aria-label="WhatsApp de Marlaca" title="WhatsApp">
+            <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="currentColor"><path d="M12 2.2a9.8 9.8 0 0 0-8.4 14.8L2.2 21.8l4.9-1.3A9.8 9.8 0 1 0 12 2.2Zm0 17.8a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.6.3 2.7 2.7 0 0 0-.8 2c0 1.2.9 2.3 1 2.5.1.2 1.7 2.6 4.1 3.6 1.5.7 2.1.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3Z"/></svg>
+          </a>
+          <a href="mailto:lucia@marlacarealestate.com" aria-label="Escribir un mail a Marlaca" title="Mail">
+            <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <a href="mailto:lucia@marlacarealestate.com">lucia@marlacarealestate.com</a>
+        <a href="https://wa.me/6281937535573" target="_blank" rel="noopener" title="Escribir por WhatsApp">WhatsApp <span style="white-space:nowrap">+62 819-3753-5573</span></a>
+        <a href="https://www.instagram.com/marlacavillaslombok/" target="_blank" rel="noopener">@marlacavillaslombok</a>
+        <a href="agendar/">Reserva tu llamada gratuita</a>
+      </div>
+
+      <div>
+        <h4>Oficinas</h4>
+        <p><b style="color:var(--ink);font-weight:500">Lombok</b><br>Kuta · Nusa Tenggara Barat · Indonesia
+          <i class="pendiente">dirección por confirmar</i></p>
+        <p style="margin-top:.7rem"><b style="color:var(--ink);font-weight:500">España</b><br>
+          <i class="pendiente">dirección por confirmar</i></p>
+      </div>
+
+      <div>
+        <h4>Valoraciones</h4>
+        <div class="sellos-pie">
+          <a class="sp" href="https://www.booking.com/" target="_blank" rel="noopener"><b>9,3</b><span>/10 Booking</span></a>
+          <a class="sp" href="https://www.airbnb.com/rooms/48097678" target="_blank" rel="noopener"><b>4,8</b><span>/5 Airbnb</span></a>
+          <a class="sp" href="https://www.tripadvisor.com/" target="_blank" rel="noopener"><b>4,8</b><span>/5 Tripadvisor</span></a>
+        </div>
+        <p style="margin-top:.8rem;font-size:.76rem">Publicadas por los huéspedes en cada plataforma.</p>
+      </div>
+    </div>
+
+    Precios sujetos a disponibilidad.<br>
+    <span class="legal">Las cifras de rentabilidad que aparecen en esta web son un objetivo basado en la
+      cartera que Marlaca opera hoy en Kuta y no garantizan resultados futuros. Invertir en inmuebles en
+      el extranjero conlleva riesgos de tipo de cambio, regulatorios y de liquidez, y el capital invertido
+      puede perderse en parte o en su totalidad. La forma de tenencia y la estructura de la participación
+      se detallan en la documentación contractual, que se entrega antes de cualquier firma. Marlaca no
+      presta asesoramiento fiscal ni de inversión: recomendamos revisar la operación con asesor propio.
+      Los datos de ocupación corresponden a Villa Nina en el ejercicio 2025 y los de mercado a las fuentes
+      citadas en esta página.</span>
+  </div>
+</footer>
+
+<script>
+/* Pasa los UTM y el origen de la landing al onboarding, para medir de qué campaña viene cada lead */
+(function(){
+  var qs = new URLSearchParams(location.search);
+  document.querySelectorAll('a[href^="agendar/"]').forEach(function(a){
+    var u = new URL(a.getAttribute('href'), location.href);
+    qs.forEach(function(v,k){ if(!u.searchParams.has(k)) u.searchParams.set(k, v); });
+    u.searchParams.set('from', 'landing');
+    a.setAttribute('href', 'agendar/' + u.search);
+  });
+  /* Mientras falte una foto, el hueco se ve marcado en lugar de romperse */
+  function marcar(img){
+    /* El retrato de Lucía todavía no existe: en vez de dejar un hueco marcado,
+       el bloque se reacomoda a una sola columna y el texto ocupa todo el ancho.
+       Cuando el archivo img/lucia.jpg exista, la foto vuelve sola a su lugar. */
+    var box = img.closest('.about-img');
+    if(box){
+      var grid = box.closest('.about');
+      box.remove();
+      if(grid) grid.style.gridTemplateColumns = '1fr';
+      return;
+    }
+    var d = document.createElement('div');
+    d.className = 'slot-empty';
+    d.textContent = 'FALTA ' + (img.getAttribute('data-slot') || img.getAttribute('src'));
+    img.replaceWith(d);
+  }
+  document.querySelectorAll('img.slot-img').forEach(function(img){
+    if(img.complete && img.naturalWidth === 0) marcar(img);
+    else img.addEventListener('error', function(){ marcar(img); });
+  });
+})();
+
+/* --- v6: video de fondo solo donde tiene sentido --- */
+(function(){
+  var v = document.getElementById('heroVideo');
+  if(!v) return;
+  /* El video se salta solo donde molesta: pantallas táctiles chicas, ahorro de
+     datos o quien pidió menos movimiento. Un panel angosto de escritorio sí lo ve. */
+  var quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var dedo = window.matchMedia('(pointer:coarse)').matches;
+  var chico = window.matchMedia('(max-width:900px)').matches;
+  var con = navigator.connection || {};
+  var ahorro = con.saveData === true || /(^|-)2g$/.test(con.effectiveType || '');
+  if(quieto || ahorro || (dedo && chico)) return;
+  ['webm','mp4'].forEach(function(t){
+    var u = v.getAttribute('data-' + t);
+    if(!u) return;
+    var s = document.createElement('source');
+    s.src = u; s.type = 'video/' + t; v.appendChild(s);
+  });
+  v.addEventListener('playing', function(){ v.classList.add('on'); });
+  v.load();
+
+  /* Algunos navegadores bloquean el arranque automático dentro de un iframe.
+     Si pasa, se vuelve a intentar en cuanto el visitante toca o mueve la página. */
+  function arranca(){
+    var p = v.play();
+    if(p && p.catch) p.catch(function(){});
+  }
+  arranca();
+  var reintentos = ['pointerdown','touchstart','keydown','scroll','pointermove'];
+  function otraVez(){
+    if(v.paused) arranca();
+    if(!v.paused) reintentos.forEach(function(e){ window.removeEventListener(e, otraVez); });
+  }
+  reintentos.forEach(function(e){ window.addEventListener(e, otraVez, {passive:true}); });
+})();
+
+/* --- v6: parallax del hero --- */
+(function(){
+  var m = document.getElementById('heroMedia');
+  if(!m || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var pedido = false;
+  function pinta(){
+    pedido = false;
+    var y = window.scrollY || 0;
+    if(y > window.innerHeight) return;
+    m.style.transform = 'translate3d(0,' + (y * 0.28).toFixed(1) + 'px,0)';
+  }
+  window.addEventListener('scroll', function(){
+    if(!pedido){ pedido = true; requestAnimationFrame(pinta); }
+  }, {passive:true});
+  pinta();
+})();
+
+/* --- v6: los bloques aparecen al entrar en pantalla --- */
+(function(){
+  var els = document.querySelectorAll('.rise');
+  if(!els.length) return;
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){ e.classList.add('seen'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(filas){
+    filas.forEach(function(f){
+      if(f.isIntersecting){ f.target.classList.add('seen'); io.unobserve(f.target); }
+    });
+  }, {rootMargin:'0px 0px -12% 0px', threshold:0.05});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+/* --- v7: barra de progreso de lectura --- */
+(function(){
+  var b = document.createElement('div');
+  b.className = 'prog'; document.body.appendChild(b);
+  var nav = document.querySelector('.nav');
+  var pedido = false;
+  function pinta(){
+    pedido = false;
+    var d = document.documentElement;
+    var alto = d.scrollHeight - window.innerHeight;
+    var y = window.scrollY || 0;
+    b.style.width = (alto > 0 ? Math.min(100, y / alto * 100) : 0) + '%';
+    if(nav) nav.classList.toggle('min', y > 120);
+  }
+  window.addEventListener('scroll', function(){
+    if(!pedido){ pedido = true; requestAnimationFrame(pinta); }
+  }, {passive:true});
+  pinta();
+})();
+
+/* --- v7: los números cuentan hasta su valor --- */
+(function(){
+  var nums = document.querySelectorAll('[data-count]');
+  if(!nums.length) return;
+  var quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fmt = function(n, dec){
+    try { return n.toLocaleString('es-ES', {minimumFractionDigits:dec, maximumFractionDigits:dec}); }
+    catch(e){ return dec ? n.toFixed(dec) : String(Math.round(n)); }
+  };
+  function pon(el, v){
+    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+    el.textContent = (el.getAttribute('data-pre') || '') + fmt(v, dec) + (el.getAttribute('data-suf') || '');
+  }
+  function corre(el){
+    var fin = parseFloat(el.getAttribute('data-count'));
+    if(isNaN(fin)) return;
+    if(quieto){ pon(el, fin); return; }
+    var t0 = null, ms = 1100;
+    function paso(t){
+      if(t0 === null) t0 = t;
+      var p = Math.min(1, (t - t0) / ms);
+      var e = 1 - Math.pow(1 - p, 3);
+      pon(el, fin * e);
+      if(p < 1) requestAnimationFrame(paso); else pon(el, fin);
+    }
+    requestAnimationFrame(paso);
+  }
+  if(!('IntersectionObserver' in window)){
+    nums.forEach(function(el){ pon(el, parseFloat(el.getAttribute('data-count'))); });
+    return;
+  }
+  nums.forEach(function(el){ pon(el, 0); });
+  /* dentro de un carrusel horizontal las tarjetas de la derecha nunca
+     "entran" en pantalla hasta deslizarlas y asomaban en 0: se observa el
+     carrusel entero y cuentan todas juntas */
+  var CARRUSEL = '.mkt,.options,.circuit,.opiniones,.escudos';
+  var io = new IntersectionObserver(function(filas){
+    filas.forEach(function(f){
+      if(!f.isIntersecting) return;
+      var grupo = f.target.matches(CARRUSEL) ? f.target.querySelectorAll('[data-count]') : [f.target];
+      Array.prototype.forEach.call(grupo, corre);
+      io.unobserve(f.target);
+    });
+  }, {threshold:0.4});
+  var vistos = [];
+  nums.forEach(function(el){
+    var t = el.closest(CARRUSEL) || el;
+    if(vistos.indexOf(t) === -1){ vistos.push(t); io.observe(t); }
+  });
+})();
+
+/* --- v7: barridos, resaltados y reglas que se dibujan --- */
+(function(){
+  var els = document.querySelectorAll('.wipe,.hl,.facts,.vs,.mkt');
+  if(!els.length) return;
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){ e.classList.add('seen'); });
+    return;
+  }
+  /* el barrido usa clip-path, que deja la caja en cero para el observador:
+     por eso se vigila al padre, que no está recortado. */
+  var mapa = new Map();
+  var io = new IntersectionObserver(function(filas){
+    filas.forEach(function(f){
+      if(!f.isIntersecting) return;
+      (mapa.get(f.target) || []).forEach(function(e){ e.classList.add('seen'); });
+      mapa.delete(f.target);
+      io.unobserve(f.target);
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.12});
+  els.forEach(function(e){
+    var t = e.classList.contains('wipe') ? (e.parentElement || e) : e;
+    if(!mapa.has(t)){ mapa.set(t, []); io.observe(t); }
+    mapa.get(t).push(e);
+  });
+})();
+
+/* --- v8: la foto de la isla también se mueve --- */
+(function(){
+  var m = document.getElementById('pbMedia');
+  if(!m || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var banda = m.parentElement, pedido = false;
+  function pinta(){
+    pedido = false;
+    var r = banda.getBoundingClientRect();
+    if(r.bottom < 0 || r.top > window.innerHeight) return;
+    var avance = (window.innerHeight - r.top) / (window.innerHeight + r.height);
+    m.style.transform = 'translate3d(0,' + ((avance - 0.5) * 56).toFixed(1) + 'px,0)';
+  }
+  window.addEventListener('scroll', function(){
+    if(!pedido){ pedido = true; requestAnimationFrame(pinta); }
+  }, {passive:true});
+  window.addEventListener('resize', pinta, {passive:true});
+  pinta();
+})();
+
+/* --- v9: el menú marca en qué sección estás --- */
+(function(){
+  var enlaces = [].slice.call(document.querySelectorAll('.menu a[href^="#"]'));
+  if(!enlaces.length || !('IntersectionObserver' in window)) return;
+  var mapa = new Map();
+  enlaces.forEach(function(a){
+    var sec = document.querySelector(a.getAttribute('href'));
+    if(sec) mapa.set(sec, a);
+  });
+  var visibles = new Set();
+  function marca(){
+    var elegida = null;
+    mapa.forEach(function(a, sec){
+      if(!visibles.has(sec)) return;
+      if(!elegida || sec.getBoundingClientRect().top < elegida.getBoundingClientRect().top) elegida = sec;
+    });
+    enlaces.forEach(function(a){ a.classList.remove('aqui'); });
+    if(elegida) mapa.get(elegida).classList.add('aqui');
+  }
+  var io = new IntersectionObserver(function(filas){
+    filas.forEach(function(f){
+      if(f.isIntersecting) visibles.add(f.target); else visibles.delete(f.target);
+    });
+    marca();
+  }, {rootMargin:'-20% 0px -55% 0px', threshold:0});
+  mapa.forEach(function(a, sec){ io.observe(sec); });
+})();
+
+/* --- v10: el navegador de pasos sigue al scroll y responde al clic --- */
+(function(){
+  var botones = [].slice.call(document.querySelectorAll('.pasos-nav button'));
+  var pasos = botones.map(function(b){ return document.getElementById(b.getAttribute('data-paso')); });
+  if(!botones.length || pasos.some(function(p){ return !p; })) return;
+
+  botones.forEach(function(b, i){
+    b.addEventListener('click', function(){
+      pasos[i].scrollIntoView({behavior:'smooth', block:'center'});
+    });
+  });
+
+  if(!('IntersectionObserver' in window)) return;
+  var visibles = new Set();
+  function marca(){
+    var elegido = -1, mejor = Infinity;
+    pasos.forEach(function(p, i){
+      if(!visibles.has(p)) return;
+      var d = Math.abs(p.getBoundingClientRect().top + p.offsetHeight/2 - window.innerHeight/2);
+      if(d < mejor){ mejor = d; elegido = i; }
+    });
+    botones.forEach(function(b, i){ b.classList.toggle('aqui', i === elegido); });
+  }
+  var io = new IntersectionObserver(function(filas){
+    filas.forEach(function(f){ f.isIntersecting ? visibles.add(f.target) : visibles.delete(f.target); });
+    marca();
+  }, {threshold:[0, .3, .6]});
+  pasos.forEach(function(p){ io.observe(p); });
+  window.addEventListener('scroll', marca, {passive:true});
+})();
+
+/* --- v11: la calculadora ---
+   TASA es el único número que hay que tocar si Marlaca cambia su objetivo
+   de rentabilidad anual. Está publicado hoy como 14% en su web. */
+(function(){
+  var TASA = 0.14;
+
+  var rango = document.getElementById('c-rango');
+  if(!rango) return;
+  var cap = document.getElementById('c-cap'),
+      mes = document.getElementById('c-mes'),
+      anio = document.getElementById('c-anio'),
+      diez = document.getElementById('c-diez'),
+      rec  = document.getElementById('c-rec'),
+      tasa = document.getElementById('c-tasa'),
+      refs = [].slice.call(document.querySelectorAll('#c-refs button'));
+
+  function eur(n, dec){
+    try { return n.toLocaleString('es-ES',{minimumFractionDigits:dec||0,maximumFractionDigits:dec||0}) + ' €'; }
+    catch(e){ return Math.round(n) + ' €'; }
+  }
+  function pinta(){
+    var v = parseFloat(rango.value);
+    var anual = v * TASA;
+    cap.textContent  = eur(v);
+    mes.textContent  = Math.round(anual/12).toLocaleString('es-ES');
+    anio.textContent = eur(anual);
+    diez.textContent = eur(anual*10);
+    rec.textContent  = '~' + (1/TASA).toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1}) + ' años';
+    var p = (v - rango.min) / (rango.max - rango.min) * 100;
+    rango.style.setProperty('--p', p.toFixed(1) + '%');
+    refs.forEach(function(b){ b.classList.toggle('aqui', parseFloat(b.getAttribute('data-v')) === v); });
+  }
+  if(tasa) tasa.textContent = (TASA*100).toLocaleString('es-ES') + '%';
+  rango.addEventListener('input', pinta);
+  refs.forEach(function(b){
+    b.addEventListener('click', function(){ rango.value = b.getAttribute('data-v'); pinta(); });
+  });
+  pinta();
+})();
+
+/* --- v11: el botón flotante aparece pasado el hero --- */
+(function(){
+  var f = document.getElementById('flota');
+  if(!f) return;
+  var pedido = false;
+  function mira(){
+    pedido = false;
+    var cerca = document.querySelector('.cta-img');
+    var fin = cerca ? cerca.getBoundingClientRect().top < window.innerHeight : false;
+    f.classList.toggle('on', window.scrollY > window.innerHeight * 0.9 && !fin);
+  }
+  window.addEventListener('scroll', function(){
+    if(!pedido){ pedido = true; requestAnimationFrame(mira); }
+  }, {passive:true});
+  mira();
+})();
+
+/* --- v12: el menú de móvil --- */
+(function(){
+  var b = document.getElementById('hamb'), p = document.getElementById('panel'), nav = document.querySelector('.nav');
+  if(!b || !p || !nav) return;
+  function coloca(){ p.style.top = nav.getBoundingClientRect().bottom + 'px'; }
+  function abre(v){
+    b.setAttribute('aria-expanded', v ? 'true' : 'false');
+    b.setAttribute('aria-label', v ? 'Cerrar el menú' : 'Abrir el menú');
+    p.classList.toggle('on', v);
+    if(v) coloca();
+  }
+  b.addEventListener('click', function(){ abre(b.getAttribute('aria-expanded') !== 'true'); });
+  p.addEventListener('click', function(e){ if(e.target.tagName === 'A') abre(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') abre(false); });
+  window.addEventListener('resize', function(){ if(window.innerWidth > 920) abre(false); else coloca(); }, {passive:true});
+  window.addEventListener('scroll', function(){ if(p.classList.contains('on')) coloca(); }, {passive:true});
+})();
+
+/* --- v12: el vídeo de la zona arranca al entrar en pantalla --- */
+(function(){
+  var v = document.getElementById('zonaVideo');
+  if(!v) return;
+  var quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var con = navigator.connection || {};
+  if(quieto || con.saveData === true) return;   /* queda el póster */
+  var cargado = false;
+  function carga(){
+    if(cargado) return; cargado = true;
+    ['webm','mp4'].forEach(function(t){
+      var u = v.getAttribute('data-' + t); if(!u) return;
+      var so = document.createElement('source'); so.src = u; so.type = 'video/' + t; v.appendChild(so);
+    });
+    v.load();
+    var pr = v.play(); if(pr && pr.catch) pr.catch(function(){});
+  }
+  if(!('IntersectionObserver' in window)){ carga(); return; }
+  var io = new IntersectionObserver(function(f){
+    f.forEach(function(x){ if(x.isIntersecting){ carga(); io.unobserve(x.target); } });
+  }, {rootMargin:'200px'});
+  io.observe(v);
+})();
+</script>
+</body>
+</html>
