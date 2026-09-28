@@ -694,7 +694,18 @@ var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycby7C719ZkZGymDN-Ei
     (jobs.length ? Promise.allSettled(jobs) : Promise.resolve([{status:'fulfilled'}])).then(function(res){
       var okAny = res.some(function(x){ return x.status === 'fulfilled'; });
       if(!okAny) throw new Error('sin destino');
-      if(window.fbq){ fbq('track', 'Lead', {content_name:'llamada-lucia', content_category:q.route, value:q.p, currency:'EUR'}); }
+      var eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+      var custom = {content_name:'llamada-lucia', content_category:q.route, value:q.p, currency:'EUR'};
+      if(window.fbq){ fbq('track', 'Lead', custom, {eventID: eventId}); }
+      var cookie = function(k){ var m = document.cookie.match(new RegExp('(?:^|; )' + k + '=([^;]+)')); return m ? decodeURIComponent(m[1]) : undefined; };
+      fetch('https://indu-otfj.onrender.com/marlaca/capi', {
+        method:'POST', headers:{'Content-Type':'application/json'}, keepalive:true,
+        body: JSON.stringify({
+          event_name:'Lead', event_id:eventId, event_source_url:location.href,
+          user_data:{ email:m, phone:prefijo+w, first_name:n.split(' ')[0], fbp:cookie('_fbp'), fbc:cookie('_fbc') },
+          custom_data:custom
+        })
+      }).catch(function(){});
       window.location.href = '../gracias/?r=' + q.code;
     }).catch(function(){
       err.textContent = 'No se pudo enviar. Revisa tu conexión y vuelve a intentarlo.';
