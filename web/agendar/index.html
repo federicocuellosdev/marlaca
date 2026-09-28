@@ -690,6 +690,7 @@ var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycby7C719ZkZGymDN-Ei
     (jobs.length ? Promise.allSettled(jobs) : Promise.resolve([{status:'fulfilled'}])).then(function(res){
       var okAny = res.some(function(x){ return x.status === 'fulfilled'; });
       if(!okAny) throw new Error('sin destino');
+      if(window.fbq){ fbq('track', 'Lead', {content_name:'llamada-lucia', content_category:q.route, value:q.p, currency:'EUR'}); }
       window.location.href = '../gracias/?r=' + q.code;
     }).catch(function(){
       err.textContent = 'No se pudo enviar. Revisa tu conexión y vuelve a intentarlo.';
