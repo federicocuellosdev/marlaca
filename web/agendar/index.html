@@ -22,6 +22,14 @@ fbq('init', '1072809952125181');
 fbq('track', 'PageView');
 fbq('track', 'ViewContent', {content_name:'agendar-llamada', content_category:'lead-form'});
 </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CHY8EL3KB8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CHY8EL3KB8');
+</script>
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1072809952125181&ev=PageView&noscript=1"/>
@@ -697,6 +705,7 @@ var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycby7C719ZkZGymDN-Ei
       var eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
       var custom = {content_name:'llamada-lucia', content_category:q.route, value:q.p, currency:'EUR'};
       if(window.fbq){ fbq('track', 'Lead', custom, {eventID: eventId}); }
+      if(window.gtag){ gtag('event', 'generate_lead', {currency:'EUR', value:q.p, form_name:'llamada-lucia', lead_route:q.route, lead_tier:q.tier}); }
       var cookie = function(k){ var m = document.cookie.match(new RegExp('(?:^|; )' + k + '=([^;]+)')); return m ? decodeURIComponent(m[1]) : undefined; };
       fetch('https://break-api.onrender.com/marlaca/capi', {
         method:'POST', headers:{'Content-Type':'application/json'}, keepalive:true,
