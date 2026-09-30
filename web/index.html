@@ -36,6 +36,40 @@ src="https://www.facebook.com/tr?id=1072809952125181&ev=PageView&noscript=1"
   gtag('js', new Date());
   gtag('config', 'G-CHY8EL3KB8');
 </script>
+<script>
+(function(){
+  var THRESHOLD = 40, KT = 'mrl_eng_s', KF = 'mrl_eng_fired';
+  try { if(sessionStorage.getItem(KF) === '1') return; } catch(e){ return; }
+  var total = parseInt(sessionStorage.getItem(KT) || '0', 10);
+  var start = Date.now(), stopped = document.hidden;
+  function currentTotal(){ return stopped ? total : total + Math.floor((Date.now() - start) / 1000); }
+  function fire(){
+    if(sessionStorage.getItem(KF) === '1') return;
+    sessionStorage.setItem(KF, '1');
+    var eventId = 'eng_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+    var custom = { threshold_seconds: THRESHOLD, page: location.pathname };
+    if(window.fbq){ fbq('trackCustom', 'Engagement', custom, {eventID: eventId}); }
+    var cookie = function(k){ var m = document.cookie.match(new RegExp('(?:^|; )' + k + '=([^;]+)')); return m ? decodeURIComponent(m[1]) : undefined; };
+    fetch('https://break-api.onrender.com/marlaca/capi', {
+      method:'POST', headers:{'Content-Type':'application/json'}, keepalive:true,
+      body: JSON.stringify({
+        event_name:'Engagement', event_id:eventId, event_source_url:location.href,
+        user_data:{ fbp:cookie('_fbp'), fbc:cookie('_fbc') },
+        custom_data: custom
+      })
+    }).catch(function(){});
+  }
+  var iv = setInterval(function(){
+    var c = currentTotal();
+    sessionStorage.setItem(KT, String(c));
+    if(c >= THRESHOLD){ fire(); clearInterval(iv); }
+  }, 1000);
+  document.addEventListener('visibilitychange', function(){
+    if(document.hidden){ total = currentTotal(); sessionStorage.setItem(KT, String(total)); stopped = true; }
+    else { start = Date.now(); stopped = false; }
+  });
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
