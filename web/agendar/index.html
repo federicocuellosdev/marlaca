@@ -723,12 +723,25 @@ var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycby7C719ZkZGymDN-Ei
 
     btn.disabled = true; btn.textContent = 'Enviando…';
     var body = new URLSearchParams(new FormData(form)).toString();
+    var tracking = {};
+    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','fbclid','gclid'].forEach(function(k){
+      var v = params.get(k); if(v) tracking[k] = v;
+    });
+    if(document.referrer) tracking.referer = document.referrer;
+    tracking.landing = location.href;
+    var kommoPayload = {
+      nombre: n, email: m, prefijo: prefijo, telefono: w,
+      opcion: val('opcion'), presupuesto: val('presupuesto'), horizonte: val('horizonte'),
+      calificacion: q.tier, puntaje: q.p + '/6', ruta: q.route, alerta: q.alert,
+      tracking: tracking
+    };
     var jobs = [];
     if(!PREVIEW){
-      jobs.push(fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: body})
-        .then(function(r){ if(!r.ok) throw new Error('netlify ' + r.status); return 'netlify'; }));
+      jobs.push(fetch('https://break-api.onrender.com/marlaca/form', {
+        method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(kommoPayload)
+      }).then(function(r){ if(!r.ok) throw new Error('kommo ' + r.status); return 'kommo'; }));
       if(SHEET_ENDPOINT){
-        // no-cors: Apps Script no devuelve cabeceras CORS; el envío llega igual
+        // Respaldo: Google Sheet (no-cors siempre resuelve)
         jobs.push(fetch(SHEET_ENDPOINT, {method:'POST', mode:'no-cors', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: body})
           .then(function(){ return 'sheet'; }));
       }
