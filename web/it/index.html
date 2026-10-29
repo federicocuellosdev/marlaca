@@ -1,0 +1,1088 @@
+<!doctype html>
+<!-- Generado por fuente/generar.py a partir de fuente/plantilla.html y fuente/textos/*.json. No editar a mano. -->
+<html lang="it" data-pagina="inicio"><head><meta charset=utf8><script>document.documentElement.className+=" js"</script><link rel="icon" href="data:,"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* ---------- Efectos y transiciones (solo transform/opacity; sobrios) ---------- */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
+.js .rv.visto{opacity:1;transform:none}
+.js .comparativa.rv{opacity:1;transform:none}
+.js .comparativa.rv .pista i{transform:scaleX(0)}
+.js .comparativa.rv.visto .pista i{transform:none}
+picture{display:contents}
+.foto img{transition:transform 1s var(--ease)}
+.tipo{transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.preguntas details[open] p{animation:aparece .5s var(--ease) both}
+.preguntas summary{transition:color .25s}
+.menu .boton{transition-property:background-color,color,border-color,box-shadow,transform}
+@keyframes aparece{from{opacity:0;transform:translateY(-6px)}}
+@keyframes aparece-f{from{opacity:0}}
+@keyframes entra{from{opacity:0;transform:translateY(24px)}}
+@keyframes zoom-lento{from{transform:scale(1.08)}}
+@media (min-width:1141px){
+  .menu a:not(.boton){position:relative}
+  .menu a:not(.boton)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--oro);transform:scaleX(0);transform-origin:0 50%;transition:transform .4s var(--ease)}
+  .menu a:not(.boton):hover::after{transform:none}
+}
+@media (hover:hover) and (pointer:fine){
+  .boton:hover{transform:translateY(-2px);box-shadow:0 8px 22px -8px rgba(0,0,0,.4)}
+  .boton:active{transform:scale(.97);box-shadow:none}
+  .tipo:hover{transform:translateY(-4px);box-shadow:0 18px 38px -20px rgba(27,25,22,.4)}
+  .tipo:hover .foto img,.hito .foto:hover img,.collage .foto:hover img,.obra .foto:hover img,.bienestar-fotos .foto:hover img,.equipo .foto:hover img{transform:scale(1.05)}
+  .preguntas summary:hover{color:var(--oro-texto)}
+  .tipo .pie a,.alquiler{transition:opacity .2s}
+  .tipo .pie a:hover{opacity:.7}
+}
+@media (pointer:coarse){
+  .marca{min-height:44px}
+  .tipo .pie a,.alquiler{display:inline-flex;align-items:center;min-height:44px}
+  .tipo .pie{align-items:center;padding-top:6px}
+  footer ul{gap:0}
+  footer ul a{display:inline-flex;align-items:center;min-height:44px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .portada .poster,.portada video{animation:zoom-lento 16s var(--ease) both}
+  .portada .coordenadas,.portada h1,.portada .entradilla,.portada .acciones,.ficha-portada{animation:entra 1s var(--ease) both}
+  .portada .coordenadas{animation-delay:.15s}
+  .portada h1{animation-delay:.3s}
+  .portada .entradilla{animation-delay:.5s}
+  .portada .acciones{animation-delay:.65s}
+  .ficha-portada{animation-delay:.8s}
+}
+@media (max-width:1140px){.js .menu.abierto li{transition-delay:calc(var(--i,0)*45ms + 60ms)}}
+
+/* ---------- Movimiento reducido: por niveles, no un apagado total ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  /* Nivel 1: se elimina el movimiento (zoom, elevaciones, desplazamientos) */
+  .portada .poster,.portada video{animation:none}
+  .tipo:hover,.boton:hover,.boton:active,.hito .foto:hover img,.foto:hover img{transform:none!important}
+  /* Nivel 2: los reveals pasan a un fundido corto sin desplazamiento */
+  .js .rv{transform:none;transition:opacity .25s linear!important;transition-delay:0ms!important}
+  .js .comparativa.rv .pista i{transform:none}
+  .portada .coordenadas,.portada h1,.portada .entradilla,.portada .acciones,.ficha-portada{animation:aparece-f .4s ease both!important}
+  .preguntas details[open] p{animation:aparece-f .2s ease both!important}
+  /* Nivel 3: se conservan fundidos de color/opacidad y el foco */
+  .boton,.escenario,.escenario .nombre,.menu a,.nav::before,input,select,.preguntas summary{transition-duration:.15s!important}
+  .menu{transition:opacity .15s!important;transform:none!important}
+  .menu.abierto li,.menu li{transform:none;transition:opacity .15s!important;transition-delay:0ms!important}
+}
+</style>
+<title>Ville in vendita a Lombok | Marlaca Real Estate</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Marlaca costruisce, vende e gestisce ville con piscina privata a Kuta, Lombok. Undici anni sull&#x27;isola, ville già operative e numeri con il loro scenario.">
+<link rel="canonical" href="https://marlacarealestate.com/it/">
+<link rel="alternate" hreflang="es" href="https://marlacarealestate.com/">
+<link rel="alternate" hreflang="en" href="https://marlacarealestate.com/en/">
+<link rel="alternate" hreflang="fr" href="https://marlacarealestate.com/fr/">
+<link rel="alternate" hreflang="it" href="https://marlacarealestate.com/it/">
+<link rel="alternate" hreflang="x-default" href="https://marlacarealestate.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Marlaca Real Estate">
+<meta property="og:title" content="Ville in vendita a Lombok | Marlaca Real Estate">
+<meta property="og:description" content="Marlaca costruisce, vende e gestisce ville con piscina privata a Kuta, Lombok. Undici anni sull&#x27;isola, ville già operative e numeri con il loro scenario.">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:url" content="https://marlacarealestate.com/it/">
+<meta property="og:image" content="https://marlacarealestate.com/img/opt/lombok-poster-1280.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesrcset="../img/opt/lombok-poster-640.avif 640w, ../img/opt/lombok-poster-1280.avif 1280w, ../img/opt/lombok-poster-1920.avif 1920w" imagesizes="100vw">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/plus-jakarta-sans-latin-400-normal.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../fonts/playfair-display-latin-400-normal.woff2">
+<style>
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/playfair-display-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/playfair-display-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/playfair-display-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Playfair Display";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/playfair-display-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Playfair Display";font-style:italic;font-weight:400;font-display:swap;src:url(../fonts/playfair-display-latin-400-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Playfair Display";font-style:italic;font-weight:400;font-display:swap;src:url(../fonts/playfair-display-latin-ext-400-italic.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:300;font-display:swap;src:url(../fonts/plus-jakarta-sans-latin-300-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:300;font-display:swap;src:url(../fonts/plus-jakarta-sans-latin-ext-300-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/plus-jakarta-sans-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/plus-jakarta-sans-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/plus-jakarta-sans-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/plus-jakarta-sans-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/plus-jakarta-sans-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/plus-jakarta-sans-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Playfair Fallback";src:local("Georgia");size-adjust:101.6%;ascent-override:95%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:"Jakarta Fallback";src:local("Arial");size-adjust:104%;ascent-override:96%;descent-override:21%;line-gap-override:0%}
+</style>
+<link rel="stylesheet" href="../css/consentimiento.css">
+<script type="application/json" id="mrl-consent-txt">{"titulo":"La tua privacy su questo sito","texto":"Utilizziamo cookie tecnici, necessari al funzionamento del sito. Con il tuo consenso utilizziamo anche cookie di analisi (Google Analytics) e di pubblicità (Meta) per misurare l'uso del sito e i risultati dei nostri annunci. Puoi accettarli, rifiutarli o scegliere quali.","aceptar":"Accetta tutti","rechazar":"Rifiuta tutti","configurar":"Personalizza","politica_enlace":"Informativa sui cookie","panel_titulo":"Impostazioni cookie","panel_intro":"Scegli quali categorie consentire. I cookie tecnici sono necessari e sempre attivi. Puoi modificare la tua scelta in qualsiasi momento dal piè di pagina.","cat_tecnicas":"Tecnici","cat_tecnicas_desc":"Ricordano la tua scelta sui cookie. Sono necessari al funzionamento del sito e non richiedono consenso.","cat_analitica":"Analisi","cat_analitica_desc":"Google Analytics 4 (Google LLC). Ci indica, in forma aggregata, quali pagine vengono visitate e come viene usato il sito.","cat_publicidad":"Pubblicità","cat_publicidad_desc":"Meta Pixel e API di conversione (Meta Platforms). Misurano i risultati dei nostri annunci e inviano a Meta eventi di navigazione e, se richiedi una chiamata, i tuoi dati di contatto.","siempre_activas":"Sempre attivi","guardar":"Salva la mia scelta","politica_url":"cookies/"}</script>
+<script src="../js/consentimiento.js" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Marlaca Real Estate","description":"Sviluppatore boutique che costruisce, vende e gestisce ville con piscina privata a Kuta, Lombok (Indonesia).","inLanguage":"it","areaServed":"Lombok, Indonesia","founder":{"@type":"Person","name":"Lucía Miranda"},"url":"https://marlacarealestate.com","sameAs":["https://www.instagram.com/marlacarealestate","https://marlacavillaslombok.com"]}
+</script>
+<style>
+/* Layout: bandas a todo el ancho que alternan noche y hueso, como la web de alquileres; contenido en una retícula de 12 columnas con márgenes amplios */
+:root{
+  --noche:#131210;      /* fondo oscuro, negro cálido */
+  --noche-2:#1C1A17;    /* superficie sobre oscuro */
+  --hueso:#F7F5F1;      /* fondo claro */
+  --arena:#ECE5DA;      /* banda clara secundaria */
+  --tinta:#1B1916;      /* texto sobre claro */
+  --gris:#5F5951;       /* texto secundario sobre claro */
+  --gris-osc:#ABA397;   /* texto secundario sobre oscuro */
+  --oro:#C5A059;        /* acento sobre oscuro (dorado Marlaca Villas) */
+  --oro-texto:#86652B;  /* acento legible sobre claro */
+  --linea:rgba(27,25,22,.14);
+  --linea-osc:rgba(247,245,241,.16);
+  --display:"Playfair Display", "Iowan Old Style", Georgia, serif;
+  --texto:"Plus Jakarta Sans", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --ancho:1200px;
+  --r:4px;
+  --ease:cubic-bezier(.22,1,.36,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
+html.bloq,html.bloq body{overflow:hidden}
+body{background:var(--hueso);color:var(--tinta);font-family:var(--texto);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.4vw,52px)}
+h3{font-size:clamp(21px,2.2vw,24px)}
+p{margin:0}
+.envoltura{max-width:var(--ancho);margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+@media (max-width:520px){.envoltura{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}}
+.banda{padding-block:clamp(72px,10vw,128px)}
+.oscura{background:var(--noche);color:var(--hueso)}
+.arena{background:var(--arena)}
+.etiqueta{font-family:var(--texto);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--oro-texto)}
+.oscura .etiqueta{color:var(--oro)}
+.entradilla{font-size:18px;color:var(--gris);max-width:58ch}
+.oscura .entradilla{color:var(--gris-osc)}
+.cabecera{display:grid;gap:18px;max-width:760px;margin-bottom:56px}
+.boton{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font:600 14px/1 var(--texto);letter-spacing:.04em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,box-shadow .35s var(--ease),transform .35s var(--ease)}
+.boton:active{transform:scale(.97);transition-duration:.1s}
+.boton-oro{background:var(--oro);color:var(--noche)}
+.boton-oro:hover{background:#D4B477}
+.boton-linea{border-color:currentColor;background:transparent}
+.boton-linea:hover{background:rgba(247,245,241,.12)}
+.boton-tinta{background:var(--tinta);color:var(--hueso)}
+.boton-tinta:hover{background:#000}
+.cifra{font-variant-numeric:tabular-nums}
+.render{position:absolute;left:12px;bottom:12px;background:rgba(19,18,16,.72);color:var(--hueso);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:2px}
+.foto{position:relative;overflow:hidden;border-radius:var(--r);background:var(--arena)}
+.foto img,.foto video{width:100%;height:100%;object-fit:cover;display:block}
+.chip-video{position:absolute;left:12px;bottom:12px;background:rgba(19,18,16,.72);color:var(--hueso);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:2px}
+
+/* ---------- Navegación ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);color:var(--hueso)}
+.nav::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(19,18,16,.96);box-shadow:0 1px 0 var(--linea-osc);opacity:0;transition:opacity .4s ease}
+.nav.solida::before{opacity:1}
+.nav .envoltura{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marca img{height:34px;width:auto}
+.marca-texto{display:grid;line-height:1}
+.marca-texto b{font-family:var(--display);font-weight:500;font-size:21px;letter-spacing:.2em}
+.marca-texto span{font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;margin-top:5px;color:var(--oro)}
+.menu{display:flex;align-items:center;gap:28px;list-style:none;margin:0;padding:0}
+.menu a{text-decoration:none;font-size:13.5px;letter-spacing:.04em;opacity:.86;transition:opacity .25s,color .25s}
+.menu a:hover{opacity:1;color:var(--oro)}
+.menu .boton{opacity:1;min-height:42px;padding:0 20px}
+.menu .boton:hover{color:var(--noche)}
+.hamburguesa{display:none;background:none;border:1px solid var(--linea-osc);color:inherit;border-radius:999px;width:46px;height:46px;cursor:pointer;transition:border-color .25s,transform .2s var(--ease)}
+.hamburguesa:active{transform:scale(.94)}
+.hamburguesa path{transform-box:fill-box;transform-origin:center;transition:transform .35s var(--ease),opacity .2s}
+.hamburguesa[aria-expanded="true"] .l1{transform:translateY(6px) rotate(45deg)}
+.hamburguesa[aria-expanded="true"] .l2{opacity:0;transform:scaleX(.2)}
+.hamburguesa[aria-expanded="true"] .l3{transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:1140px){
+  .hamburguesa{display:grid;place-items:center}
+  .menu{position:fixed;inset:calc(76px + env(safe-area-inset-top,0px)) 0 auto 0;max-height:calc(100vh - 76px - env(safe-area-inset-top,0px));max-height:calc(100dvh - 76px - env(safe-area-inset-top,0px));overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;flex-direction:column;align-items:stretch;gap:0;background:var(--noche);padding:8px max(18px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px));border-top:1px solid var(--linea-osc);transform:translateY(-10px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s ease,transform .4s var(--ease),visibility 0s .4s}
+  .menu.abierto{opacity:1;transform:none;visibility:visible;pointer-events:auto;transition-delay:0s}
+  .menu li{opacity:0;transform:translateY(-6px);transition:opacity .25s,transform .25s}
+  .menu.abierto li{opacity:1;transform:none;transition:opacity .4s ease calc(var(--i,0)*45ms + 60ms),transform .45s var(--ease) calc(var(--i,0)*45ms + 60ms)}
+  .menu li a{display:flex;align-items:center;min-height:48px;padding:12px 0;border-bottom:1px solid var(--linea-osc);font-size:16px}
+  .menu li:last-child a{margin-top:18px;justify-content:center;border:0}
+}
+
+
+/* ---------- Selector de idioma: mundo + sigla actual, despliega la lista (details nativo: funciona sin JS) ---------- */
+.idiomas details{position:relative}
+.idiomas summary{list-style:none;display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:0 12px 0 10px;border:1px solid var(--linea-osc);border-radius:999px;cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.12em;opacity:.86;transition:opacity .25s,color .25s,border-color .25s;-webkit-user-select:none;user-select:none}
+.idiomas summary::-webkit-details-marker{display:none}
+.idiomas summary:hover,.idiomas details[open] summary{opacity:1;color:var(--oro);border-color:rgba(197,160,89,.55)}
+.idiomas summary svg{flex:none}
+.idiomas .flecha{transition:transform .3s var(--ease)}
+.idiomas details[open] .flecha{transform:rotate(180deg)}
+.idiomas ul{list-style:none;margin:0;padding:6px;position:absolute;right:0;top:calc(100% + 10px);min-width:190px;background:var(--noche-2);border:1px solid var(--linea-osc);border-radius:var(--r);box-shadow:0 18px 40px rgba(0,0,0,.35);z-index:5}
+.idiomas details[open] ul{animation:idiomasAbre .25s var(--ease)}
+@keyframes idiomasAbre{from{opacity:0;transform:translateY(-6px)}}
+.menu .idiomas ul a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:40px;padding:0 12px;border:0;border-radius:2px;margin:0;font-size:14px;letter-spacing:.02em;opacity:.86}
+.menu .idiomas ul a span{font-size:11px;font-weight:600;letter-spacing:.14em;opacity:.55}
+.menu .idiomas ul a:hover,.menu .idiomas ul a:focus-visible{opacity:1;background:rgba(247,245,241,.06);color:var(--hueso)}
+.menu .idiomas ul a[aria-current]{color:var(--oro);opacity:1}
+.menu .idiomas ul a[aria-current] span{opacity:1}
+.menu .idiomas a::after{display:none}
+@media (min-width:1141px){.menu{gap:20px}}
+@media (min-width:1141px){.menu li{white-space:nowrap}}
+@media (min-width:1141px) and (max-width:1280px){
+  .nav .envoltura{gap:16px}
+  .menu{gap:13px}
+  .menu a{font-size:13px;letter-spacing:.02em}
+  .menu .boton{padding:0 14px}
+  .idiomas summary{padding:0 10px 0 8px;gap:6px}
+}
+@media (pointer:coarse){.idiomas summary{min-height:44px}.menu .idiomas ul a{min-height:44px}}
+/* Móvil: dentro del menú desplegado la lista se abre en el sitio, no flotando */
+@media (max-width:1140px){
+  .menu li.idiomas{padding:12px 0;border-bottom:1px solid var(--linea-osc)}
+  .idiomas summary{min-height:44px;font-size:13px}
+  .idiomas ul{position:static;margin-top:10px;box-shadow:none;min-width:0}
+  .menu .idiomas ul li a{min-height:48px;font-size:16px;margin:0;justify-content:space-between;border:0}
+}
+
+/* ---------- Portada ---------- */
+.portada{position:relative;min-height:min(860px,94vh);display:flex;align-items:flex-end;color:var(--hueso);background:var(--noche);overflow:hidden}
+.portada video,.portada .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portada::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,18,16,.62) 0%,rgba(19,18,16,.18) 60%,rgba(19,18,16,0) 100%),linear-gradient(180deg,rgba(19,18,16,.6) 0%,rgba(19,18,16,.15) 30%,rgba(19,18,16,.45) 62%,rgba(19,18,16,.92) 100%)}
+@media (max-width:860px){.portada::after{background:linear-gradient(180deg,rgba(19,18,16,.7) 0%,rgba(19,18,16,.55) 40%,rgba(19,18,16,.9) 100%)}}
+.portada .envoltura{position:relative;z-index:2;width:100%;padding-bottom:clamp(40px,7vw,80px);padding-top:140px}
+.portada-rejilla{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;align-items:end}
+.portada h1{font-size:clamp(42px,6.6vw,86px);font-weight:400;line-height:1.02;letter-spacing:-.02em}
+.portada h1 em{font-style:italic;color:var(--oro)}
+.portada .entradilla{color:rgba(247,245,241,.86);margin-top:24px;font-size:clamp(16px,1.6vw,19px)}
+.portada .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.coordenadas{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(247,245,241,.75);margin-bottom:22px;display:flex;gap:14px;flex-wrap:wrap}
+.coordenadas span+span::before{content:"·";margin-right:14px;color:var(--oro)}
+.ficha-portada{border:1px solid var(--linea-osc);background:rgba(19,18,16,.5);backdrop-filter:blur(10px);border-radius:var(--r);padding:26px;display:grid;gap:16px;max-width:380px;justify-self:end}
+.ficha-portada .etiqueta{color:var(--oro)}
+.ficha-portada dl{margin:0;display:grid;gap:12px}
+.ficha-portada dl div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--linea-osc);padding-bottom:10px}
+.ficha-portada dt{color:var(--gris-osc);font-size:14px}
+.ficha-portada dd{margin:0;font-weight:500}
+@media (max-width:860px){.portada-rejilla{grid-template-columns:1fr}.ficha-portada{justify-self:start;max-width:none;width:100%}}
+
+/* ---------- Pruebas ---------- */
+.pruebas{background:var(--noche);color:var(--hueso);border-top:1px solid var(--linea-osc)}
+.pruebas .envoltura{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-block:38px}
+.prueba{padding:4px 28px;border-left:1px solid var(--linea-osc);display:grid;gap:6px}
+.prueba:first-child{border-left:0;padding-left:0}
+.prueba b{font-family:var(--display);font-weight:400;font-size:clamp(34px,3.6vw,46px);line-height:1;color:var(--oro)}
+.prueba span{font-size:13.5px;color:var(--gris-osc);line-height:1.45}
+@media (max-width:820px){.pruebas .envoltura{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}.prueba:nth-child(3){border-left:0;padding-left:0}}
+
+/* ---------- Manifiesto / tres usos ---------- */
+.dos-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center}
+@media (max-width:860px){.dos-col{grid-template-columns:1fr}}
+.collage{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:240px 240px;gap:12px}
+.collage .foto:first-child{grid-row:1 / span 2}
+@media (max-width:520px){.collage{grid-template-rows:180px 180px}}
+.usos{display:grid;gap:0;margin-top:34px;border-top:1px solid var(--linea)}
+.uso{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:20px 0;border-bottom:1px solid var(--linea)}
+.uso h3{font-size:20px}
+.uso p{color:var(--gris)}
+@media (max-width:520px){.uso{grid-template-columns:1fr;gap:6px}}
+
+/* ---------- Villas disponibles ---------- */
+.villas-intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:end;margin-bottom:48px}
+@media (max-width:860px){.villas-intro{grid-template-columns:1fr}}
+.estado{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--hueso);background:var(--noche);padding:8px 14px;border-radius:999px}
+.estado i{width:8px;height:8px;border-radius:50%;background:#7FBF8A;display:block}
+.tipos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1060px){.tipos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.tipos{grid-template-columns:1fr}}
+.tipo{background:#fff;border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.tipo .foto{aspect-ratio:4/3;border-radius:0}
+.tipo-cuerpo{padding:22px 22px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.tipo h3{font-size:22px}
+.precio{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.precio small{font-size:13px;color:var(--gris)}
+.precio b{font-family:var(--display);font-weight:500;font-size:30px;line-height:1}
+.tipo ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:14px;color:var(--gris)}
+.tipo li{padding-left:16px;position:relative}
+.tipo li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:1px;background:var(--oro-texto)}
+.tipo .pie{margin-top:auto;padding-top:14px;border-top:1px solid var(--linea);font-size:13px;display:flex;justify-content:space-between;gap:10px}
+.tipo .pie a{color:var(--oro-texto);font-weight:600;text-decoration:none;white-space:nowrap}
+.tipo.destacado{background:var(--noche);color:var(--hueso);border-color:var(--noche)}
+.tipo.destacado ul,.tipo.destacado .precio small{color:var(--gris-osc)}
+.tipo.destacado .pie{border-color:var(--linea-osc)}
+.tipo.destacado .pie a{color:var(--oro)}
+.bienestar{margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:40px;align-items:center;background:var(--arena);border-radius:var(--r);padding:clamp(24px,4vw,44px)}
+@media (max-width:860px){.bienestar{grid-template-columns:1fr}}
+.bienestar-fotos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.bienestar-fotos .foto{aspect-ratio:3/4}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{border:1px solid var(--linea);border-radius:999px;padding:6px 14px;font-size:13px;background:var(--hueso)}
+
+/* ---------- Trayectoria ---------- */
+.linea-tiempo{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid var(--linea-osc)}
+.hito{padding:28px 24px 8px 0;display:grid;gap:12px;align-content:start;position:relative}
+.hito::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--gris-osc)}
+.hito.operando::before{background:var(--oro)}
+.hito.venta::before{background:var(--hueso);box-shadow:0 0 0 4px rgba(197,160,89,.4)}
+.hito .romano{font-family:var(--display);font-size:44px;line-height:1;color:var(--hueso)}
+.hito .foto{aspect-ratio:4/5;margin-top:4px}
+.hito .est{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oro)}
+.hito p{font-size:14px;color:var(--gris-osc)}
+.hito h3{font-size:19px}
+@media (max-width:980px){.linea-tiempo{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px;border-top:0}.hito{border-top:1px solid var(--linea-osc)}}
+@media (max-width:520px){.linea-tiempo{grid-template-columns:1fr}}
+
+/* ---------- Caso real ---------- */
+.caso{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+@media (max-width:900px){.caso{grid-template-columns:1fr}}
+.caso .foto{aspect-ratio:5/4}
+.comparativa{display:grid;gap:18px;margin:32px 0}
+.barra{display:grid;gap:8px}
+.barra-cab{display:flex;justify-content:space-between;font-size:14px}
+.barra-cab b{font-variant-numeric:tabular-nums}
+.pista{height:12px;background:rgba(27,25,22,.08);border-radius:999px;overflow:hidden}
+.pista i{display:block;height:100%;border-radius:999px;background:var(--tinta);transform-origin:0 50%;transition:transform 1.2s var(--ease) .2s}
+.pista i.oro{background:var(--oro)}
+.datos-caso{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.datos-caso div{padding:16px 12px 16px 0;display:grid;gap:2px}
+.datos-caso b{font-family:var(--display);font-size:28px;font-weight:400}
+.datos-caso span{font-size:12.5px;color:var(--gris)}
+@media (max-width:520px){.datos-caso{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.caso-tarifa{display:flex;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px solid var(--linea)}
+.caso-tarifa b{font-family:var(--display);font-size:28px;font-weight:400;white-space:nowrap}
+.caso-tarifa span{font-size:14px;line-height:1.45;color:var(--gris)}
+.nota-mes{margin-top:24px;font-size:17px;line-height:1.5}
+.nota-mes b{color:var(--oro)}
+.nota{font-size:12.5px;color:var(--gris);margin-top:14px;line-height:1.5}
+.oscura .nota{color:var(--gris-osc)}
+
+/* ---------- Números ---------- */
+.escenarios{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--linea-osc);border-radius:var(--r)}
+.escenario{all:unset;box-sizing:border-box;cursor:pointer;position:relative;padding:28px 28px 26px;display:grid;gap:8px;border-left:1px solid var(--linea-osc);transition:background-color .35s ease}
+.escenario::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--oro);transform:scaleX(0);transform-origin:0 50%;transition:transform .5s var(--ease)}
+.escenario:focus-visible{outline:2px solid var(--oro);outline-offset:-4px}
+.escenario:active .pct{transform:scale(.98)}
+.escenario .pct{transition:transform .2s var(--ease),color .35s;transform-origin:0 70%}
+.escenario:first-child{border-left:0}
+@media (hover:hover) and (pointer:fine){.escenario:hover{background:rgba(247,245,241,.04)}.escenario[aria-pressed="true"]:hover{background:var(--noche-2)}}
+.escenario[aria-pressed="true"]{background:var(--noche-2)}
+.escenario[aria-pressed="true"]::after{transform:none}
+.escenario .nombre{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gris-osc);transition:color .35s}
+.escenario[aria-pressed="true"] .nombre{color:var(--oro)}
+.escenario .pct{font-family:var(--display);font-size:clamp(56px,8vw,104px);line-height:.95;color:var(--hueso)}
+.escenario .pct sup{font-size:.4em;vertical-align:top;margin-left:4px;color:var(--oro)}
+.escenario .sub{font-size:13.5px;color:var(--gris-osc)}
+@media (max-width:700px){.escenarios{grid-template-columns:1fr}.escenario{border-left:0;border-top:1px solid var(--linea-osc)}.escenario:first-child{border-top:0}}
+.cuenta{margin-top:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:48px}
+@media (max-width:900px){.cuenta{grid-template-columns:1fr}}
+.tabla-num{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.tabla-num td{padding:14px 0;border-bottom:1px solid var(--linea-osc);font-size:15px}
+.tabla-num td:last-child{text-align:right;font-weight:500}
+.tabla-num tr.total td{color:var(--oro);font-size:17px;border-bottom:0}
+.flujo{display:grid;gap:14px;align-content:start}
+.flujo-barra{display:grid;gap:8px}
+.flujo-barra .pista{height:44px;border-radius:var(--r);background:rgba(247,245,241,.06)}
+.flujo-barra .pista i{width:100%;border-radius:var(--r);background:var(--gris-osc);transition:transform .7s var(--ease)}
+.flujo-barra .pista i.oro{background:var(--oro)}
+.flujo-barra .barra-cab{color:var(--gris-osc)}
+.flujo-barra .barra-cab b{color:var(--hueso)}
+.aviso{margin-top:36px;padding:18px 20px;border:1px solid var(--linea-osc);border-radius:var(--r);font-size:13.5px;color:var(--gris-osc);line-height:1.55}
+.aviso b{color:var(--hueso);font-weight:600}
+
+/* ---------- Gestión ---------- */
+.gestion{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--linea)}
+.paso{padding:28px 24px 0 0;display:grid;gap:10px;align-content:start}
+.paso+.paso{padding-left:24px;border-left:1px solid var(--linea)}
+.paso h3{font-size:22px}
+.paso p{font-size:15px;color:var(--gris)}
+.paso .n{font-family:var(--display);font-style:italic;color:var(--oro-texto);font-size:18px}
+@media (max-width:900px){.gestion{grid-template-columns:repeat(2,minmax(0,1fr))}.paso:nth-child(3){padding-left:0;border-left:0}.paso{padding-bottom:24px}}
+@media (max-width:520px){.gestion{grid-template-columns:1fr}.paso+.paso{padding-left:0;border-left:0;border-top:1px solid var(--linea)}}
+.fee{margin-top:44px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;padding:28px;background:#fff;border:1px solid var(--linea);border-radius:var(--r)}
+.fee b{font-family:var(--display);font-size:56px;font-weight:400;line-height:1}
+@media (max-width:560px){.fee{grid-template-columns:1fr;gap:10px}}
+
+/* ---------- Compra y legal ---------- */
+.compra{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px)}
+@media (max-width:900px){.compra{grid-template-columns:1fr}}
+.pasos-compra{list-style:none;margin:0;padding:0;display:grid}
+.pasos-compra li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:22px 0;border-bottom:1px solid var(--linea)}
+.pasos-compra li:first-child{border-top:1px solid var(--linea)}
+.pasos-compra .n{font-family:var(--display);font-size:30px;color:var(--oro-texto);line-height:1}
+.pasos-compra h3{font-size:20px;margin-bottom:4px}
+.pasos-compra p{color:var(--gris);font-size:15px}
+.legal{background:var(--noche);color:var(--hueso);border-radius:var(--r);padding:clamp(26px,4vw,44px);display:grid;gap:18px;align-content:start}
+.legal p{color:var(--gris-osc)}
+.legal dl{margin:6px 0 0;display:grid;gap:0}
+.legal dl div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--linea-osc)}
+.legal dt{color:var(--oro);font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+.legal dd{margin:0;font-size:15px}
+@media (max-width:520px){.legal dl div{grid-template-columns:1fr;gap:4px}}
+
+/* ---------- Lombok ---------- */
+.lombok{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start}
+@media (max-width:900px){.lombok{grid-template-columns:1fr}}
+.lombok .foto{aspect-ratio:16/10}
+.minutos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:22px;border-top:1px solid var(--linea)}
+.minutos div{padding:14px 10px 0 0;display:grid}
+.minutos b{font-family:var(--display);font-size:30px;font-weight:400;line-height:1.1}
+.minutos span{font-size:12.5px;color:var(--gris)}
+@media (max-width:520px){.minutos{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:14px}}
+.indicadores{display:grid;gap:0}
+.indicador{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:22px 0;border-bottom:1px solid var(--linea);align-items:baseline}
+.indicador:first-child{border-top:1px solid var(--linea)}
+.indicador b{font-family:var(--display);font-weight:400;font-size:clamp(28px,3vw,38px);white-space:nowrap}
+.indicador span{color:var(--gris);font-size:15px}
+.motogp{display:flex;align-items:flex-end;gap:10px;height:76px;margin-top:10px}
+.motogp div{flex:1;display:grid;gap:6px;justify-items:start;font-size:11.5px;color:var(--gris)}
+.motogp i{display:block;width:100%;background:var(--tinta);border-radius:2px 2px 0 0}
+.motogp div:last-child i{background:var(--oro-texto)}
+
+/* ---------- Equipo ---------- */
+.equipo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center}
+@media (max-width:860px){.equipo{grid-template-columns:1fr}}
+.equipo .foto{aspect-ratio:4/5;max-width:460px}
+.razones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-top:34px;border-top:1px solid var(--linea-osc)}
+.razon{padding:18px 18px 18px 0;border-bottom:1px solid var(--linea-osc)}
+.razon h3{font-size:18px;margin-bottom:4px}
+.razon p{font-size:14px;color:var(--gris-osc)}
+@media (max-width:520px){.razones{grid-template-columns:1fr}}
+
+/* ---------- Visita / obra ---------- */
+.obra{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px}
+.obra .foto{aspect-ratio:9/14}
+@media (max-width:760px){.obra{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.visita{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:end;margin-bottom:40px}
+@media (max-width:860px){.visita{grid-template-columns:1fr;gap:24px}}
+
+/* ---------- Preguntas ---------- */
+.preguntas{max-width:880px}
+.preguntas details{border-bottom:1px solid var(--linea)}
+.preguntas details:first-of-type{border-top:1px solid var(--linea)}
+.preguntas summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;font-family:var(--display);font-size:21px;position:relative}
+.preguntas summary::-webkit-details-marker{display:none}
+.preguntas summary::after{content:"+";position:absolute;right:4px;top:18px;font-family:var(--texto);font-weight:300;font-size:28px;color:var(--oro-texto);transition:transform .45s var(--ease)}
+.preguntas details[open] summary::after{transform:rotate(45deg)}
+.preguntas details p{padding:0 0 24px;color:var(--gris);max-width:68ch}
+
+/* ---------- Contacto ---------- */
+.contacto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,6vw,88px);position:relative;z-index:1}
+@media (max-width:900px){.contacto{grid-template-columns:1fr}}
+.contacto-fondo{position:relative;overflow:hidden}
+.contacto-fondo>img,.contacto-fondo>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22}
+.canal{display:grid;gap:4px;padding:18px 0;border-top:1px solid var(--linea-osc)}
+.canal span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oro)}
+.canal b{font-weight:500;font-size:17px;user-select:all}
+.pendiente{color:var(--gris-osc);font-style:italic;font-weight:400}
+.cta-llamada{background:var(--hueso);color:var(--tinta);border-radius:var(--r);padding:clamp(24px,4vw,40px);display:grid;gap:16px;align-content:start}
+.cta-llamada h3{font-size:clamp(24px,2.6vw,30px)}
+.cta-llamada p{color:var(--gris)}
+.cta-llamada ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;border-top:1px solid var(--linea);padding-top:16px}
+.cta-llamada li{position:relative;padding-left:22px}
+.cta-llamada li::before{content:"";position:absolute;left:0;top:.7em;width:10px;height:1px;background:var(--oro-texto)}
+.cta-botones{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.boton-linea-tinta{border-color:var(--tinta);color:var(--tinta);background:transparent}
+.boton-linea-tinta:hover{background:var(--arena)}
+.cta-nota{font-size:12.5px}
+.pie-legal{display:flex;flex-wrap:wrap;gap:6px 22px}
+
+/* ---------- Pie ---------- */
+footer{background:var(--noche);color:var(--gris-osc);border-top:1px solid var(--linea-osc);font-size:14px}
+.pie-rejilla{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px;padding-block:64px 40px}
+@media (max-width:860px){.pie-rejilla{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.pie-rejilla{grid-template-columns:1fr}}
+footer h4{color:var(--hueso);font-family:var(--texto);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 14px;font-weight:600}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--oro)}
+.alquiler{display:inline-flex;margin-top:18px;gap:8px;align-items:center;color:var(--hueso);border-bottom:1px solid var(--oro);padding-bottom:2px}
+.descargo{border-top:1px solid var(--linea-osc);padding-block:22px 34px;font-size:12px;line-height:1.6;display:grid;gap:10px}
+.wa{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,calc(env(safe-area-inset-bottom,0px) + 12px));z-index:45;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 28px -6px rgba(0,0,0,.45);transition:transform .35s var(--ease),opacity .3s,visibility .3s}
+.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:wa-late 3.2s ease-out infinite;opacity:0}
+@keyframes wa-late{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(1.55);opacity:0}}
+@media (hover:hover){.wa:hover{transform:translateY(-3px) scale(1.04)}}
+@media (max-width:600px){.wa{width:48px;height:48px;right:max(14px,env(safe-area-inset-right,0px));bottom:max(14px,calc(env(safe-area-inset-bottom,0px) + 10px))}.wa svg{width:24px;height:24px}}
+@media (prefers-reduced-motion:reduce){.wa::after{animation:none}}
+html.bloq .wa{opacity:0;visibility:hidden;pointer-events:none}
+</style></head><body>
+
+<header class="nav" id="nav">
+  <div class="envoltura">
+    <a class="marca" href="#inicio" aria-label="Marlaca Real Estate, home">
+      <picture><source type="image/avif" srcset="../img/opt/palmas-blanco-640.avif 640w, ../img/opt/palmas-blanco-714.avif 714w" sizes="114px"><source type="image/webp" srcset="../img/opt/palmas-blanco-640.webp 640w, ../img/opt/palmas-blanco-714.webp 714w" sizes="114px"><img src="../img/palmas-blanco.png" width="114" height="64" alt=""></picture>
+      <span class="marca-texto"><b>MARLACA</b><span>Real Estate</span></span>
+    </a>
+    <button class="hamburguesa" id="hamburguesa" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu">
+      <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><g stroke="currentColor" stroke-width="1.5" fill="none"><path class="l1" d="M0 1h20"/><path class="l2" d="M0 7h20"/><path class="l3" d="M0 13h20"/></g></svg>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="#villas">Ville</a></li>
+      <li><a href="#trayectoria">Percorso</a></li>
+      <li><a href="#numeros">Numeri</a></li>
+      <li><a href="#compra">Come si compra</a></li>
+      <li><a href="#equipo">Chi siamo</a></li>
+      <li><a href="#preguntas">Domande</a></li>
+      <li class="idiomas"><details><summary aria-label="Lingua: Italiano"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9.25"/><path d="M2.75 12h18.5M12 2.75c2.4 2.5 3.6 5.6 3.6 9.25s-1.2 6.75-3.6 9.25M12 2.75C9.6 5.25 8.4 8.35 8.4 12s1.2 6.75 3.6 9.25"/></svg><span aria-hidden="true">IT</span><svg class="flecha" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></summary><ul><li><a href="../" hreflang="es" lang="es">Español<span aria-hidden="true">ES</span></a></li><li><a href="../en/" hreflang="en" lang="en">English<span aria-hidden="true">EN</span></a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français<span aria-hidden="true">FR</span></a></li><li><a href="./" hreflang="it" lang="it" aria-current="true">Italiano<span aria-hidden="true">IT</span></a></li></ul></details></li>
+      <li><a class="boton boton-oro" href="agendar/">Fissa una call</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- PORTADA -->
+<section class="portada" id="inicio">
+  <picture><source type="image/avif" srcset="../img/opt/lombok-poster-640.avif 640w, ../img/opt/lombok-poster-1280.avif 1280w, ../img/opt/lombok-poster-1920.avif 1920w" sizes="100vw"><source type="image/webp" srcset="../img/opt/lombok-poster-640.webp 640w, ../img/opt/lombok-poster-1280.webp 1280w, ../img/opt/lombok-poster-1920.webp 1920w" sizes="100vw"><img src="../img/lombok-poster.jpg" class="poster" width="1920" height="1080" alt="Costa meridionale di Lombok con palme e mare turchese" fetchpriority="high" decoding="async"></picture>
+  <video id="video-portada" muted loop playsinline autoplay preload="none" poster="../img/opt/lombok-poster-1280.webp" aria-hidden="true">
+    <source src="../video/opt/lombok.mp4" type="video/mp4">
+  </video>
+  <div class="envoltura">
+    <div class="portada-rejilla">
+      <div>
+        <p class="coordenadas"><span>Kuta · Lombok · Indonesia</span><span class="cifra">8°53′ S 116°17′ E</span></p>
+        <h1>Ville che già funzionano, <em>nel sud di Lombok.</em></h1>
+        <p class="entradilla">Costruiamo, vendiamo e gestiamo ville con piscina privata direttamente dall'isola, dove viviamo da undici anni. Puoi visitarle prima di acquistare.</p>
+        <div class="acciones">
+          <a class="boton boton-oro" href="#villas">Scopri le ville disponibili</a>
+          <a class="boton boton-linea" href="agendar/">Fissa una videochiamata</a>
+        </div>
+      </div>
+      <aside class="ficha-portada" aria-label="Marlaca IV in sintesi">
+        <span class="etiqueta">In vendita · Marlaca IV</span>
+        <dl>
+          <div><dt>Villa con 1 camera da letto</dt><dd class="cifra">da 165.000 €</dd></div>
+          <div><dt>Villa con 2 camere da letto</dt><dd class="cifra">da 240.000 €</dd></div>
+          <div><dt>Partecipazione</dt><dd class="cifra">da 36.800 €</dd></div>
+          <div><dt>Consegna</dt><dd>da marzo 2027</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PRUEBAS -->
+<section class="pruebas" aria-label="Risultati di Marlaca">
+  <div class="envoltura">
+    <div class="prueba"><b class="cifra">11</b><span>anni vissuti e costruiti a Lombok</span></div>
+    <div class="prueba"><b class="cifra">76,9%</b><span>tasso di occupazione medio delle ville operative</span></div>
+    <div class="prueba"><b class="cifra">9,3</b><span>su Booking · 156 recensioni · 4,8 su Tripadvisor</span></div>
+    <div class="prueba"><b class="cifra">7/7</b><span>ville di Marlaca III vendute</span></div>
+  </div>
+</section>
+
+<!-- QUÉ ES MARLACA -->
+<section class="banda" id="que-es">
+  <div class="envoltura dos-col">
+    <div class="collage">
+      <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="../img/opt/villa-m2-poster-640.webp" aria-label="Tour di una villa consegnata di Marlaca II: facciata, piscina e soggiorno"><source src="../video/opt/villa-m2.mp4" type="video/mp4"></video></div>
+      <div class="foto"><picture><source type="image/avif" srcset="../img/opt/m2-dormitorio-640.avif 640w, ../img/opt/m2-dormitorio-1280.avif 1280w, ../img/opt/m2-dormitorio-1800.avif 1800w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/m2-dormitorio-640.webp 640w, ../img/opt/m2-dormitorio-1280.webp 1280w, ../img/opt/m2-dormitorio-1800.webp 1800w" sizes="(max-width:768px) 340px, 280px"><img src="../img/m2-dormitorio.jpg" width="1800" height="1200" alt="Camera da letto principale con testiera in foglie di palma" loading="lazy" decoding="async"></picture></div>
+      <div class="foto"><picture><source type="image/avif" srcset="../img/opt/m1-columpio-640.avif 640w, ../img/opt/m1-columpio-1000.avif 1000w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/m1-columpio-640.webp 640w, ../img/opt/m1-columpio-1000.webp 1000w" sizes="(max-width:768px) 340px, 280px"><img src="../img/m1-columpio.jpg" width="1000" height="667" alt="Poltrona sospesa accanto alla piscina di Marlaca I" loading="lazy" decoding="async"></picture></div>
+    </div>
+    <div>
+      <span class="etiqueta">Cos'è Marlaca</span>
+      <h2 style="margin-top:16px">Uno sviluppatore boutique che costruisce, vende e gestisce le proprie ville sulla costa meridionale di Lombok.</h2>
+      <p class="entradilla" style="margin-top:20px">Cerchiamo il terreno, progettiamo la villa, supervisioniamo il cantiere ogni giorno e, quando ti consegniamo le chiavi, la affittiamo e la manteniamo per te. Tutto dal nostro ufficio di Kuta.</p>
+      <div class="usos">
+        <div class="uso"><h3>Seconda casa</h3><p>Una villa tutta tua con piscina per le tue stagioni sull'isola.</p></div>
+        <div class="uso"><h3>Affitto gestito</h3><p>La gestiamo noi tutto l'anno e ti liquidiamo il risultato netto.</p></div>
+        <div class="uso"><h3>Entrambe le cose</h3><p>Prenoti le date in cui vuoi usarla e per il resto dell'anno viene affittata.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VILLAS DISPONIBLES -->
+<section class="banda arena" id="villas">
+  <div class="envoltura">
+    <div class="villas-intro">
+      <div class="cabecera" style="margin:0">
+        <span class="etiqueta">Ville disponibili</span>
+        <h2>Marlaca IV: venti ville con piscina privata a Kuta.</h2>
+      </div>
+      <div style="display:grid;gap:18px;justify-items:start">
+        <span class="estado"><i aria-hidden="true"></i>Ultime ville in vendita · consegna da marzo 2027</span>
+        <p class="entradilla" style="color:var(--tinta);font-weight:600">Restano 8 ville disponibili, ciascuna con piscina privata.</p>
+        <p class="entradilla">Ville mediterranee in pietra, calce e legno, consegnate chiavi in mano e arredate. Le ville con 2 camere da letto vengono consegnate tra marzo e giugno 2027; quelle con 1 camera da letto e quella con vista mare, a ottobre 2027.</p>
+      </div>
+    </div>
+
+    <div class="tipos">
+      <article class="tipo">
+        <div class="foto"><picture><source type="image/avif" srcset="../img/opt/r4-dormitorio-640.avif 640w, ../img/opt/r4-dormitorio-1280.avif 1280w, ../img/opt/r4-dormitorio-1536.avif 1536w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/r4-dormitorio-640.webp 640w, ../img/opt/r4-dormitorio-1280.webp 1280w, ../img/opt/r4-dormitorio-1536.webp 1536w" sizes="(max-width:768px) 340px, 280px"><img src="../img/r4-dormitorio.jpg" width="1536" height="1024" alt="Render della camera da letto di una villa di Marlaca IV" loading="lazy" decoding="async"></picture><span class="render">Render</span></div>
+        <div class="tipo-cuerpo">
+          <h3>Villa con 1 camera da letto</h3>
+          <p class="precio"><small>da</small><b class="cifra">165.000 €</b></p>
+          <ul><li>Piscina privata</li><li>Chiavi in mano e arredata</li><li>Accesso alla zona benessere</li><li>Consegna a ottobre 2027</li></ul>
+          <div class="pie"><span>Ne restano 5</span><a href="agendar/?opcion=villa">Richiedi informazioni →</a></div>
+        </div>
+      </article>
+      <article class="tipo">
+        <div class="foto"><picture><source type="image/avif" srcset="../img/opt/r4-salon-640.avif 640w, ../img/opt/r4-salon-1280.avif 1280w, ../img/opt/r4-salon-1536.avif 1536w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/r4-salon-640.webp 640w, ../img/opt/r4-salon-1280.webp 1280w, ../img/opt/r4-salon-1536.webp 1536w" sizes="(max-width:768px) 340px, 280px"><img src="../img/r4-salon.jpg" width="1536" height="1024" alt="Render del soggiorno aperto sul giardino a Marlaca IV" loading="lazy" decoding="async"></picture><span class="render">Render</span></div>
+        <div class="tipo-cuerpo">
+          <h3>Villa con 2 camere da letto</h3>
+          <p class="precio"><small>da</small><b class="cifra">240.000 €</b></p>
+          <ul><li>Piscina privata</li><li>Due suite con bagno</li><li>Chiavi in mano e arredata</li><li>Consegna tra marzo e giugno 2027</li></ul>
+          <div class="pie"><span>Ne restano 2</span><a href="agendar/?opcion=villa">Richiedi informazioni →</a></div>
+        </div>
+      </article>
+      <article class="tipo">
+        <div class="foto"><picture><source type="image/avif" srcset="../img/opt/lombok-poster-640.avif 640w, ../img/opt/lombok-poster-1280.avif 1280w, ../img/opt/lombok-poster-1920.avif 1920w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/lombok-poster-640.webp 640w, ../img/opt/lombok-poster-1280.webp 1280w, ../img/opt/lombok-poster-1920.webp 1920w" sizes="(max-width:768px) 340px, 280px"><img src="../img/lombok-poster.jpg" width="1920" height="1080" alt="Costa meridionale di Lombok con palme e mare turchese" loading="lazy" decoding="async"></picture></div>
+        <div class="tipo-cuerpo">
+          <h3>2 camere da letto con vista mare</h3>
+          <p class="precio"><b class="cifra">260.000 €</b></p>
+          <ul><li>Unità unica al piano superiore</li><li>Piscina privata</li><li>Vista mare</li><li>Consegna a ottobre 2027</li></ul>
+          <div class="pie"><span>Ne resta 1</span><a href="agendar/?opcion=villa">Richiedi informazioni →</a></div>
+        </div>
+      </article>
+      <article class="tipo destacado">
+        <div class="foto"><picture><source type="image/avif" srcset="../img/opt/r4-jardin-640.avif 640w, ../img/opt/r4-jardin-1280.avif 1280w, ../img/opt/r4-jardin-1536.avif 1536w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/r4-jardin-640.webp 640w, ../img/opt/r4-jardin-1280.webp 1280w, ../img/opt/r4-jardin-1536.webp 1536w" sizes="(max-width:768px) 340px, 280px"><img src="../img/r4-jardin.jpg" width="1536" height="1024" alt="Render del giardino e della piscina di Marlaca IV" loading="lazy" decoding="async"></picture><span class="render">Render</span></div>
+        <div class="tipo-cuerpo">
+          <h3>Partecipazione</h3>
+          <p class="precio"><small>da</small><b class="cifra">36.800 €</b></p>
+          <ul><li>Il 4% della società proprietaria di quattro ville con 2 camere da letto di Marlaca IV</li><li>Prenotazione di 5.000 €, poi il saldo dopo la firma del Partnership Agreement</li><li>Distribuzione semestrale dell'utile netto</li><li>Include l'uso proporzionale in bassa stagione (dal 15 gennaio al 15 aprile), pagando i costi di manutenzione</li><li>Nessun rendimento fisso garantito</li></ul>
+          <div class="pie"><span>Per entrare con meno capitale</span><a href="agendar/?opcion=participacion">Richiedi informazioni →</a></div>
+        </div>
+      </article>
+    </div>
+    <p class="nota">Le immagini contrassegnate come render riguardano Marlaca IV, attualmente in costruzione. Le altre sono foto di ville Marlaca già consegnate. Prezzi per villa, al netto delle imposte di trasferimento.</p>
+
+    <div class="bienestar">
+      <div>
+        <span class="etiqueta">Nel complesso</span>
+        <h3 style="font-size:clamp(26px,3vw,34px);margin-top:12px">Zona benessere condivisa tra Marlaca III e IV.</h3>
+        <p style="margin-top:14px;color:var(--gris)">Palestra, spa con trattamenti, sala yoga, due saune e vasca di ghiaccio per i proprietari e gli ospiti dei due complessi, inclusa nel prezzo della villa. Più esperienza per l'ospite, una tariffa migliore per te.</p>
+        <div class="chips"><span>Palestra</span><span>Due saune</span><span>Vasca di ghiaccio</span><span>Spa e yoga</span></div>
+      </div>
+      <div class="bienestar-fotos">
+        <div class="foto"><picture><source type="image/avif" srcset="../img/opt/r4-bano-640.avif 640w, ../img/opt/r4-bano-1147.avif 1147w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/r4-bano-640.webp 640w, ../img/opt/r4-bano-1147.webp 1147w" sizes="(max-width:768px) 340px, 280px"><img src="../img/r4-bano.jpg" width="1147" height="1372" alt="Render di un bagno in pietra a Marlaca IV" loading="lazy" decoding="async"></picture><span class="render">Render</span></div>
+        <div class="foto"><picture><source type="image/avif" srcset="../img/opt/m2-bano-640.avif 640w, ../img/opt/m2-bano-1280.avif 1280w, ../img/opt/m2-bano-1800.avif 1800w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/m2-bano-640.webp 640w, ../img/opt/m2-bano-1280.webp 1280w, ../img/opt/m2-bano-1800.webp 1800w" sizes="(max-width:768px) 340px, 280px"><img src="../img/m2-bano.jpg" width="1800" height="1200" alt="Bagno con doccia in pietra di una villa consegnata" loading="lazy" decoding="async"></picture></div>
+        <div class="foto"><picture><source type="image/avif" srcset="../img/opt/m1-entrada-640.avif 640w, ../img/opt/m1-entrada-667.avif 667w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/m1-entrada-640.webp 640w, ../img/opt/m1-entrada-667.webp 667w" sizes="(max-width:768px) 340px, 280px"><img src="../img/m1-entrada.jpg" width="667" height="1000" alt="Ingresso tra i bambù di una villa di Marlaca I" loading="lazy" decoding="async"></picture></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAYECTORIA -->
+<section class="banda oscura" id="trayectoria">
+  <div class="envoltura">
+    <div class="cabecera">
+      <span class="etiqueta">Percorso</span>
+      <h2>Ogni progetto, consegnato e avviato prima di lanciare il successivo.</h2>
+    </div>
+    <div class="linea-tiempo">
+      <div class="hito operando">
+        <span class="romano">I</span>
+        <div class="foto"><picture><source type="image/avif" srcset="../img/opt/m1-piscina-640.avif 640w, ../img/opt/m1-piscina-1000.avif 1000w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/m1-piscina-640.webp 640w, ../img/opt/m1-piscina-1000.webp 1000w" sizes="(max-width:768px) 340px, 280px"><img src="../img/m1-piscina.jpg" width="1000" height="667" alt="Piscina di Marlaca I" loading="lazy" decoding="async"></picture></div>
+        <span class="est">Consegnato · operativo</span>
+        <h3>Marlaca I · Kuta</h3>
+        <p>Cinque ville con piscina che si affittano tutto l'anno.</p>
+      </div>
+      <div class="hito operando">
+        <span class="romano">II</span>
+        <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="../img/opt/villa-m2-b-poster-640.webp" aria-label="Terrazza e piscina di una villa a due piani di Marlaca II"><source src="../video/opt/villa-m2-b.mp4" type="video/mp4"></video></div>
+        <span class="est">Consegnato nel 2026</span>
+        <h3>Marlaca II · Selong Belanak</h3>
+        <p>Tre ville a due piani, già in affitto.</p>
+      </div>
+      <div class="hito">
+        <span class="romano">III</span>
+        <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="../img/opt/obra-m3-poster-478.webp" aria-label="Cantiere di Marlaca III a settembre 2026"><source src="../video/opt/obra-m3.mp4" type="video/mp4"></video><span class="chip-video">Cantiere reale</span></div>
+        <span class="est">Consegna a dicembre 2026</span>
+        <h3>Marlaca III · Boutique</h3>
+        <p>Sette ville con piscina e zona benessere condivisa con Marlaca IV. Tutte vendute.</p>
+      </div>
+      <div class="hito venta">
+        <span class="romano">IV</span>
+        <div class="foto"><picture><source type="image/avif" srcset="../img/opt/r4-dormitorio-640.avif 640w, ../img/opt/r4-dormitorio-1280.avif 1280w, ../img/opt/r4-dormitorio-1536.avif 1536w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/r4-dormitorio-640.webp 640w, ../img/opt/r4-dormitorio-1280.webp 1280w, ../img/opt/r4-dormitorio-1536.webp 1536w" sizes="(max-width:768px) 340px, 280px"><img src="../img/r4-dormitorio.jpg" width="1536" height="1024" alt="Render di Marlaca IV" loading="lazy" decoding="async"></picture><span class="render">Render</span></div>
+        <span class="est">In vendita</span>
+        <h3>Marlaca IV · Kuta</h3>
+        <p>Venti ville. Consegna da marzo 2027.</p>
+      </div>
+      <div class="hito">
+        <span class="romano">V</span>
+        <div class="foto"><picture><source type="image/avif" srcset="../img/opt/vista-640.avif 640w, ../img/opt/vista-1280.avif 1280w, ../img/opt/vista-1400.avif 1400w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="../img/opt/vista-640.webp 640w, ../img/opt/vista-1280.webp 1280w, ../img/opt/vista-1400.webp 1400w" sizes="(max-width:768px) 340px, 280px"><img src="../img/vista.jpg" width="1400" height="872" alt="Paesaggio del sud di Lombok" loading="lazy" decoding="async"></picture></div>
+        <span class="est">In vendita</span>
+        <h3>Marlaca V</h3>
+        <p>Sei ville a Selong Belanak, da 700.000 €. Ne restano 5.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASO REAL -->
+<section class="banda" id="caso">
+  <div class="envoltura caso">
+    <div class="foto"><picture><source type="image/avif" srcset="../img/opt/m1-salon-640.avif 640w, ../img/opt/m1-salon-1000.avif 1000w" sizes="(max-width:768px) 720px, 600px"><source type="image/webp" srcset="../img/opt/m1-salon-640.webp 640w, ../img/opt/m1-salon-1000.webp 1000w" sizes="(max-width:768px) 720px, 600px"><img src="../img/m1-salon.jpg" width="1000" height="667" alt="Soggiorno aperto sulla piscina in una villa Marlaca operativa" loading="lazy" decoding="async"></picture></div>
+    <div>
+      <span class="etiqueta">Caso reale · Villa Nina, 2025</span>
+      <h2 style="margin-top:16px">Occupata 338 notti su 365.</h2>
+      <p class="entradilla" style="margin-top:18px">Ecco come è andata una delle nostre ville operative l'anno scorso, a confronto con la media degli affitti vacanza a Lombok.</p>
+      <div class="comparativa">
+        <div class="barra">
+          <div class="barra-cab"><span>Villa Nina</span><b>92,6%</b></div>
+          <div class="pista"><i class="oro" style="width:92.6%"></i></div>
+        </div>
+        <div class="barra">
+          <div class="barra-cab"><span>Media di Lombok</span><b>64%</b></div>
+          <div class="pista"><i style="width:64%"></i></div>
+        </div>
+      </div>
+      <div class="datos-caso">
+        <div><b class="cifra">104</b><span>prenotazioni</span></div>
+        <div><b class="cifra">338</b><span>notti occupate</span></div>
+        <div><b class="cifra">9,0</b><span>su Booking</span></div>
+        <div><b class="cifra">4,8</b><span>su Airbnb</span></div>
+      </div>
+      <p class="caso-tarifa"><b class="cifra">172 €</b><span>la tariffa già incassata a dicembre 2025, dopo un aumento del 150% nell'anno senza scendere sotto l'87% di occupazione.</span></p>
+      <p class="nota">Dati di gestione di Villa Nina da gennaio a dicembre 2025. L'andamento di una villa in un anno non assicura il risultato di un'altra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section class="banda oscura" id="numeros">
+  <div class="envoltura">
+    <div class="cabecera">
+      <span class="etiqueta">I numeri, con il loro scenario</span>
+      <h2>Facciamo proiezioni prudenti e ti mostriamo il conto per intero.</h2>
+      <p class="entradilla">Rendimento annuo previsto di una villa con 1 camera da letto di Marlaca IV (165.000 €) nel suo primo anno completo di affitto, il 2027. Scegli uno scenario.</p>
+    </div>
+
+    <div class="escenarios" role="group" aria-label="Scenari di rendimento">
+      <button class="escenario" type="button" data-esc="0" aria-pressed="false"><span class="nombre">Prudente</span><span class="pct cifra">11<sup>%</sup></span><span class="sub">Occupazione del 75,5%</span></button>
+      <button class="escenario" type="button" data-esc="1" aria-pressed="true"><span class="nombre">Base · obiettivo</span><span class="pct cifra">14<sup>%</sup></span><span class="sub">Occupazione dell'81,7%</span></button>
+      <button class="escenario" type="button" data-esc="2" aria-pressed="false"><span class="nombre">Favorevole</span><span class="pct cifra">18<sup>%</sup></span><span class="sub">Occupazione dell'88,5%</span></button>
+    </div>
+
+    <div class="cuenta">
+      <table class="tabla-num" aria-live="polite">
+        <tbody>
+          <tr><td>Ricavo medio per notte</td><td id="t-tarifa">160 €</td></tr>
+          <tr><td>Tasso di occupazione annuo</td><td id="t-ocup">81,7%</td></tr>
+          <tr><td>Alloggio</td><td id="t-aloj">47.800 €</td></tr>
+          <tr><td>Colazione e servizi</td><td id="t-desa">11.500 €</td></tr>
+          <tr><td>Fatturato totale annuo della villa</td><td id="t-fact">59.300 €</td></tr>
+          <tr><td>Prezzo della villa</td><td>165.000 €</td></tr>
+          <tr><td>Tempo di rientro</td><td id="t-rec">7,1 anni</td></tr>
+          <tr class="total"><td>Netto annuo per te</td><td id="t-neto">23.111 €</td></tr>
+        </tbody>
+      </table>
+      <div class="flujo">
+        <span class="etiqueta">Da ciò che fattura la villa a ciò che incassi tu</span>
+        <div class="flujo-barra">
+          <div class="barra-cab"><span>Fatturato</span><b id="b-fact">59.300 €</b></div>
+          <div class="pista"><i id="i-fact" style="transform:scaleX(.853)"></i></div>
+        </div>
+        <div class="flujo-barra">
+          <div class="barra-cab"><span>Netto per il proprietario</span><b id="b-neto">23.111 €</b></div>
+          <div class="pista"><i class="oro" id="i-neto" style="transform:scaleX(.333)"></i></div>
+        </div>
+        <p class="nota">Su ogni 100 € fatturati dalla villa, te ne arrivano tra 35 e 43 a seconda dello scenario. La differenza copre le commissioni delle piattaforme di prenotazione, la gestione quotidiana (pulizie, personale, utenze), la manutenzione e la commissione di gestione di Marlaca.</p>
+      </div>
+    </div>
+
+    <p class="nota-mes">Nello scenario prudente ricevi 18.159 € l'anno, circa <b>1.500 € al mese</b>, già al netto di tutti i costi e della gestione.</p>
+    <p class="nota" style="margin-top:12px">Villa con 2 camere da letto e vista mare (260.000 €): 10,2% · 12,9% · 16,6% a seconda dello scenario.</p>
+
+    <p class="aviso"><b>Prima dell'imposta sulle società. Non è una garanzia.</b> Sono proiezioni del modello di gestione di Marlaca IV per il 2027. Lo scenario base è il nostro obiettivo; quello prudente è il nostro riferimento per decidere. Ti inviamo il foglio di calcolo completo perché tu possa verificare ogni ipotesi.</p>
+  </div>
+</section>
+
+<!-- GESTIÓN -->
+<section class="banda" id="gestion">
+  <div class="envoltura">
+    <div class="cabecera">
+      <span class="etiqueta">Gestione</span>
+      <h2>La villa la gestiamo noi. Tu ricevi il netto e il dettaglio.</h2>
+    </div>
+    <div class="gestion">
+      <div class="paso"><span class="n">Prenotazioni</span><h3>Tutti i canali</h3><p>Booking, Airbnb e prenotazione diretta su Marlaca Villas, con tariffe che adeguiamo ogni giorno in base alla domanda.</p></div>
+      <div class="paso"><span class="n">Gestione operativa</span><h3>Team interno</h3><p>Accoglienza degli ospiti, pulizie, piscina, giardino e manutenzione 24 ore su 24, con personale Marlaca sull'isola.</p></div>
+      <div class="paso"><span class="n">Report</span><h3>Tutto sotto controllo</h3><p>Occupazione, tariffa media, ricavi e spese della tua villa, spiegati voce per voce.</p></div>
+      <div class="paso"><span class="n">Liquidazione</span><h3>La tua parte, sul tuo conto</h3><p>Ti trasferiamo il risultato netto ogni semestre, a gennaio e a luglio, insieme al report. Se vieni sull'isola, la villa ti aspetta pronta.</p></div>
+    </div>
+    <div class="fee">
+      <b class="cifra">20%</b>
+      <p><strong>Commissione di gestione sul margine operativo lordo (GOP).</strong> Il GOP è ciò che resta dei ricavi della villa dopo le commissioni delle piattaforme e i costi di gestione. Nessun costo nascosto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPRA Y LEGAL -->
+<section class="banda arena" id="compra">
+  <div class="envoltura">
+    <div class="cabecera">
+      <span class="etiqueta">Come si compra</span>
+      <h2>Dalla prima chiamata alla consegna delle chiavi.</h2>
+    </div>
+    <div class="compra">
+      <ol class="pasos-compra">
+        <li><span class="n">1</span><div><h3>Videochiamata o visita</h3><p>Ti mostriamo le ville, il cantiere e i numeri. Se sei a Lombok, vieni a vederle.</p></div></li>
+        <li><span class="n">2</span><div><h3>Prenotazione e contratto</h3><p>Scegli la tua villa, ti guidiamo nella costituzione della tua società e firmiamo il contratto di compravendita davanti a un notaio, in spagnolo o in inglese. Tutto il processo si può fare a distanza.</p></div></li>
+        <li><span class="n">3</span><div><h3>Pagamenti in base all'avanzamento dei lavori</h3><p>I lavori durano da 12 a 14 mesi, con un'impresa edile locale sotto il nostro controllo quotidiano. Paghi il 40% alla firma, il 40% per stati di avanzamento durante i lavori e il restante 20% almeno due mesi prima del completamento della villa, e ricevi foto di ogni avanzamento.</p></div></li>
+        <li><span class="n">4</span><div><h3>Consegna chiavi in mano</h3><p>Ricevi la villa arredata e pronta. Da quel giorno entra in gestione e inizia a essere affittata.</p></div></li>
+      </ol>
+      <div class="legal">
+        <span class="etiqueta">Struttura legale</span>
+        <h3 style="font-size:clamp(24px,2.6vw,30px)">Cosa acquisti esattamente.</h3>
+        <p>La legge indonesiana non consente a uno straniero di avere la piena proprietà del suolo. Per questo acquisti attraverso una struttura legale riconosciuta, che ti spieghiamo con il nostro notaio prima della firma. Marlaca gestisce la villa con un contratto di gestione: la affitta e ti liquida il netto, ma non è proprietaria della tua villa.</p>
+        <dl>
+          <div><dt>Società</dt><dd>PT PMA: società indonesiana a capitale estero, intestata a te o condivisa.</dd></div>
+          <div><dt>Diritto</dt><dd>HGB: diritto di costruzione e d'uso sul terreno, per periodi rinnovabili.</dd></div>
+          <div><dt>Assistenza</dt><dd>Notaio e avvocati locali durante tutto il processo, con documentazione in inglese.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOMBOK -->
+<section class="banda" id="lombok">
+  <div class="envoltura lombok">
+    <div>
+      <span class="etiqueta">Perché Lombok</span>
+      <h2 style="margin-top:16px">L'isola accanto a Bali, con la crescita ancora tutta davanti.</h2>
+      <p class="entradilla" style="margin-top:18px">Kuta è la porta della zona economica speciale di Mandalika: circuito di MotoGP, spiagge per il surf, le isole Gili e il vulcano Rinjani, geoparco mondiale UNESCO.</p>
+      <p class="entradilla" style="margin-top:12px">Ha un proprio aeroporto internazionale, con nuove rotte dirette verso l'Asia, e marchi alberghieri internazionali stanno già arrivando sulla costa meridionale.</p>
+      <div class="foto" style="margin-top:32px"><video class="clip" muted loop playsinline preload="none" poster="../img/opt/lombok-mar-poster-640.webp" aria-label="Onde da surf, cascata e tartaruga marina nel sud di Lombok"><source src="../video/opt/lombok-mar.mp4" type="video/mp4"></video></div>
+      <div class="minutos">
+        <div><b class="cifra">5′</b><span>dalla spiaggia</span></div>
+        <div><b class="cifra">15′</b><span>da Tanjung Aan</span></div>
+        <div><b class="cifra">20′</b><span>dall'aeroporto internazionale</span></div>
+        <div><b>A piedi</b><span>ristoranti e servizi</span></div>
+      </div>
+    </div>
+    <div class="indicadores">
+      <div class="indicador">
+        <div style="display:grid;gap:4px;min-width:0"><span>Spettatori del MotoGP di Mandalika, vicino a Kuta, nel 2026: record del circuito</span>
+          <div class="motogp" aria-hidden="true">
+            <div><i style="height:44px"></i>2023</div><div><i style="height:52px"></i>2024</div><div><i style="height:60px"></i>2025</div><div><i style="height:68px"></i>2026</div>
+          </div>
+        </div>
+        <b class="cifra">157.875</b>
+      </div>
+      <div class="indicador"><span>Crescita del turismo straniero a Nusa Tenggara Occidentale, da gennaio a ottobre 2025</span><b class="cifra">+19%</b></div>
+      <div class="indicador"><span>Posti di lavoro nella zona economica speciale di Mandalika</span><b class="cifra">19.010</b></div>
+      <div class="indicador"><span>Voli settimanali di Scoot da Singapore (prima erano 4), più la nuova rotta diretta per Kuala Lumpur</span><b class="cifra">10</b></div>
+      <p class="nota">Spettatori: 102.929 nel 2023, 121.252 nel 2024, 140.324 nel 2025 e 157.875 nel 2026, record storico del circuito. Fonti pubbliche: organizzatore del MotoGP di Mandalika, istituto di statistica indonesiano (BPS) e compagnie aeree, raccolte a ottobre 2026.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="banda oscura" id="equipo">
+  <div class="envoltura equipo">
+    <div class="foto"><picture><source type="image/avif" srcset="../img/opt/lucia-640.avif 640w, ../img/opt/lucia-900.avif 900w" sizes="(max-width:768px) 340px, 460px"><source type="image/webp" srcset="../img/opt/lucia-640.webp 640w, ../img/opt/lucia-900.webp 900w" sizes="(max-width:768px) 340px, 460px"><img src="../img/lucia.jpg" width="900" height="1125" alt="Lucía Miranda, fondatrice di Marlaca, in una delle sue ville" loading="lazy" decoding="async"></picture></div>
+    <div>
+      <span class="etiqueta">Chi c'è dietro</span>
+      <h2 style="margin-top:16px">Lucía Miranda, fondatrice.</h2>
+      <p class="entradilla" style="margin-top:18px">È arrivata a Lombok nel 2015, più di undici anni fa. Oggi guida un team interno di 21 persone che progetta le ville, supervisiona il cantiere e le gestisce. E Marlaca mantiene ville di proprietà nei suoi sviluppi.</p>
+      <div class="razones">
+        <div class="razon"><h3>Undici anni sull'isola</h3><p>Conosciamo le persone, i terreni e i tempi di Lombok.</p></div>
+        <div class="razon"><h3>Occupazione misurata</h3><p>Dati reali delle ville che già affittiamo.</p></div>
+        <div class="razon"><h3>Restiamo qui</h3><p>Ufficio e team a Kuta. Non è un business di passaggio.</p></div>
+        <div class="razon"><h3>Cantiere supervisionato</h3><p>Un'impresa locale, con il controllo quotidiano del nostro team.</p></div>
+        <div class="razon"><h3>Investiamo con te</h3><p>Marlaca mantiene ville di proprietà nei suoi sviluppi.</p></div>
+        <div class="razon"><h3>Numeri prudenti</h3><p>Partiamo sempre dallo scenario prudente.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISITA Y OBRA -->
+<section class="banda arena" id="visita">
+  <div class="envoltura">
+    <div class="visita">
+      <div class="cabecera" style="margin:0">
+        <span class="etiqueta">Vieni a vederle</span>
+        <h2>Le ville esistono. E anche il cantiere.</h2>
+      </div>
+      <div style="display:grid;gap:18px;justify-items:start">
+        <p class="entradilla">Se sei a Lombok, ti mostriamo le ville operative e i cantieri di Marlaca III e IV. Altrimenti lo facciamo in videochiamata, in diretta dall'isola.</p>
+        <a class="boton boton-tinta" href="agendar/">Organizza una visita</a>
+      </div>
+    </div>
+    <div class="obra">
+      <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="../img/opt/obra-m3-poster-478.webp" aria-label="Cantiere di Marlaca III a settembre 2026"><source src="../video/opt/obra-m3.mp4" type="video/mp4"></video><span class="chip-video">Marlaca III</span></div>
+      <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="../img/opt/obra-m4-a-poster-478.webp" aria-label="Muri delle ville di Marlaca IV in costruzione, settembre 2026"><source src="../video/opt/obra-m4-a.mp4" type="video/mp4"></video><span class="chip-video">Marlaca IV</span></div>
+      <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="../img/opt/obra-m4-b-poster-478.webp" aria-label="Strutture di Marlaca IV in costruzione con la valle sullo sfondo, settembre 2026"><source src="../video/opt/obra-m4-b.mp4" type="video/mp4"></video><span class="chip-video">Marlaca IV</span></div>
+      <div class="foto"><picture><source type="image/avif" srcset="../img/opt/equipo-640.avif 640w, ../img/opt/equipo-1201.avif 1201w" sizes="(max-width:768px) 340px, 460px"><source type="image/webp" srcset="../img/opt/equipo-640.webp 640w, ../img/opt/equipo-1201.webp 1201w" sizes="(max-width:768px) 340px, 460px"><img src="../img/equipo.jpg" width="1201" height="1800" alt="Membro del team di Marlaca in uniforme che serve una colazione" loading="lazy" decoding="async"></picture></div>
+          </div>
+    <p class="nota">Video dei cantieri di Marlaca III e Marlaca IV (settembre 2026) e foto del team.</p>
+  </div>
+</section>
+
+<!-- PREGUNTAS -->
+<section class="banda" id="preguntas">
+  <div class="envoltura">
+    <div class="cabecera">
+      <span class="etiqueta">Domande frequenti</span>
+      <h2>Quello che ci chiedono prima di investire.</h2>
+    </div>
+    <div class="preguntas">
+      <details><summary>Che titolo ho sulla villa?</summary><p>Acquisti attraverso una società PT PMA titolare di un diritto HGB sul terreno, che consente di costruire e usare la proprietà per periodi rinnovabili. Non è la piena proprietà del suolo, che la legge indonesiana riserva ai propri cittadini. Te lo spieghiamo con il nostro notaio prima della firma.</p></details>
+      <details><summary>Il rendimento è garantito?</summary><p>No. Lavoriamo con tre scenari (11%, 14% e 18% annuo, prima dell'imposta sulle società) e ti mostriamo le ipotesi di ciascuno. Quello che abbiamo, invece, sono risultati reali di ville operative, come Villa Nina nel 2025.</p></details>
+      <details><summary>Posso visitare le ville già operative?</summary><p>Sì. Se sei a Lombok, ti mostriamo le ville operative e il cantiere in corso. Altrimenti facciamo la visita in videochiamata.</p></details>
+      <details><summary>Posso usare io stesso la villa?</summary><p>Sì. Prenoti le date che vuoi e per il resto dell'anno la villa viene affittata. Più notti la usi, minore sarà il risultato dell'affitto.</p></details>
+      <details><summary>Quanto addebita Marlaca per gestire la villa?</summary><p>Il 20% del margine operativo lordo (GOP): ciò che resta dei ricavi dopo le commissioni delle piattaforme e i costi di gestione.</p></details>
+      <details><summary>Come si paga?</summary><p>Il 40% alla firma del contratto di compravendita, il 40% per stati di avanzamento durante i lavori e il restante 20% almeno due mesi prima del completamento della villa. La partecipazione si prenota con 5.000 € e, firmato il Partnership Agreement, si versa il saldo. Ti inviamo il calendario dei pagamenti insieme al contratto.</p></details>
+      <details><summary>E se voglio investire meno di 165.000 €?</summary><p>Puoi entrare con una partecipazione da 36.800 €: il 4% della società proprietaria di quattro ville con 2 camere da letto di Marlaca IV, con una prenotazione di 5.000 € e il saldo dopo la firma del Partnership Agreement, e incassi la tua parte dell'utile netto con una distribuzione semestrale. Include il diritto di utilizzo proporzionale. Nessun rendimento fisso garantito.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="banda oscura contacto-fondo" id="contacto">
+  <video class="clip" muted loop playsinline preload="none" poster="../img/opt/lombok-atardecer-poster-1280.webp" aria-hidden="true"><source src="../video/opt/lombok-atardecer.mp4" type="video/mp4"></video>
+  <div class="envoltura contacto">
+    <div>
+      <span class="etiqueta">Parliamone</span>
+      <h2 style="margin-top:16px">Raccontaci cosa cerchi e ti chiamiamo.</h2>
+      <p class="entradilla" style="margin-top:18px">Una videochiamata di 30 minuti con il team commerciale, nell'orario che preferisci. Senza impegno.</p>
+      <div style="margin-top:32px">
+        <div class="canal"><span>WhatsApp commerciale</span><b><a href="https://wa.me/6281125506159" target="_blank" rel="noopener">+62 811-2550-6159</a></b></div>
+        <div class="canal"><span>Ufficio</span><b>Kuta, Lombok, Indonesia</b></div>
+        <div class="canal"><span>Instagram</span><b>@marlacarealestate</b></div>
+      </div>
+    </div>
+    <div class="cta-llamada">
+      <h3>Prenota la tua chiamata gratuita</h3>
+      <p>Rispondi a tre domande con un clic e fissiamo una videochiamata di 30 minuti, nell'orario che preferisci.</p>
+      <ul>
+        <li>Un minuto, senza impegno.</li>
+        <li>Ti scriviamo su WhatsApp entro 24–48 ore.</li>
+        <li>Parli con Lucía, la fondatrice.</li>
+      </ul>
+      <div class="cta-botones">
+        <a class="boton boton-tinta" href="agendar/">Fissa una call</a>
+        <a class="boton boton-linea-tinta" href="https://wa.me/6281125506159?text=Buongiorno%2C%20vorrei%20informazioni%20sulle%20ville%20di%20Marlaca." target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+      </div>
+      <p class="cta-nota">Se l'investimento non fa per te, te lo diciamo durante la chiamata.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="envoltura pie-rejilla">
+    <div>
+      <a class="marca" href="#inicio" style="color:var(--hueso)"><picture><source type="image/avif" srcset="../img/opt/palmas-oro-640.avif 640w, ../img/opt/palmas-oro-714.avif 714w" sizes="114px"><source type="image/webp" srcset="../img/opt/palmas-oro-640.webp 640w, ../img/opt/palmas-oro-714.webp 714w" sizes="114px"><img src="../img/palmas-oro.png" width="114" height="64" alt="" loading="lazy" decoding="async"></picture><span class="marca-texto"><b>MARLACA</b><span>Real Estate</span></span></a>
+      <p style="margin-top:18px;max-width:34ch">Ville con piscina privata a Kuta, Lombok, costruite e gestite da chi vive sull'isola.</p>
+      <a class="alquiler" href="https://marlacavillaslombok.com" target="_blank" rel="noopener">Cerchi un alloggio? Marlaca Villas →</a>
+    </div>
+    <div><h4>Investire</h4><ul><li><a href="#villas">Ville disponibili</a></li><li><a href="#numeros">Numeri</a></li><li><a href="#compra">Come si compra</a></li><li><a href="#preguntas">Domande</a></li></ul></div>
+    <div><h4>Marlaca</h4><ul><li><a href="#trayectoria">Percorso</a></li><li><a href="#caso">Caso reale</a></li><li><a href="#equipo">Chi siamo</a></li><li><a href="#visita">Visitare le ville</a></li></ul></div>
+    <div><h4>Seguici</h4><ul><li><a href="https://www.instagram.com/marlacarealestate" target="_blank" rel="noopener">Instagram</a></li><li><a href="#contacto">LinkedIn</a></li><li><a href="#contacto">YouTube</a></li><li><a href="https://www.instagram.com/marlacavillaslombok" target="_blank" rel="noopener">Marlaca Villas</a></li></ul></div>
+  </div>
+  <div class="envoltura descargo">
+    <p>I rendimenti indicati sono proiezioni prima dell'imposta sulle società basate sul modello di gestione di Marlaca IV per il 2027 e non costituiscono una garanzia. I risultati di una villa in un anno non assicurano quelli di un'altra. Le immagini contrassegnate come render sono puramente indicative.</p>
+    <p class="pie-legal"><a href="cookies/">Informativa sui cookie</a><a href="cookies/#configurar" data-mrl-consent>Impostazioni cookie</a></p>
+    <p>© 2026 Marlaca Real Estate · Kuta, Lombok, Indonesia</p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/6281125506159?text=Buongiorno%2C%20vorrei%20informazioni%20sulle%20ville%20di%20Marlaca." target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.6a8 8 0 0 1-11.9 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z"/><path d="M9.2 8.6c.2-.4.4-.4.7-.4s.4 0 .6.4l.7 1.4c.1.3 0 .5-.2.7l-.5.6c.6 1.1 1.6 2 2.8 2.6l.6-.7c.2-.2.4-.2.7-.1l1.4.7c.3.1.4.3.4.5 0 .5-.4 1.2-1.1 1.4-.8.2-2.2 0-3.9-1.1-1.8-1.1-3-2.8-3.3-4-.1-.6.1-1.1.1-1.4Z"/></svg></a>
+<script>
+(function(){
+  var root=document.documentElement;
+  // Textos y formato numérico del idioma (los inyecta fuente/generar.py desde fuente/textos/<idioma>.json)
+  var FMT={"locale":"it-IT","decimal":",","miles":".","euro":"{n} €"},TXT={"menu_abrir":"Apri il menu","menu_cerrar":"Chiudi il menu","porcentaje":"{n}%","recupero":"{n} anni"};
+  function reduce(){return window.matchMedia('(prefers-reduced-motion: reduce)').matches}
+
+  // Aparición al hacer scroll: un solo observador; sin JS todo queda visible (la clase .js solo la pone el script)
+  var RV='.cabecera,.tipo,.bienestar,.hito,.prueba,.paso,.fee,.pasos-compra li,.legal,.indicador,.razon,.obra .foto,.preguntas details,.collage .foto,.caso>.foto,.caso>div,.datos-caso div,.comparativa,.escenarios,.cuenta>*,.lombok>div:first-child,.equipo>*,.visita>*,.contacto>*,.dos-col>*,.villas-intro>*';
+  var CNT='.prueba b,.datos-caso b,.fee b,.indicador b';
+  /*fmt*/
+  function agrupa(s){return s.replace(/\B(?=(\d{3})+(?!\d))/g,FMT.miles)}
+  function num(x,d){return x.toFixed(d).replace('.',FMT.decimal)}
+  function eur(x){return FMT.euro.replace('{n}',agrupa(String(x)))}
+  // Analiza un texto numérico según FMT (decimal y miles del idioma): prefijo + número + sufijo. null si no es un número simple (p. ej. '7/7')
+  function analiza(t){
+    var m=/^([^\d]*?)(\d(?:[\d.,\u00a0\u202f ]*\d)?)([^\d]*)$/.exec(t);
+    if(!m)return null;
+    var s=m[2],i=s.lastIndexOf(FMT.decimal),ent=i>-1?s.slice(0,i):s,fr=i>-1?s.slice(i+1):'';
+    if(!/^\d{1,3}(?:[^\d]\d{3})+$|^\d+$/.test(ent)||/\D/.test(fr))return null;
+    return {pre:m[1],suf:m[3],miles:/\D/.test(ent),dec:fr.length,fin:parseFloat(ent.replace(/\D/g,'')+(fr?'.'+fr:''))};
+  }
+  function formatea(p,x){var n=x.toFixed(p.dec).split('.');return p.pre+(p.miles?agrupa(n[0]):n[0])+(p.dec?FMT.decimal+n[1]:'')+p.suf}
+  /*fin fmt*/
+  function cuenta(el){
+    if(el.dataset.cuenta)return;
+    var t=el.textContent.trim(),p=analiza(t);
+    if(!p||reduce())return;
+    el.dataset.cuenta='1';
+    el.textContent=formatea(p,0);
+    var d=el.closest('.rv'),D=1300;
+    setTimeout(function(){
+      var t0=performance.now();
+      (function f(ts){
+        var k=Math.min((ts-t0)/D,1);
+        el.textContent=k<1?formatea(p,p.fin*(1-Math.pow(1-k,4))):t;
+        if(k<1)requestAnimationFrame(f);
+      })(t0);
+    },d?(parseInt(d.style.getPropertyValue('--d'))||0)+150:150);
+  }
+  if('IntersectionObserver' in window){
+    var grupos=new Map();
+    var nodos=[].slice.call(document.querySelectorAll(RV)).filter(function(n){return !n.closest('.portada')});
+    var ro=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var n=e.target;ro.unobserve(n);
+      n.classList.add('visto');
+      (n.matches(CNT)?[n]:[].slice.call(n.querySelectorAll(CNT))).forEach(cuenta);
+      // al terminar se retira la clase para que los efectos hover (transform) no choquen con la transición de aparición
+      setTimeout(function(){n.classList.remove('rv','visto');n.style.removeProperty('--d')},(parseInt(n.style.getPropertyValue('--d'))||0)+1500);
+    })},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    nodos.forEach(function(n){
+      var g=n.parentNode,i=grupos.get(g)||0;grupos.set(g,i+1);
+      n.style.setProperty('--d',Math.min(i,6)*80+'ms');
+      n.classList.add('rv');ro.observe(n);
+    });
+  }
+
+  var nav=document.getElementById('nav');
+  var menu=document.getElementById('menu'),ham=document.getElementById('hamburguesa');
+  function alScroll(){nav.classList.toggle('solida',window.scrollY>40||menu.classList.contains('abierto'))}
+  [].forEach.call(menu.children,function(li,i){li.style.setProperty('--i',i)});
+  function abre(a){menu.classList.toggle('abierto',a);root.classList.toggle('bloq',a);ham.setAttribute('aria-expanded',a);ham.setAttribute('aria-label',a?TXT.menu_cerrar:TXT.menu_abrir);alScroll()}
+  ham.addEventListener('click',function(){abre(!menu.classList.contains('abierto'))});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))abre(false)});
+  // Selector de idioma: se cierra al pulsar fuera o con Escape (antes que el menú)
+  var idi=menu.querySelector('.idiomas details');
+  document.addEventListener('click',function(e){if(idi.open&&!idi.contains(e.target))idi.open=false});
+  document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;if(idi.open){idi.open=false;idi.querySelector('summary').focus();return}if(menu.classList.contains('abierto')){abre(false);ham.focus()}});
+  var ancho=window.matchMedia('(min-width:1141px)');
+  (ancho.addEventListener?ancho.addEventListener('change',function(e){if(e.matches)abre(false)}):ancho.addListener(function(e){if(e.matches)abre(false)}));
+  window.addEventListener('scroll',alScroll,{passive:true});alScroll();
+
+  var v=document.getElementById('video-portada');
+  var quieto=reduce();
+  // Portada: se elige la fuente según el ancho (720p en móvil, 1280 hasta 1600px) antes de la primera carga; la fuente por defecto del marcado es la completa
+  if(v && !quieto){
+    var sv=v.querySelector('source');
+    if(sv){if(window.matchMedia('(max-width:768px)').matches)sv.src='../video/opt/lombok-720.mp4';else if(window.matchMedia('(max-width:1600px)').matches)sv.src='../video/opt/lombok-1280.mp4'}
+    v.preload='auto';v.load();v.play&&v.play().catch(function(){});
+  }
+  // Clips de sección: se reproducen solo cuando están a la vista
+  var clips=document.querySelectorAll('video.clip');
+  if(!quieto && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){var c=e.target;
+      if(e.isIntersecting){if(c.preload==='none'){c.preload='auto';c.load()}c.play().catch(function(){})}else{c.pause()}})},{rootMargin:'200px 0px',threshold:0.15});
+    clips.forEach(function(c){io.observe(c)});
+  }
+
+  // Fuente única de números (Excel de escenarios de Marlaca IV, 24-sep-2026)
+  var E=[{t:149,o:75.5,a:41100,d:10400,f:51500,n:18159,r:9.1},{t:160,o:81.7,a:47800,d:11500,f:59300,n:23111,r:7.1},{t:175,o:88.5,a:56400,d:13100,f:69500,n:29723,r:5.6}];
+  var MAX=69500/0.95;
+  function pon(i){
+    var e=E[i];
+    document.querySelectorAll('.escenario').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.esc==i)});
+    document.getElementById('t-tarifa').textContent=eur(e.t);
+    document.getElementById('t-ocup').textContent=TXT.porcentaje.replace('{n}',num(e.o,1));
+    document.getElementById('t-aloj').textContent=eur(e.a);
+    document.getElementById('t-desa').textContent=eur(e.d);
+    document.getElementById('t-fact').textContent=eur(e.f);
+    document.getElementById('t-neto').textContent=eur(e.n);
+    document.getElementById('t-rec').textContent=TXT.recupero.replace('{n}',num(e.r,1));
+    document.getElementById('b-fact').textContent=eur(e.f);
+    document.getElementById('b-neto').textContent=eur(e.n);
+    document.getElementById('i-fact').style.transform='scaleX('+(e.f/MAX).toFixed(3)+')';
+    document.getElementById('i-neto').style.transform='scaleX('+(e.n/MAX).toFixed(3)+')';
+  }
+  document.querySelectorAll('.escenario').forEach(function(b){b.addEventListener('click',function(){pon(+b.dataset.esc)})});
+  pon(1);
+})();
+</script>
+
+</body></html>
