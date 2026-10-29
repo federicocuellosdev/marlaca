@@ -1,0 +1,49 @@
+/* Banner y panel de consentimiento. Usa los tokens de la landing (con valores de respaldo). */
+.mrl-cb,.mrl-ov{--c-fondo:var(--hueso,#F7F5F1);--c-tinta:var(--tinta,#1B1916);--c-gris:var(--gris,#5F5951);--c-linea:var(--linea,rgba(27,25,22,.14));--c-oro:var(--oro-texto,#86652B);--c-arena:var(--arena,#ECE5DA)}
+.mrl-cb[hidden]{display:none!important}
+.mrl-cb{position:fixed;z-index:1000;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));max-width:980px;margin-inline:auto;max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);overflow-y:auto;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 28px;align-items:center;padding:22px 26px;
+  background:var(--c-fondo);color:var(--c-tinta);border:1px solid var(--c-linea);border-radius:6px;box-shadow:0 18px 50px -12px rgba(0,0,0,.45);
+  font-family:var(--texto,"Plus Jakarta Sans",system-ui,sans-serif);font-size:14px;line-height:1.6}
+.mrl-cb__t,.mrl-pn__t{font-family:var(--display,"Playfair Display",Georgia,serif);font-weight:400;font-size:22px;line-height:1.2;letter-spacing:-.01em;margin:0 0 6px}
+.mrl-cb__d,.mrl-pn__i,.mrl-cat__d{margin:0;color:var(--c-gris)}
+.mrl-cb a,.mrl-pn a{color:var(--c-tinta);text-underline-offset:.2em}
+.mrl-cb__bs{display:flex;flex-direction:column;gap:10px;min-width:200px}
+.mrl-btn{font:600 14px/1 var(--texto,"Plus Jakarta Sans",system-ui,sans-serif);letter-spacing:.03em;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid var(--c-tinta);cursor:pointer;
+  transition:background-color .2s,color .2s,transform .2s}
+/* Aceptar y Rechazar comparten esta clase: mismo tamaño, color y peso */
+.mrl-btn--pri{background:var(--c-tinta);color:var(--c-fondo)}
+.mrl-btn--pri:hover{background:#000;color:#fff}
+.mrl-btn--sec{background:transparent;color:var(--c-tinta)}
+.mrl-btn--sec:hover{background:var(--c-arena)}
+.mrl-btn:active{transform:scale(.98)}
+.mrl-btn:focus-visible,.mrl-sw input:focus-visible+.mrl-sw__pista,.mrl-cb a:focus-visible,.mrl-pn a:focus-visible{outline:2px solid var(--c-oro);outline-offset:3px}
+
+.mrl-ov{position:fixed;z-index:1001;inset:0;background:rgba(19,18,16,.62);display:grid;place-items:center;padding:max(12px,env(safe-area-inset-top,0px)) 12px max(12px,env(safe-area-inset-bottom,0px))}
+.mrl-pn{width:100%;max-width:640px;max-height:100%;overflow-y:auto;background:var(--c-fondo);color:var(--c-tinta);border-radius:6px;padding:clamp(20px,4vw,32px);
+  font-family:var(--texto,"Plus Jakarta Sans",system-ui,sans-serif);font-size:14px;line-height:1.6;box-shadow:0 24px 60px -12px rgba(0,0,0,.5)}
+.mrl-pn__t{font-size:26px}
+.mrl-cats{margin:20px 0}
+.mrl-cat{padding:16px 0;border-top:1px solid var(--c-linea)}
+.mrl-cat:last-child{border-bottom:1px solid var(--c-linea)}
+.mrl-cat__cab{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:4px}
+.mrl-cat__t{font-weight:600;font-size:15px}
+.mrl-cat__fijo{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--c-oro);white-space:nowrap}
+.mrl-sw{position:relative;display:inline-block;width:48px;height:28px;flex:none}
+.mrl-sw input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer;z-index:1}
+.mrl-sw__pista{position:absolute;inset:0;border-radius:999px;background:#bdb6a9;transition:background-color .2s}
+.mrl-sw__pista::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:transform .2s}
+.mrl-sw input:checked+.mrl-sw__pista{background:var(--c-tinta)}
+.mrl-sw input:checked+.mrl-sw__pista::after{transform:translateX(20px)}
+.mrl-pn__bs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.mrl-pn__bs .mrl-btn{padding:0 12px}
+html.mrl-pn-abierto,html.mrl-pn-abierto body{overflow:hidden}
+
+@media (max-width:760px){
+  .mrl-cb{grid-template-columns:1fr;padding:18px;gap:14px}
+  .mrl-cb__bs{min-width:0}
+  .mrl-cb__t{font-size:20px}
+  .mrl-pn__bs{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.mrl-btn,.mrl-sw__pista,.mrl-sw__pista::after{transition:none}}
+
