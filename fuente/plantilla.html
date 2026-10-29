@@ -1,0 +1,1065 @@
+<!doctype html>
+<!-- Generado por fuente/generar.py a partir de fuente/plantilla.html y fuente/textos/*.json. No editar a mano. -->
+<html lang="{{lang}}" data-pagina="inicio"><head><meta charset=utf8><script>document.documentElement.className+=" js"</script><link rel="icon" href="data:,"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* ---------- Efectos y transiciones (solo transform/opacity; sobrios) ---------- */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
+.js .rv.visto{opacity:1;transform:none}
+.js .comparativa.rv{opacity:1;transform:none}
+.js .comparativa.rv .pista i{transform:scaleX(0)}
+.js .comparativa.rv.visto .pista i{transform:none}
+picture{display:contents}
+.foto img{transition:transform 1s var(--ease)}
+.tipo{transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.preguntas details[open] p{animation:aparece .5s var(--ease) both}
+.preguntas summary{transition:color .25s}
+.menu .boton{transition-property:background-color,color,border-color,box-shadow,transform}
+@keyframes aparece{from{opacity:0;transform:translateY(-6px)}}
+@keyframes aparece-f{from{opacity:0}}
+@keyframes entra{from{opacity:0;transform:translateY(24px)}}
+@keyframes zoom-lento{from{transform:scale(1.08)}}
+@media (min-width:1141px){
+  .menu a:not(.boton){position:relative}
+  .menu a:not(.boton)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--oro);transform:scaleX(0);transform-origin:0 50%;transition:transform .4s var(--ease)}
+  .menu a:not(.boton):hover::after{transform:none}
+}
+@media (hover:hover) and (pointer:fine){
+  .boton:hover{transform:translateY(-2px);box-shadow:0 8px 22px -8px rgba(0,0,0,.4)}
+  .boton:active{transform:scale(.97);box-shadow:none}
+  .tipo:hover{transform:translateY(-4px);box-shadow:0 18px 38px -20px rgba(27,25,22,.4)}
+  .tipo:hover .foto img,.hito .foto:hover img,.collage .foto:hover img,.obra .foto:hover img,.bienestar-fotos .foto:hover img,.equipo .foto:hover img{transform:scale(1.05)}
+  .preguntas summary:hover{color:var(--oro-texto)}
+  .tipo .pie a,.alquiler{transition:opacity .2s}
+  .tipo .pie a:hover{opacity:.7}
+}
+@media (pointer:coarse){
+  .marca{min-height:44px}
+  .tipo .pie a,.alquiler{display:inline-flex;align-items:center;min-height:44px}
+  .tipo .pie{align-items:center;padding-top:6px}
+  footer ul{gap:0}
+  footer ul a{display:inline-flex;align-items:center;min-height:44px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .portada .poster,.portada video{animation:zoom-lento 16s var(--ease) both}
+  .portada .coordenadas,.portada h1,.portada .entradilla,.portada .acciones,.ficha-portada{animation:entra 1s var(--ease) both}
+  .portada .coordenadas{animation-delay:.15s}
+  .portada h1{animation-delay:.3s}
+  .portada .entradilla{animation-delay:.5s}
+  .portada .acciones{animation-delay:.65s}
+  .ficha-portada{animation-delay:.8s}
+}
+@media (max-width:1140px){.js .menu.abierto li{transition-delay:calc(var(--i,0)*45ms + 60ms)}}
+
+/* ---------- Movimiento reducido: por niveles, no un apagado total ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  /* Nivel 1: se elimina el movimiento (zoom, elevaciones, desplazamientos) */
+  .portada .poster,.portada video{animation:none}
+  .tipo:hover,.boton:hover,.boton:active,.hito .foto:hover img,.foto:hover img{transform:none!important}
+  /* Nivel 2: los reveals pasan a un fundido corto sin desplazamiento */
+  .js .rv{transform:none;transition:opacity .25s linear!important;transition-delay:0ms!important}
+  .js .comparativa.rv .pista i{transform:none}
+  .portada .coordenadas,.portada h1,.portada .entradilla,.portada .acciones,.ficha-portada{animation:aparece-f .4s ease both!important}
+  .preguntas details[open] p{animation:aparece-f .2s ease both!important}
+  /* Nivel 3: se conservan fundidos de color/opacidad y el foco */
+  .boton,.escenario,.escenario .nombre,.menu a,.nav::before,input,select,.preguntas summary{transition-duration:.15s!important}
+  .menu{transition:opacity .15s!important;transform:none!important}
+  .menu.abierto li,.menu li{transform:none;transition:opacity .15s!important;transition-delay:0ms!important}
+}
+</style>
+<title>{{meta.titulo|attr}}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="{{meta.descripcion|attr}}">
+<link rel="canonical" href="{{url}}">
+{{hreflang_tags}}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Marlaca Real Estate">
+<meta property="og:title" content="{{meta.titulo|attr}}">
+<meta property="og:description" content="{{meta.descripcion|attr}}">
+<meta property="og:locale" content="{{locale}}">
+{{og_alternos}}
+<meta property="og:url" content="{{url}}">
+<meta property="og:image" content="https://marlacarealestate.com/img/opt/lombok-poster-1280.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" type="image/avif" fetchpriority="high" imagesrcset="{{base}}img/opt/lombok-poster-640.avif 640w, {{base}}img/opt/lombok-poster-1280.avif 1280w, {{base}}img/opt/lombok-poster-1920.avif 1920w" imagesizes="100vw">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="{{base}}fonts/plus-jakarta-sans-latin-400-normal.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="{{base}}fonts/playfair-display-latin-400-normal.woff2">
+<style>
+<!--#incluir fuentes.css-->
+</style>
+<!--#incluir consentimiento.html-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Marlaca Real Estate","description":"{{meta.ld_descripcion|json}}","inLanguage":"{{lang}}","areaServed":"{{meta.ld_zona|json}}","founder":{"@type":"Person","name":"Lucía Miranda"},"url":"https://marlacarealestate.com","sameAs":["https://www.instagram.com/marlacarealestate","https://marlacavillaslombok.com"]}
+</script>
+<style>
+/* Layout: bandas a todo el ancho que alternan noche y hueso, como la web de alquileres; contenido en una retícula de 12 columnas con márgenes amplios */
+:root{
+  --noche:#131210;      /* fondo oscuro, negro cálido */
+  --noche-2:#1C1A17;    /* superficie sobre oscuro */
+  --hueso:#F7F5F1;      /* fondo claro */
+  --arena:#ECE5DA;      /* banda clara secundaria */
+  --tinta:#1B1916;      /* texto sobre claro */
+  --gris:#5F5951;       /* texto secundario sobre claro */
+  --gris-osc:#ABA397;   /* texto secundario sobre oscuro */
+  --oro:#C5A059;        /* acento sobre oscuro (dorado Marlaca Villas) */
+  --oro-texto:#86652B;  /* acento legible sobre claro */
+  --linea:rgba(27,25,22,.14);
+  --linea-osc:rgba(247,245,241,.16);
+  --display:"Playfair Display", "Iowan Old Style", Georgia, serif;
+  --texto:"Plus Jakarta Sans", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --ancho:1200px;
+  --r:4px;
+  --ease:cubic-bezier(.22,1,.36,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
+html.bloq,html.bloq body{overflow:hidden}
+body{background:var(--hueso);color:var(--tinta);font-family:var(--texto);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.4vw,52px)}
+h3{font-size:clamp(21px,2.2vw,24px)}
+p{margin:0}
+.envoltura{max-width:var(--ancho);margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+@media (max-width:520px){.envoltura{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}}
+.banda{padding-block:clamp(72px,10vw,128px)}
+.oscura{background:var(--noche);color:var(--hueso)}
+.arena{background:var(--arena)}
+.etiqueta{font-family:var(--texto);font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--oro-texto)}
+.oscura .etiqueta{color:var(--oro)}
+.entradilla{font-size:18px;color:var(--gris);max-width:58ch}
+.oscura .entradilla{color:var(--gris-osc)}
+.cabecera{display:grid;gap:18px;max-width:760px;margin-bottom:56px}
+.boton{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font:600 14px/1 var(--texto);letter-spacing:.04em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .25s,color .25s,border-color .25s,box-shadow .35s var(--ease),transform .35s var(--ease)}
+.boton:active{transform:scale(.97);transition-duration:.1s}
+.boton-oro{background:var(--oro);color:var(--noche)}
+.boton-oro:hover{background:#D4B477}
+.boton-linea{border-color:currentColor;background:transparent}
+.boton-linea:hover{background:rgba(247,245,241,.12)}
+.boton-tinta{background:var(--tinta);color:var(--hueso)}
+.boton-tinta:hover{background:#000}
+.cifra{font-variant-numeric:tabular-nums}
+.render{position:absolute;left:12px;bottom:12px;background:rgba(19,18,16,.72);color:var(--hueso);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:2px}
+.foto{position:relative;overflow:hidden;border-radius:var(--r);background:var(--arena)}
+.foto img,.foto video{width:100%;height:100%;object-fit:cover;display:block}
+.chip-video{position:absolute;left:12px;bottom:12px;background:rgba(19,18,16,.72);color:var(--hueso);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:2px}
+
+/* ---------- Navegación ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);color:var(--hueso)}
+.nav::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(19,18,16,.96);box-shadow:0 1px 0 var(--linea-osc);opacity:0;transition:opacity .4s ease}
+.nav.solida::before{opacity:1}
+.nav .envoltura{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marca img{height:34px;width:auto}
+.marca-texto{display:grid;line-height:1}
+.marca-texto b{font-family:var(--display);font-weight:500;font-size:21px;letter-spacing:.2em}
+.marca-texto span{font-size:9.5px;letter-spacing:.42em;text-transform:uppercase;margin-top:5px;color:var(--oro)}
+.menu{display:flex;align-items:center;gap:28px;list-style:none;margin:0;padding:0}
+.menu a{text-decoration:none;font-size:13.5px;letter-spacing:.04em;opacity:.86;transition:opacity .25s,color .25s}
+.menu a:hover{opacity:1;color:var(--oro)}
+.menu .boton{opacity:1;min-height:42px;padding:0 20px}
+.menu .boton:hover{color:var(--noche)}
+.hamburguesa{display:none;background:none;border:1px solid var(--linea-osc);color:inherit;border-radius:999px;width:46px;height:46px;cursor:pointer;transition:border-color .25s,transform .2s var(--ease)}
+.hamburguesa:active{transform:scale(.94)}
+.hamburguesa path{transform-box:fill-box;transform-origin:center;transition:transform .35s var(--ease),opacity .2s}
+.hamburguesa[aria-expanded="true"] .l1{transform:translateY(6px) rotate(45deg)}
+.hamburguesa[aria-expanded="true"] .l2{opacity:0;transform:scaleX(.2)}
+.hamburguesa[aria-expanded="true"] .l3{transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:1140px){
+  .hamburguesa{display:grid;place-items:center}
+  .menu{position:fixed;inset:calc(76px + env(safe-area-inset-top,0px)) 0 auto 0;max-height:calc(100vh - 76px - env(safe-area-inset-top,0px));max-height:calc(100dvh - 76px - env(safe-area-inset-top,0px));overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;flex-direction:column;align-items:stretch;gap:0;background:var(--noche);padding:8px max(18px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px));border-top:1px solid var(--linea-osc);transform:translateY(-10px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s ease,transform .4s var(--ease),visibility 0s .4s}
+  .menu.abierto{opacity:1;transform:none;visibility:visible;pointer-events:auto;transition-delay:0s}
+  .menu li{opacity:0;transform:translateY(-6px);transition:opacity .25s,transform .25s}
+  .menu.abierto li{opacity:1;transform:none;transition:opacity .4s ease calc(var(--i,0)*45ms + 60ms),transform .45s var(--ease) calc(var(--i,0)*45ms + 60ms)}
+  .menu li a{display:flex;align-items:center;min-height:48px;padding:12px 0;border-bottom:1px solid var(--linea-osc);font-size:16px}
+  .menu li:last-child a{margin-top:18px;justify-content:center;border:0}
+}
+
+
+/* ---------- Selector de idioma: mundo + sigla actual, despliega la lista (details nativo: funciona sin JS) ---------- */
+.idiomas details{position:relative}
+.idiomas summary{list-style:none;display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:0 12px 0 10px;border:1px solid var(--linea-osc);border-radius:999px;cursor:pointer;font-size:12px;font-weight:600;letter-spacing:.12em;opacity:.86;transition:opacity .25s,color .25s,border-color .25s;-webkit-user-select:none;user-select:none}
+.idiomas summary::-webkit-details-marker{display:none}
+.idiomas summary:hover,.idiomas details[open] summary{opacity:1;color:var(--oro);border-color:rgba(197,160,89,.55)}
+.idiomas summary svg{flex:none}
+.idiomas .flecha{transition:transform .3s var(--ease)}
+.idiomas details[open] .flecha{transform:rotate(180deg)}
+.idiomas ul{list-style:none;margin:0;padding:6px;position:absolute;right:0;top:calc(100% + 10px);min-width:190px;background:var(--noche-2);border:1px solid var(--linea-osc);border-radius:var(--r);box-shadow:0 18px 40px rgba(0,0,0,.35);z-index:5}
+.idiomas details[open] ul{animation:idiomasAbre .25s var(--ease)}
+@keyframes idiomasAbre{from{opacity:0;transform:translateY(-6px)}}
+.menu .idiomas ul a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:40px;padding:0 12px;border:0;border-radius:2px;margin:0;font-size:14px;letter-spacing:.02em;opacity:.86}
+.menu .idiomas ul a span{font-size:11px;font-weight:600;letter-spacing:.14em;opacity:.55}
+.menu .idiomas ul a:hover,.menu .idiomas ul a:focus-visible{opacity:1;background:rgba(247,245,241,.06);color:var(--hueso)}
+.menu .idiomas ul a[aria-current]{color:var(--oro);opacity:1}
+.menu .idiomas ul a[aria-current] span{opacity:1}
+.menu .idiomas a::after{display:none}
+@media (min-width:1141px){.menu{gap:20px}}
+@media (min-width:1141px){.menu li{white-space:nowrap}}
+@media (min-width:1141px) and (max-width:1280px){
+  .nav .envoltura{gap:16px}
+  .menu{gap:13px}
+  .menu a{font-size:13px;letter-spacing:.02em}
+  .menu .boton{padding:0 14px}
+  .idiomas summary{padding:0 10px 0 8px;gap:6px}
+}
+@media (pointer:coarse){.idiomas summary{min-height:44px}.menu .idiomas ul a{min-height:44px}}
+/* Móvil: dentro del menú desplegado la lista se abre en el sitio, no flotando */
+@media (max-width:1140px){
+  .menu li.idiomas{padding:12px 0;border-bottom:1px solid var(--linea-osc)}
+  .idiomas summary{min-height:44px;font-size:13px}
+  .idiomas ul{position:static;margin-top:10px;box-shadow:none;min-width:0}
+  .menu .idiomas ul li a{min-height:48px;font-size:16px;margin:0;justify-content:space-between;border:0}
+}
+
+/* ---------- Portada ---------- */
+.portada{position:relative;min-height:min(860px,94vh);display:flex;align-items:flex-end;color:var(--hueso);background:var(--noche);overflow:hidden}
+.portada video,.portada .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portada::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,18,16,.62) 0%,rgba(19,18,16,.18) 60%,rgba(19,18,16,0) 100%),linear-gradient(180deg,rgba(19,18,16,.6) 0%,rgba(19,18,16,.15) 30%,rgba(19,18,16,.45) 62%,rgba(19,18,16,.92) 100%)}
+@media (max-width:860px){.portada::after{background:linear-gradient(180deg,rgba(19,18,16,.7) 0%,rgba(19,18,16,.55) 40%,rgba(19,18,16,.9) 100%)}}
+.portada .envoltura{position:relative;z-index:2;width:100%;padding-bottom:clamp(40px,7vw,80px);padding-top:140px}
+.portada-rejilla{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;align-items:end}
+.portada h1{font-size:clamp(42px,6.6vw,86px);font-weight:400;line-height:1.02;letter-spacing:-.02em}
+.portada h1 em{font-style:italic;color:var(--oro)}
+.portada .entradilla{color:rgba(247,245,241,.86);margin-top:24px;font-size:clamp(16px,1.6vw,19px)}
+.portada .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.coordenadas{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(247,245,241,.75);margin-bottom:22px;display:flex;gap:14px;flex-wrap:wrap}
+.coordenadas span+span::before{content:"·";margin-right:14px;color:var(--oro)}
+.ficha-portada{border:1px solid var(--linea-osc);background:rgba(19,18,16,.5);backdrop-filter:blur(10px);border-radius:var(--r);padding:26px;display:grid;gap:16px;max-width:380px;justify-self:end}
+.ficha-portada .etiqueta{color:var(--oro)}
+.ficha-portada dl{margin:0;display:grid;gap:12px}
+.ficha-portada dl div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--linea-osc);padding-bottom:10px}
+.ficha-portada dt{color:var(--gris-osc);font-size:14px}
+.ficha-portada dd{margin:0;font-weight:500}
+@media (max-width:860px){.portada-rejilla{grid-template-columns:1fr}.ficha-portada{justify-self:start;max-width:none;width:100%}}
+
+/* ---------- Pruebas ---------- */
+.pruebas{background:var(--noche);color:var(--hueso);border-top:1px solid var(--linea-osc)}
+.pruebas .envoltura{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-block:38px}
+.prueba{padding:4px 28px;border-left:1px solid var(--linea-osc);display:grid;gap:6px}
+.prueba:first-child{border-left:0;padding-left:0}
+.prueba b{font-family:var(--display);font-weight:400;font-size:clamp(34px,3.6vw,46px);line-height:1;color:var(--oro)}
+.prueba span{font-size:13.5px;color:var(--gris-osc);line-height:1.45}
+@media (max-width:820px){.pruebas .envoltura{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}.prueba:nth-child(3){border-left:0;padding-left:0}}
+
+/* ---------- Manifiesto / tres usos ---------- */
+.dos-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center}
+@media (max-width:860px){.dos-col{grid-template-columns:1fr}}
+.collage{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:240px 240px;gap:12px}
+.collage .foto:first-child{grid-row:1 / span 2}
+@media (max-width:520px){.collage{grid-template-rows:180px 180px}}
+.usos{display:grid;gap:0;margin-top:34px;border-top:1px solid var(--linea)}
+.uso{display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px;padding:20px 0;border-bottom:1px solid var(--linea)}
+.uso h3{font-size:20px}
+.uso p{color:var(--gris)}
+@media (max-width:520px){.uso{grid-template-columns:1fr;gap:6px}}
+
+/* ---------- Villas disponibles ---------- */
+.villas-intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:end;margin-bottom:48px}
+@media (max-width:860px){.villas-intro{grid-template-columns:1fr}}
+.estado{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--hueso);background:var(--noche);padding:8px 14px;border-radius:999px}
+.estado i{width:8px;height:8px;border-radius:50%;background:#7FBF8A;display:block}
+.tipos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1060px){.tipos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.tipos{grid-template-columns:1fr}}
+.tipo{background:#fff;border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.tipo .foto{aspect-ratio:4/3;border-radius:0}
+.tipo-cuerpo{padding:22px 22px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.tipo h3{font-size:22px}
+.precio{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.precio small{font-size:13px;color:var(--gris)}
+.precio b{font-family:var(--display);font-weight:500;font-size:30px;line-height:1}
+.tipo ul{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:14px;color:var(--gris)}
+.tipo li{padding-left:16px;position:relative}
+.tipo li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:1px;background:var(--oro-texto)}
+.tipo .pie{margin-top:auto;padding-top:14px;border-top:1px solid var(--linea);font-size:13px;display:flex;justify-content:space-between;gap:10px}
+.tipo .pie a{color:var(--oro-texto);font-weight:600;text-decoration:none;white-space:nowrap}
+.tipo.destacado{background:var(--noche);color:var(--hueso);border-color:var(--noche)}
+.tipo.destacado ul,.tipo.destacado .precio small{color:var(--gris-osc)}
+.tipo.destacado .pie{border-color:var(--linea-osc)}
+.tipo.destacado .pie a{color:var(--oro)}
+.bienestar{margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:40px;align-items:center;background:var(--arena);border-radius:var(--r);padding:clamp(24px,4vw,44px)}
+@media (max-width:860px){.bienestar{grid-template-columns:1fr}}
+.bienestar-fotos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.bienestar-fotos .foto{aspect-ratio:3/4}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{border:1px solid var(--linea);border-radius:999px;padding:6px 14px;font-size:13px;background:var(--hueso)}
+
+/* ---------- Trayectoria ---------- */
+.linea-tiempo{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid var(--linea-osc)}
+.hito{padding:28px 24px 8px 0;display:grid;gap:12px;align-content:start;position:relative}
+.hito::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--gris-osc)}
+.hito.operando::before{background:var(--oro)}
+.hito.venta::before{background:var(--hueso);box-shadow:0 0 0 4px rgba(197,160,89,.4)}
+.hito .romano{font-family:var(--display);font-size:44px;line-height:1;color:var(--hueso)}
+.hito .foto{aspect-ratio:4/5;margin-top:4px}
+.hito .est{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oro)}
+.hito p{font-size:14px;color:var(--gris-osc)}
+.hito h3{font-size:19px}
+@media (max-width:980px){.linea-tiempo{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px;border-top:0}.hito{border-top:1px solid var(--linea-osc)}}
+@media (max-width:520px){.linea-tiempo{grid-template-columns:1fr}}
+
+/* ---------- Caso real ---------- */
+.caso{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+@media (max-width:900px){.caso{grid-template-columns:1fr}}
+.caso .foto{aspect-ratio:5/4}
+.comparativa{display:grid;gap:18px;margin:32px 0}
+.barra{display:grid;gap:8px}
+.barra-cab{display:flex;justify-content:space-between;font-size:14px}
+.barra-cab b{font-variant-numeric:tabular-nums}
+.pista{height:12px;background:rgba(27,25,22,.08);border-radius:999px;overflow:hidden}
+.pista i{display:block;height:100%;border-radius:999px;background:var(--tinta);transform-origin:0 50%;transition:transform 1.2s var(--ease) .2s}
+.pista i.oro{background:var(--oro)}
+.datos-caso{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.datos-caso div{padding:16px 12px 16px 0;display:grid;gap:2px}
+.datos-caso b{font-family:var(--display);font-size:28px;font-weight:400}
+.datos-caso span{font-size:12.5px;color:var(--gris)}
+@media (max-width:520px){.datos-caso{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.caso-tarifa{display:flex;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px solid var(--linea)}
+.caso-tarifa b{font-family:var(--display);font-size:28px;font-weight:400;white-space:nowrap}
+.caso-tarifa span{font-size:14px;line-height:1.45;color:var(--gris)}
+.nota-mes{margin-top:24px;font-size:17px;line-height:1.5}
+.nota-mes b{color:var(--oro)}
+.nota{font-size:12.5px;color:var(--gris);margin-top:14px;line-height:1.5}
+.oscura .nota{color:var(--gris-osc)}
+
+/* ---------- Números ---------- */
+.escenarios{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--linea-osc);border-radius:var(--r)}
+.escenario{all:unset;box-sizing:border-box;cursor:pointer;position:relative;padding:28px 28px 26px;display:grid;gap:8px;border-left:1px solid var(--linea-osc);transition:background-color .35s ease}
+.escenario::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--oro);transform:scaleX(0);transform-origin:0 50%;transition:transform .5s var(--ease)}
+.escenario:focus-visible{outline:2px solid var(--oro);outline-offset:-4px}
+.escenario:active .pct{transform:scale(.98)}
+.escenario .pct{transition:transform .2s var(--ease),color .35s;transform-origin:0 70%}
+.escenario:first-child{border-left:0}
+@media (hover:hover) and (pointer:fine){.escenario:hover{background:rgba(247,245,241,.04)}.escenario[aria-pressed="true"]:hover{background:var(--noche-2)}}
+.escenario[aria-pressed="true"]{background:var(--noche-2)}
+.escenario[aria-pressed="true"]::after{transform:none}
+.escenario .nombre{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gris-osc);transition:color .35s}
+.escenario[aria-pressed="true"] .nombre{color:var(--oro)}
+.escenario .pct{font-family:var(--display);font-size:clamp(56px,8vw,104px);line-height:.95;color:var(--hueso)}
+.escenario .pct sup{font-size:.4em;vertical-align:top;margin-left:4px;color:var(--oro)}
+.escenario .sub{font-size:13.5px;color:var(--gris-osc)}
+@media (max-width:700px){.escenarios{grid-template-columns:1fr}.escenario{border-left:0;border-top:1px solid var(--linea-osc)}.escenario:first-child{border-top:0}}
+.cuenta{margin-top:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:48px}
+@media (max-width:900px){.cuenta{grid-template-columns:1fr}}
+.tabla-num{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.tabla-num td{padding:14px 0;border-bottom:1px solid var(--linea-osc);font-size:15px}
+.tabla-num td:last-child{text-align:right;font-weight:500}
+.tabla-num tr.total td{color:var(--oro);font-size:17px;border-bottom:0}
+.flujo{display:grid;gap:14px;align-content:start}
+.flujo-barra{display:grid;gap:8px}
+.flujo-barra .pista{height:44px;border-radius:var(--r);background:rgba(247,245,241,.06)}
+.flujo-barra .pista i{width:100%;border-radius:var(--r);background:var(--gris-osc);transition:transform .7s var(--ease)}
+.flujo-barra .pista i.oro{background:var(--oro)}
+.flujo-barra .barra-cab{color:var(--gris-osc)}
+.flujo-barra .barra-cab b{color:var(--hueso)}
+.aviso{margin-top:36px;padding:18px 20px;border:1px solid var(--linea-osc);border-radius:var(--r);font-size:13.5px;color:var(--gris-osc);line-height:1.55}
+.aviso b{color:var(--hueso);font-weight:600}
+
+/* ---------- Gestión ---------- */
+.gestion{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--linea)}
+.paso{padding:28px 24px 0 0;display:grid;gap:10px;align-content:start}
+.paso+.paso{padding-left:24px;border-left:1px solid var(--linea)}
+.paso h3{font-size:22px}
+.paso p{font-size:15px;color:var(--gris)}
+.paso .n{font-family:var(--display);font-style:italic;color:var(--oro-texto);font-size:18px}
+@media (max-width:900px){.gestion{grid-template-columns:repeat(2,minmax(0,1fr))}.paso:nth-child(3){padding-left:0;border-left:0}.paso{padding-bottom:24px}}
+@media (max-width:520px){.gestion{grid-template-columns:1fr}.paso+.paso{padding-left:0;border-left:0;border-top:1px solid var(--linea)}}
+.fee{margin-top:44px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;padding:28px;background:#fff;border:1px solid var(--linea);border-radius:var(--r)}
+.fee b{font-family:var(--display);font-size:56px;font-weight:400;line-height:1}
+@media (max-width:560px){.fee{grid-template-columns:1fr;gap:10px}}
+
+/* ---------- Compra y legal ---------- */
+.compra{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px)}
+@media (max-width:900px){.compra{grid-template-columns:1fr}}
+.pasos-compra{list-style:none;margin:0;padding:0;display:grid}
+.pasos-compra li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:22px 0;border-bottom:1px solid var(--linea)}
+.pasos-compra li:first-child{border-top:1px solid var(--linea)}
+.pasos-compra .n{font-family:var(--display);font-size:30px;color:var(--oro-texto);line-height:1}
+.pasos-compra h3{font-size:20px;margin-bottom:4px}
+.pasos-compra p{color:var(--gris);font-size:15px}
+.legal{background:var(--noche);color:var(--hueso);border-radius:var(--r);padding:clamp(26px,4vw,44px);display:grid;gap:18px;align-content:start}
+.legal p{color:var(--gris-osc)}
+.legal dl{margin:6px 0 0;display:grid;gap:0}
+.legal dl div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid var(--linea-osc)}
+.legal dt{color:var(--oro);font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+.legal dd{margin:0;font-size:15px}
+@media (max-width:520px){.legal dl div{grid-template-columns:1fr;gap:4px}}
+
+/* ---------- Lombok ---------- */
+.lombok{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start}
+@media (max-width:900px){.lombok{grid-template-columns:1fr}}
+.lombok .foto{aspect-ratio:16/10}
+.minutos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:22px;border-top:1px solid var(--linea)}
+.minutos div{padding:14px 10px 0 0;display:grid}
+.minutos b{font-family:var(--display);font-size:30px;font-weight:400;line-height:1.1}
+.minutos span{font-size:12.5px;color:var(--gris)}
+@media (max-width:520px){.minutos{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:14px}}
+.indicadores{display:grid;gap:0}
+.indicador{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;padding:22px 0;border-bottom:1px solid var(--linea);align-items:baseline}
+.indicador:first-child{border-top:1px solid var(--linea)}
+.indicador b{font-family:var(--display);font-weight:400;font-size:clamp(28px,3vw,38px);white-space:nowrap}
+.indicador span{color:var(--gris);font-size:15px}
+.motogp{display:flex;align-items:flex-end;gap:10px;height:76px;margin-top:10px}
+.motogp div{flex:1;display:grid;gap:6px;justify-items:start;font-size:11.5px;color:var(--gris)}
+.motogp i{display:block;width:100%;background:var(--tinta);border-radius:2px 2px 0 0}
+.motogp div:last-child i{background:var(--oro-texto)}
+
+/* ---------- Equipo ---------- */
+.equipo{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center}
+@media (max-width:860px){.equipo{grid-template-columns:1fr}}
+.equipo .foto{aspect-ratio:4/5;max-width:460px}
+.razones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-top:34px;border-top:1px solid var(--linea-osc)}
+.razon{padding:18px 18px 18px 0;border-bottom:1px solid var(--linea-osc)}
+.razon h3{font-size:18px;margin-bottom:4px}
+.razon p{font-size:14px;color:var(--gris-osc)}
+@media (max-width:520px){.razones{grid-template-columns:1fr}}
+
+/* ---------- Visita / obra ---------- */
+.obra{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:8px}
+.obra .foto{aspect-ratio:9/14}
+@media (max-width:760px){.obra{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.visita{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:end;margin-bottom:40px}
+@media (max-width:860px){.visita{grid-template-columns:1fr;gap:24px}}
+
+/* ---------- Preguntas ---------- */
+.preguntas{max-width:880px}
+.preguntas details{border-bottom:1px solid var(--linea)}
+.preguntas details:first-of-type{border-top:1px solid var(--linea)}
+.preguntas summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;font-family:var(--display);font-size:21px;position:relative}
+.preguntas summary::-webkit-details-marker{display:none}
+.preguntas summary::after{content:"+";position:absolute;right:4px;top:18px;font-family:var(--texto);font-weight:300;font-size:28px;color:var(--oro-texto);transition:transform .45s var(--ease)}
+.preguntas details[open] summary::after{transform:rotate(45deg)}
+.preguntas details p{padding:0 0 24px;color:var(--gris);max-width:68ch}
+
+/* ---------- Contacto ---------- */
+.contacto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,6vw,88px);position:relative;z-index:1}
+@media (max-width:900px){.contacto{grid-template-columns:1fr}}
+.contacto-fondo{position:relative;overflow:hidden}
+.contacto-fondo>img,.contacto-fondo>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22}
+.canal{display:grid;gap:4px;padding:18px 0;border-top:1px solid var(--linea-osc)}
+.canal span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oro)}
+.canal b{font-weight:500;font-size:17px;user-select:all}
+.pendiente{color:var(--gris-osc);font-style:italic;font-weight:400}
+.cta-llamada{background:var(--hueso);color:var(--tinta);border-radius:var(--r);padding:clamp(24px,4vw,40px);display:grid;gap:16px;align-content:start}
+.cta-llamada h3{font-size:clamp(24px,2.6vw,30px)}
+.cta-llamada p{color:var(--gris)}
+.cta-llamada ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;border-top:1px solid var(--linea);padding-top:16px}
+.cta-llamada li{position:relative;padding-left:22px}
+.cta-llamada li::before{content:"";position:absolute;left:0;top:.7em;width:10px;height:1px;background:var(--oro-texto)}
+.cta-botones{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.boton-linea-tinta{border-color:var(--tinta);color:var(--tinta);background:transparent}
+.boton-linea-tinta:hover{background:var(--arena)}
+.cta-nota{font-size:12.5px}
+.pie-legal{display:flex;flex-wrap:wrap;gap:6px 22px}
+
+/* ---------- Pie ---------- */
+footer{background:var(--noche);color:var(--gris-osc);border-top:1px solid var(--linea-osc);font-size:14px}
+.pie-rejilla{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px;padding-block:64px 40px}
+@media (max-width:860px){.pie-rejilla{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.pie-rejilla{grid-template-columns:1fr}}
+footer h4{color:var(--hueso);font-family:var(--texto);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 14px;font-weight:600}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--oro)}
+.alquiler{display:inline-flex;margin-top:18px;gap:8px;align-items:center;color:var(--hueso);border-bottom:1px solid var(--oro);padding-bottom:2px}
+.descargo{border-top:1px solid var(--linea-osc);padding-block:22px 34px;font-size:12px;line-height:1.6;display:grid;gap:10px}
+.wa{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,calc(env(safe-area-inset-bottom,0px) + 12px));z-index:45;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 10px 28px -6px rgba(0,0,0,.45);transition:transform .35s var(--ease),opacity .3s,visibility .3s}
+.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:wa-late 3.2s ease-out infinite;opacity:0}
+@keyframes wa-late{0%{transform:scale(1);opacity:.55}70%,100%{transform:scale(1.55);opacity:0}}
+@media (hover:hover){.wa:hover{transform:translateY(-3px) scale(1.04)}}
+@media (max-width:600px){.wa{width:48px;height:48px;right:max(14px,env(safe-area-inset-right,0px));bottom:max(14px,calc(env(safe-area-inset-bottom,0px) + 10px))}.wa svg{width:24px;height:24px}}
+@media (prefers-reduced-motion:reduce){.wa::after{animation:none}}
+html.bloq .wa{opacity:0;visibility:hidden;pointer-events:none}
+</style></head><body>
+
+<header class="nav" id="nav">
+  <div class="envoltura">
+    <a class="marca" href="#inicio" aria-label="{{nav.marca_aria}}">
+      <picture><source type="image/avif" srcset="{{base}}img/opt/palmas-blanco-640.avif 640w, {{base}}img/opt/palmas-blanco-714.avif 714w" sizes="114px"><source type="image/webp" srcset="{{base}}img/opt/palmas-blanco-640.webp 640w, {{base}}img/opt/palmas-blanco-714.webp 714w" sizes="114px"><img src="{{base}}img/palmas-blanco.png" width="114" height="64" alt=""></picture>
+      <span class="marca-texto"><b>MARLACA</b><span>Real Estate</span></span>
+    </a>
+    <button class="hamburguesa" id="hamburguesa" aria-label="{{js.menu_abrir}}" aria-expanded="false" aria-controls="menu">
+      <svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><g stroke="currentColor" stroke-width="1.5" fill="none"><path class="l1" d="M0 1h20"/><path class="l2" d="M0 7h20"/><path class="l3" d="M0 13h20"/></g></svg>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="#villas">{{nav.villas}}</a></li>
+      <li><a href="#trayectoria">{{nav.trayectoria}}</a></li>
+      <li><a href="#numeros">{{nav.numeros}}</a></li>
+      <li><a href="#compra">{{nav.compra}}</a></li>
+      <li><a href="#equipo">{{nav.equipo}}</a></li>
+      <li><a href="#preguntas">{{nav.preguntas}}</a></li>
+      <li class="idiomas"><details><summary aria-label="{{nav.idioma}}: {{idioma_nombre}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9.25"/><path d="M2.75 12h18.5M12 2.75c2.4 2.5 3.6 5.6 3.6 9.25s-1.2 6.75-3.6 9.25M12 2.75C9.6 5.25 8.4 8.35 8.4 12s1.2 6.75 3.6 9.25"/></svg><span aria-hidden="true">{{idioma_sigla}}</span><svg class="flecha" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></summary><ul>{{selector_idiomas}}</ul></details></li>
+      <li><a class="boton boton-oro" href="{{url_agendar}}">{{nav.cta}}</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- PORTADA -->
+<section class="portada" id="inicio">
+  <picture><source type="image/avif" srcset="{{base}}img/opt/lombok-poster-640.avif 640w, {{base}}img/opt/lombok-poster-1280.avif 1280w, {{base}}img/opt/lombok-poster-1920.avif 1920w" sizes="100vw"><source type="image/webp" srcset="{{base}}img/opt/lombok-poster-640.webp 640w, {{base}}img/opt/lombok-poster-1280.webp 1280w, {{base}}img/opt/lombok-poster-1920.webp 1920w" sizes="100vw"><img src="{{base}}img/lombok-poster.jpg" class="poster" width="1920" height="1080" alt="{{portada.alt_poster}}" fetchpriority="high" decoding="async"></picture>
+  <video id="video-portada" muted loop playsinline autoplay preload="none" poster="{{base}}img/opt/lombok-poster-1280.webp" aria-hidden="true">
+    <source src="{{base}}video/opt/lombok.mp4" type="video/mp4">
+  </video>
+  <div class="envoltura">
+    <div class="portada-rejilla">
+      <div>
+        <p class="coordenadas"><span>{{portada.lugar}}</span><span class="cifra">{{portada.gps}}</span></p>
+        <h1>{{portada.h1}}</h1>
+        <p class="entradilla">{{portada.entradilla}}</p>
+        <div class="acciones">
+          <a class="boton boton-oro" href="#villas">{{portada.boton_villas}}</a>
+          <a class="boton boton-linea" href="{{url_agendar}}">{{portada.boton_videollamada}}</a>
+        </div>
+      </div>
+      <aside class="ficha-portada" aria-label="{{portada.ficha_aria}}">
+        <span class="etiqueta">{{portada.ficha_etiqueta}}</span>
+        <dl>
+          <div><dt>{{portada.ficha1_dt}}</dt><dd class="cifra">{{portada.ficha1_dd}}</dd></div>
+          <div><dt>{{portada.ficha2_dt}}</dt><dd class="cifra">{{portada.ficha2_dd}}</dd></div>
+          <div><dt>{{portada.ficha3_dt}}</dt><dd class="cifra">{{portada.ficha3_dd}}</dd></div>
+          <div><dt>{{portada.ficha4_dt}}</dt><dd>{{portada.ficha4_dd}}</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PRUEBAS -->
+<section class="pruebas" aria-label="{{pruebas.aria}}">
+  <div class="envoltura">
+    <div class="prueba"><b class="cifra">{{pruebas.prueba1_cifra}}</b><span>{{pruebas.prueba1_texto}}</span></div>
+    <div class="prueba"><b class="cifra">{{pruebas.prueba2_cifra}}</b><span>{{pruebas.prueba2_texto}}</span></div>
+    <div class="prueba"><b class="cifra">{{pruebas.prueba3_cifra}}</b><span>{{pruebas.prueba3_texto}}</span></div>
+    <div class="prueba"><b class="cifra">{{pruebas.prueba4_cifra}}</b><span>{{pruebas.prueba4_texto}}</span></div>
+  </div>
+</section>
+
+<!-- QUÉ ES MARLACA -->
+<section class="banda" id="que-es">
+  <div class="envoltura dos-col">
+    <div class="collage">
+      <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="{{base}}img/opt/villa-m2-poster-640.webp" aria-label="{{que_es.aria_villa_m2}}"><source src="{{base}}video/opt/villa-m2.mp4" type="video/mp4"></video></div>
+      <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/m2-dormitorio-640.avif 640w, {{base}}img/opt/m2-dormitorio-1280.avif 1280w, {{base}}img/opt/m2-dormitorio-1800.avif 1800w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/m2-dormitorio-640.webp 640w, {{base}}img/opt/m2-dormitorio-1280.webp 1280w, {{base}}img/opt/m2-dormitorio-1800.webp 1800w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/m2-dormitorio.jpg" width="1800" height="1200" alt="{{que_es.alt_m2_dormitorio}}" loading="lazy" decoding="async"></picture></div>
+      <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/m1-columpio-640.avif 640w, {{base}}img/opt/m1-columpio-1000.avif 1000w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/m1-columpio-640.webp 640w, {{base}}img/opt/m1-columpio-1000.webp 1000w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/m1-columpio.jpg" width="1000" height="667" alt="{{que_es.alt_m1_columpio}}" loading="lazy" decoding="async"></picture></div>
+    </div>
+    <div>
+      <span class="etiqueta">{{que_es.etiqueta}}</span>
+      <h2 style="margin-top:16px">{{que_es.h2}}</h2>
+      <p class="entradilla" style="margin-top:20px">{{que_es.entradilla}}</p>
+      <div class="usos">
+        <div class="uso"><h3>{{que_es.uso1_h3}}</h3><p>{{que_es.uso1_p}}</p></div>
+        <div class="uso"><h3>{{que_es.uso2_h3}}</h3><p>{{que_es.uso2_p}}</p></div>
+        <div class="uso"><h3>{{que_es.uso3_h3}}</h3><p>{{que_es.uso3_p}}</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VILLAS DISPONIBLES -->
+<section class="banda arena" id="villas">
+  <div class="envoltura">
+    <div class="villas-intro">
+      <div class="cabecera" style="margin:0">
+        <span class="etiqueta">{{villas.etiqueta}}</span>
+        <h2>{{villas.h2}}</h2>
+      </div>
+      <div style="display:grid;gap:18px;justify-items:start">
+        <span class="estado"><i aria-hidden="true"></i>{{villas.estado}}</span>
+        <p class="entradilla" style="color:var(--tinta);font-weight:600">{{villas.entradilla1}}</p>
+        <p class="entradilla">{{villas.entradilla2}}</p>
+      </div>
+    </div>
+
+    <div class="tipos">
+      <article class="tipo">
+        <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/r4-dormitorio-640.avif 640w, {{base}}img/opt/r4-dormitorio-1280.avif 1280w, {{base}}img/opt/r4-dormitorio-1536.avif 1536w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/r4-dormitorio-640.webp 640w, {{base}}img/opt/r4-dormitorio-1280.webp 1280w, {{base}}img/opt/r4-dormitorio-1536.webp 1536w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/r4-dormitorio.jpg" width="1536" height="1024" alt="{{villas.alt_r4_dormitorio}}" loading="lazy" decoding="async"></picture><span class="render">{{villas.tipo1_render}}</span></div>
+        <div class="tipo-cuerpo">
+          <h3>{{villas.tipo1_h3}}</h3>
+          <p class="precio"><small>{{villas.tipo1_desde}}</small><b class="cifra">{{villas.tipo1_precio}}</b></p>
+          <ul><li>{{villas.tipo1_li1}}</li><li>{{villas.tipo1_li2}}</li><li>{{villas.tipo1_li3}}</li><li>{{villas.tipo1_li4}}</li></ul>
+          <div class="pie"><span>{{villas.tipo1_pie}}</span><a href="{{url_agendar}}?opcion=villa">{{villas.tipo1_consultar}}</a></div>
+        </div>
+      </article>
+      <article class="tipo">
+        <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/r4-salon-640.avif 640w, {{base}}img/opt/r4-salon-1280.avif 1280w, {{base}}img/opt/r4-salon-1536.avif 1536w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/r4-salon-640.webp 640w, {{base}}img/opt/r4-salon-1280.webp 1280w, {{base}}img/opt/r4-salon-1536.webp 1536w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/r4-salon.jpg" width="1536" height="1024" alt="{{villas.alt_r4_salon}}" loading="lazy" decoding="async"></picture><span class="render">{{villas.tipo2_render}}</span></div>
+        <div class="tipo-cuerpo">
+          <h3>{{villas.tipo2_h3}}</h3>
+          <p class="precio"><small>{{villas.tipo2_desde}}</small><b class="cifra">{{villas.tipo2_precio}}</b></p>
+          <ul><li>{{villas.tipo2_li1}}</li><li>{{villas.tipo2_li2}}</li><li>{{villas.tipo2_li3}}</li><li>{{villas.tipo2_li4}}</li></ul>
+          <div class="pie"><span>{{villas.tipo2_pie}}</span><a href="{{url_agendar}}?opcion=villa">{{villas.tipo2_consultar}}</a></div>
+        </div>
+      </article>
+      <article class="tipo">
+        <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/lombok-poster-640.avif 640w, {{base}}img/opt/lombok-poster-1280.avif 1280w, {{base}}img/opt/lombok-poster-1920.avif 1920w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/lombok-poster-640.webp 640w, {{base}}img/opt/lombok-poster-1280.webp 1280w, {{base}}img/opt/lombok-poster-1920.webp 1920w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/lombok-poster.jpg" width="1920" height="1080" alt="{{portada.alt_poster}}" loading="lazy" decoding="async"></picture></div>
+        <div class="tipo-cuerpo">
+          <h3>{{villas.tipo3_h3}}</h3>
+          <p class="precio"><b class="cifra">{{villas.tipo3_precio}}</b></p>
+          <ul><li>{{villas.tipo3_li1}}</li><li>{{villas.tipo3_li2}}</li><li>{{villas.tipo3_li3}}</li><li>{{villas.tipo3_li4}}</li></ul>
+          <div class="pie"><span>{{villas.tipo3_pie}}</span><a href="{{url_agendar}}?opcion=villa">{{villas.tipo3_consultar}}</a></div>
+        </div>
+      </article>
+      <article class="tipo destacado">
+        <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/r4-jardin-640.avif 640w, {{base}}img/opt/r4-jardin-1280.avif 1280w, {{base}}img/opt/r4-jardin-1536.avif 1536w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/r4-jardin-640.webp 640w, {{base}}img/opt/r4-jardin-1280.webp 1280w, {{base}}img/opt/r4-jardin-1536.webp 1536w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/r4-jardin.jpg" width="1536" height="1024" alt="{{villas.alt_r4_jardin}}" loading="lazy" decoding="async"></picture><span class="render">{{villas.tipo4_render}}</span></div>
+        <div class="tipo-cuerpo">
+          <h3>{{villas.tipo4_h3}}</h3>
+          <p class="precio"><small>{{villas.tipo4_desde}}</small><b class="cifra">{{villas.tipo4_precio}}</b></p>
+          <ul><li>{{villas.tipo4_li1}}</li><li>{{villas.tipo4_li2}}</li><li>{{villas.tipo4_li4}}</li><li>{{villas.tipo4_li5}}</li><li>{{villas.tipo4_li6}}</li></ul>
+          <div class="pie"><span>{{villas.tipo4_pie}}</span><a href="{{url_agendar}}?opcion=participacion">{{villas.tipo4_consultar}}</a></div>
+        </div>
+      </article>
+    </div>
+    <p class="nota">{{villas.nota}}</p>
+
+    <div class="bienestar">
+      <div>
+        <span class="etiqueta">{{bienestar.etiqueta}}</span>
+        <h3 style="font-size:clamp(26px,3vw,34px);margin-top:12px">{{bienestar.h3}}</h3>
+        <p style="margin-top:14px;color:var(--gris)">{{bienestar.p}}</p>
+        <div class="chips"><span>{{bienestar.chip1}}</span><span>{{bienestar.chip2}}</span><span>{{bienestar.chip3}}</span><span>{{bienestar.chip4}}</span></div>
+      </div>
+      <div class="bienestar-fotos">
+        <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/r4-bano-640.avif 640w, {{base}}img/opt/r4-bano-1147.avif 1147w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/r4-bano-640.webp 640w, {{base}}img/opt/r4-bano-1147.webp 1147w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/r4-bano.jpg" width="1147" height="1372" alt="{{bienestar.alt_r4_bano}}" loading="lazy" decoding="async"></picture><span class="render">{{bienestar.foto1_render}}</span></div>
+        <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/m2-bano-640.avif 640w, {{base}}img/opt/m2-bano-1280.avif 1280w, {{base}}img/opt/m2-bano-1800.avif 1800w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/m2-bano-640.webp 640w, {{base}}img/opt/m2-bano-1280.webp 1280w, {{base}}img/opt/m2-bano-1800.webp 1800w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/m2-bano.jpg" width="1800" height="1200" alt="{{bienestar.alt_m2_bano}}" loading="lazy" decoding="async"></picture></div>
+        <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/m1-entrada-640.avif 640w, {{base}}img/opt/m1-entrada-667.avif 667w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/m1-entrada-640.webp 640w, {{base}}img/opt/m1-entrada-667.webp 667w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/m1-entrada.jpg" width="667" height="1000" alt="{{bienestar.alt_m1_entrada}}" loading="lazy" decoding="async"></picture></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAYECTORIA -->
+<section class="banda oscura" id="trayectoria">
+  <div class="envoltura">
+    <div class="cabecera">
+      <span class="etiqueta">{{trayectoria.etiqueta}}</span>
+      <h2>{{trayectoria.h2}}</h2>
+    </div>
+    <div class="linea-tiempo">
+      <div class="hito operando">
+        <span class="romano">I</span>
+        <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/m1-piscina-640.avif 640w, {{base}}img/opt/m1-piscina-1000.avif 1000w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/m1-piscina-640.webp 640w, {{base}}img/opt/m1-piscina-1000.webp 1000w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/m1-piscina.jpg" width="1000" height="667" alt="{{trayectoria.alt_m1_piscina}}" loading="lazy" decoding="async"></picture></div>
+        <span class="est">{{trayectoria.hito1_est}}</span>
+        <h3>{{trayectoria.hito1_h3}}</h3>
+        <p>{{trayectoria.hito1_p}}</p>
+      </div>
+      <div class="hito operando">
+        <span class="romano">II</span>
+        <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="{{base}}img/opt/villa-m2-b-poster-640.webp" aria-label="{{trayectoria.aria_villa_m2_b}}"><source src="{{base}}video/opt/villa-m2-b.mp4" type="video/mp4"></video></div>
+        <span class="est">{{trayectoria.hito2_est}}</span>
+        <h3>{{trayectoria.hito2_h3}}</h3>
+        <p>{{trayectoria.hito2_p}}</p>
+      </div>
+      <div class="hito">
+        <span class="romano">III</span>
+        <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="{{base}}img/opt/obra-m3-poster-478.webp" aria-label="{{trayectoria.aria_obra_m3}}"><source src="{{base}}video/opt/obra-m3.mp4" type="video/mp4"></video><span class="chip-video">{{trayectoria.hito3_chip_video}}</span></div>
+        <span class="est">{{trayectoria.hito3_est}}</span>
+        <h3>{{trayectoria.hito3_h3}}</h3>
+        <p>{{trayectoria.hito3_p}}</p>
+      </div>
+      <div class="hito venta">
+        <span class="romano">IV</span>
+        <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/r4-dormitorio-640.avif 640w, {{base}}img/opt/r4-dormitorio-1280.avif 1280w, {{base}}img/opt/r4-dormitorio-1536.avif 1536w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/r4-dormitorio-640.webp 640w, {{base}}img/opt/r4-dormitorio-1280.webp 1280w, {{base}}img/opt/r4-dormitorio-1536.webp 1536w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/r4-dormitorio.jpg" width="1536" height="1024" alt="{{trayectoria.alt_r4_dormitorio}}" loading="lazy" decoding="async"></picture><span class="render">{{trayectoria.hito4_render}}</span></div>
+        <span class="est">{{trayectoria.hito4_est}}</span>
+        <h3>{{trayectoria.hito4_h3}}</h3>
+        <p>{{trayectoria.hito4_p}}</p>
+      </div>
+      <div class="hito">
+        <span class="romano">V</span>
+        <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/vista-640.avif 640w, {{base}}img/opt/vista-1280.avif 1280w, {{base}}img/opt/vista-1400.avif 1400w" sizes="(max-width:768px) 340px, 280px"><source type="image/webp" srcset="{{base}}img/opt/vista-640.webp 640w, {{base}}img/opt/vista-1280.webp 1280w, {{base}}img/opt/vista-1400.webp 1400w" sizes="(max-width:768px) 340px, 280px"><img src="{{base}}img/vista.jpg" width="1400" height="872" alt="{{trayectoria.alt_vista}}" loading="lazy" decoding="async"></picture></div>
+        <span class="est">{{trayectoria.hito5_est}}</span>
+        <h3>{{trayectoria.hito5_h3}}</h3>
+        <p>{{trayectoria.hito5_p}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASO REAL -->
+<section class="banda" id="caso">
+  <div class="envoltura caso">
+    <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/m1-salon-640.avif 640w, {{base}}img/opt/m1-salon-1000.avif 1000w" sizes="(max-width:768px) 720px, 600px"><source type="image/webp" srcset="{{base}}img/opt/m1-salon-640.webp 640w, {{base}}img/opt/m1-salon-1000.webp 1000w" sizes="(max-width:768px) 720px, 600px"><img src="{{base}}img/m1-salon.jpg" width="1000" height="667" alt="{{caso.alt_m1_salon}}" loading="lazy" decoding="async"></picture></div>
+    <div>
+      <span class="etiqueta">{{caso.etiqueta}}</span>
+      <h2 style="margin-top:16px">{{caso.h2}}</h2>
+      <p class="entradilla" style="margin-top:18px">{{caso.entradilla}}</p>
+      <div class="comparativa">
+        <div class="barra">
+          <div class="barra-cab"><span>{{caso.barra1_nombre}}</span><b>{{caso.barra1_valor}}</b></div>
+          <div class="pista"><i class="oro" style="width:92.6%"></i></div>
+        </div>
+        <div class="barra">
+          <div class="barra-cab"><span>{{caso.barra2_nombre}}</span><b>{{caso.barra2_valor}}</b></div>
+          <div class="pista"><i style="width:64%"></i></div>
+        </div>
+      </div>
+      <div class="datos-caso">
+        <div><b class="cifra">{{caso.dato1_valor}}</b><span>{{caso.dato1_texto}}</span></div>
+        <div><b class="cifra">{{caso.dato2_valor}}</b><span>{{caso.dato2_texto}}</span></div>
+        <div><b class="cifra">{{caso.dato3_valor}}</b><span>{{caso.dato3_texto}}</span></div>
+        <div><b class="cifra">{{caso.dato4_valor}}</b><span>{{caso.dato4_texto}}</span></div>
+      </div>
+      <p class="caso-tarifa"><b class="cifra">{{caso.tarifa_valor}}</b><span>{{caso.tarifa_texto}}</span></p>
+      <p class="nota">{{caso.nota}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section class="banda oscura" id="numeros">
+  <div class="envoltura">
+    <div class="cabecera">
+      <span class="etiqueta">{{numeros.etiqueta}}</span>
+      <h2>{{numeros.h2}}</h2>
+      <p class="entradilla">{{numeros.entradilla}}</p>
+    </div>
+
+    <div class="escenarios" role="group" aria-label="{{numeros.escenarios_aria}}">
+      <button class="escenario" type="button" data-esc="0" aria-pressed="false"><span class="nombre">{{numeros.escenario1_nombre}}</span><span class="pct cifra">{{numeros.escenario1_pct}}</span><span class="sub">{{numeros.escenario1_sub}}</span></button>
+      <button class="escenario" type="button" data-esc="1" aria-pressed="true"><span class="nombre">{{numeros.escenario2_nombre}}</span><span class="pct cifra">{{numeros.escenario2_pct}}</span><span class="sub">{{numeros.escenario2_sub}}</span></button>
+      <button class="escenario" type="button" data-esc="2" aria-pressed="false"><span class="nombre">{{numeros.escenario3_nombre}}</span><span class="pct cifra">{{numeros.escenario3_pct}}</span><span class="sub">{{numeros.escenario3_sub}}</span></button>
+    </div>
+
+    <div class="cuenta">
+      <table class="tabla-num" aria-live="polite">
+        <tbody>
+          <tr><td>{{numeros.fila1_etiqueta}}</td><td id="t-tarifa">{{numeros.fila1_valor}}</td></tr>
+          <tr><td>{{numeros.fila2_etiqueta}}</td><td id="t-ocup">{{numeros.fila2_valor}}</td></tr>
+          <tr><td>{{numeros.fila_aloj_etiqueta}}</td><td id="t-aloj">{{numeros.fila_aloj_valor}}</td></tr>
+          <tr><td>{{numeros.fila_desayuno_etiqueta}}</td><td id="t-desa">{{numeros.fila_desayuno_valor}}</td></tr>
+          <tr><td>{{numeros.fila3_etiqueta}}</td><td id="t-fact">{{numeros.fila3_valor}}</td></tr>
+          <tr><td>{{numeros.fila4_etiqueta}}</td><td>{{numeros.fila4_valor}}</td></tr>
+          <tr><td>{{numeros.fila5_etiqueta}}</td><td id="t-rec">{{numeros.fila5_valor}}</td></tr>
+          <tr class="total"><td>{{numeros.fila6_etiqueta}}</td><td id="t-neto">{{numeros.fila6_valor}}</td></tr>
+        </tbody>
+      </table>
+      <div class="flujo">
+        <span class="etiqueta">{{numeros.flujo_etiqueta}}</span>
+        <div class="flujo-barra">
+          <div class="barra-cab"><span>{{numeros.flujo1_nombre}}</span><b id="b-fact">{{numeros.flujo1_valor}}</b></div>
+          <div class="pista"><i id="i-fact" style="transform:scaleX(.853)"></i></div>
+        </div>
+        <div class="flujo-barra">
+          <div class="barra-cab"><span>{{numeros.flujo2_nombre}}</span><b id="b-neto">{{numeros.flujo2_valor}}</b></div>
+          <div class="pista"><i class="oro" id="i-neto" style="transform:scaleX(.333)"></i></div>
+        </div>
+        <p class="nota">{{numeros.flujo_nota}}</p>
+      </div>
+    </div>
+
+    <p class="nota-mes">{{numeros.nota_mes}}</p>
+    <p class="nota" style="margin-top:12px">{{numeros.nota_vistas}}</p>
+
+    <p class="aviso">{{numeros.aviso}}</p>
+  </div>
+</section>
+
+<!-- GESTIÓN -->
+<section class="banda" id="gestion">
+  <div class="envoltura">
+    <div class="cabecera">
+      <span class="etiqueta">{{gestion.etiqueta}}</span>
+      <h2>{{gestion.h2}}</h2>
+    </div>
+    <div class="gestion">
+      <div class="paso"><span class="n">{{gestion.paso1_etiqueta}}</span><h3>{{gestion.paso1_h3}}</h3><p>{{gestion.paso1_p}}</p></div>
+      <div class="paso"><span class="n">{{gestion.paso2_etiqueta}}</span><h3>{{gestion.paso2_h3}}</h3><p>{{gestion.paso2_p}}</p></div>
+      <div class="paso"><span class="n">{{gestion.paso3_etiqueta}}</span><h3>{{gestion.paso3_h3}}</h3><p>{{gestion.paso3_p}}</p></div>
+      <div class="paso"><span class="n">{{gestion.paso4_etiqueta}}</span><h3>{{gestion.paso4_h3}}</h3><p>{{gestion.paso4_p}}</p></div>
+    </div>
+    <div class="fee">
+      <b class="cifra">{{gestion.fee_cifra}}</b>
+      <p>{{gestion.fee_texto}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPRA Y LEGAL -->
+<section class="banda arena" id="compra">
+  <div class="envoltura">
+    <div class="cabecera">
+      <span class="etiqueta">{{compra.etiqueta}}</span>
+      <h2>{{compra.h2}}</h2>
+    </div>
+    <div class="compra">
+      <ol class="pasos-compra">
+        <li><span class="n">1</span><div><h3>{{compra.pasos_compra1_h3}}</h3><p>{{compra.pasos_compra1_p}}</p></div></li>
+        <li><span class="n">2</span><div><h3>{{compra.pasos_compra2_h3}}</h3><p>{{compra.pasos_compra2_p}}</p></div></li>
+        <li><span class="n">3</span><div><h3>{{compra.pasos_compra3_h3}}</h3><p>{{compra.pasos_compra3_p}}</p></div></li>
+        <li><span class="n">4</span><div><h3>{{compra.pasos_compra4_h3}}</h3><p>{{compra.pasos_compra4_p}}</p></div></li>
+      </ol>
+      <div class="legal">
+        <span class="etiqueta">{{legal.etiqueta}}</span>
+        <h3 style="font-size:clamp(24px,2.6vw,30px)">{{legal.h3}}</h3>
+        <p>{{legal.p}}</p>
+        <dl>
+          <div><dt>{{legal.item1_dt}}</dt><dd>{{legal.item1_dd}}</dd></div>
+          <div><dt>{{legal.item2_dt}}</dt><dd>{{legal.item2_dd}}</dd></div>
+          <div><dt>{{legal.item3_dt}}</dt><dd>{{legal.item3_dd}}</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOMBOK -->
+<section class="banda" id="lombok">
+  <div class="envoltura lombok">
+    <div>
+      <span class="etiqueta">{{lombok.etiqueta}}</span>
+      <h2 style="margin-top:16px">{{lombok.h2}}</h2>
+      <p class="entradilla" style="margin-top:18px">{{lombok.entradilla1}}</p>
+      <p class="entradilla" style="margin-top:12px">{{lombok.entradilla2}}</p>
+      <div class="foto" style="margin-top:32px"><video class="clip" muted loop playsinline preload="none" poster="{{base}}img/opt/lombok-mar-poster-640.webp" aria-label="{{lombok.aria_lombok_mar}}"><source src="{{base}}video/opt/lombok-mar.mp4" type="video/mp4"></video></div>
+      <div class="minutos">
+        <div><b class="cifra">{{lombok.minuto1_valor}}</b><span>{{lombok.minuto1_texto}}</span></div>
+        <div><b class="cifra">{{lombok.minuto2_valor}}</b><span>{{lombok.minuto2_texto}}</span></div>
+        <div><b class="cifra">{{lombok.minuto3_valor}}</b><span>{{lombok.minuto3_texto}}</span></div>
+        <div><b>{{lombok.minuto4_valor}}</b><span>{{lombok.minuto4_texto}}</span></div>
+      </div>
+    </div>
+    <div class="indicadores">
+      <div class="indicador">
+        <div style="display:grid;gap:4px;min-width:0"><span>{{lombok.indicador1_texto}}</span>
+          <div class="motogp" aria-hidden="true">
+            <div><i style="height:44px"></i>2023</div><div><i style="height:52px"></i>2024</div><div><i style="height:60px"></i>2025</div><div><i style="height:68px"></i>2026</div>
+          </div>
+        </div>
+        <b class="cifra">{{lombok.indicador1_valor}}</b>
+      </div>
+      <div class="indicador"><span>{{lombok.indicador2_texto}}</span><b class="cifra">{{lombok.indicador2_valor}}</b></div>
+      <div class="indicador"><span>{{lombok.indicador3_texto}}</span><b class="cifra">{{lombok.indicador3_valor}}</b></div>
+      <div class="indicador"><span>{{lombok.indicador4_texto}}</span><b class="cifra">{{lombok.indicador4_valor}}</b></div>
+      <p class="nota">{{lombok.nota}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="banda oscura" id="equipo">
+  <div class="envoltura equipo">
+    <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/lucia-640.avif 640w, {{base}}img/opt/lucia-900.avif 900w" sizes="(max-width:768px) 340px, 460px"><source type="image/webp" srcset="{{base}}img/opt/lucia-640.webp 640w, {{base}}img/opt/lucia-900.webp 900w" sizes="(max-width:768px) 340px, 460px"><img src="{{base}}img/lucia.jpg" width="900" height="1125" alt="{{equipo.alt_lucia}}" loading="lazy" decoding="async"></picture></div>
+    <div>
+      <span class="etiqueta">{{equipo.etiqueta}}</span>
+      <h2 style="margin-top:16px">{{equipo.h2}}</h2>
+      <p class="entradilla" style="margin-top:18px">{{equipo.entradilla}}</p>
+      <div class="razones">
+        <div class="razon"><h3>{{equipo.razon1_h3}}</h3><p>{{equipo.razon1_p}}</p></div>
+        <div class="razon"><h3>{{equipo.razon2_h3}}</h3><p>{{equipo.razon2_p}}</p></div>
+        <div class="razon"><h3>{{equipo.razon3_h3}}</h3><p>{{equipo.razon3_p}}</p></div>
+        <div class="razon"><h3>{{equipo.razon4_h3}}</h3><p>{{equipo.razon4_p}}</p></div>
+        <div class="razon"><h3>{{equipo.razon5_h3}}</h3><p>{{equipo.razon5_p}}</p></div>
+        <div class="razon"><h3>{{equipo.razon6_h3}}</h3><p>{{equipo.razon6_p}}</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISITA Y OBRA -->
+<section class="banda arena" id="visita">
+  <div class="envoltura">
+    <div class="visita">
+      <div class="cabecera" style="margin:0">
+        <span class="etiqueta">{{visita.etiqueta}}</span>
+        <h2>{{visita.h2}}</h2>
+      </div>
+      <div style="display:grid;gap:18px;justify-items:start">
+        <p class="entradilla">{{visita.entradilla}}</p>
+        <a class="boton boton-tinta" href="{{url_agendar}}">{{visita.boton}}</a>
+      </div>
+    </div>
+    <div class="obra">
+      <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="{{base}}img/opt/obra-m3-poster-478.webp" aria-label="{{visita.aria_obra_m3}}"><source src="{{base}}video/opt/obra-m3.mp4" type="video/mp4"></video><span class="chip-video">{{visita.foto1_chip_video}}</span></div>
+      <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="{{base}}img/opt/obra-m4-a-poster-478.webp" aria-label="{{visita.aria_obra_m4_a}}"><source src="{{base}}video/opt/obra-m4-a.mp4" type="video/mp4"></video><span class="chip-video">{{visita.foto2_chip_video}}</span></div>
+      <div class="foto"><video class="clip" muted loop playsinline preload="none" poster="{{base}}img/opt/obra-m4-b-poster-478.webp" aria-label="{{visita.aria_obra_m4_b}}"><source src="{{base}}video/opt/obra-m4-b.mp4" type="video/mp4"></video><span class="chip-video">{{visita.foto3_chip_video}}</span></div>
+      <div class="foto"><picture><source type="image/avif" srcset="{{base}}img/opt/equipo-640.avif 640w, {{base}}img/opt/equipo-1201.avif 1201w" sizes="(max-width:768px) 340px, 460px"><source type="image/webp" srcset="{{base}}img/opt/equipo-640.webp 640w, {{base}}img/opt/equipo-1201.webp 1201w" sizes="(max-width:768px) 340px, 460px"><img src="{{base}}img/equipo.jpg" width="1201" height="1800" alt="{{visita.alt_equipo}}" loading="lazy" decoding="async"></picture></div>
+          </div>
+    <p class="nota">{{visita.nota}}</p>
+  </div>
+</section>
+
+<!-- PREGUNTAS -->
+<section class="banda" id="preguntas">
+  <div class="envoltura">
+    <div class="cabecera">
+      <span class="etiqueta">{{preguntas.etiqueta}}</span>
+      <h2>{{preguntas.h2}}</h2>
+    </div>
+    <div class="preguntas">
+      <details><summary>{{preguntas.pregunta1}}</summary><p>{{preguntas.respuesta1}}</p></details>
+      <details><summary>{{preguntas.pregunta2}}</summary><p>{{preguntas.respuesta2}}</p></details>
+      <details><summary>{{preguntas.pregunta3}}</summary><p>{{preguntas.respuesta3}}</p></details>
+      <details><summary>{{preguntas.pregunta4}}</summary><p>{{preguntas.respuesta4}}</p></details>
+      <details><summary>{{preguntas.pregunta5}}</summary><p>{{preguntas.respuesta5}}</p></details>
+      <details><summary>{{preguntas.pregunta6}}</summary><p>{{preguntas.respuesta6}}</p></details>
+      <details><summary>{{preguntas.pregunta7}}</summary><p>{{preguntas.respuesta7}}</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="banda oscura contacto-fondo" id="contacto">
+  <video class="clip" muted loop playsinline preload="none" poster="{{base}}img/opt/lombok-atardecer-poster-1280.webp" aria-hidden="true"><source src="{{base}}video/opt/lombok-atardecer.mp4" type="video/mp4"></video>
+  <div class="envoltura contacto">
+    <div>
+      <span class="etiqueta">{{contacto.etiqueta}}</span>
+      <h2 style="margin-top:16px">{{contacto.h2}}</h2>
+      <p class="entradilla" style="margin-top:18px">{{contacto.entradilla}}</p>
+      <div style="margin-top:32px">
+        <div class="canal"><span>{{contacto.canal1_etiqueta}}</span><b><a href="https://wa.me/6281125506159" target="_blank" rel="noopener">{{contacto.canal1_valor}}</a></b></div>
+        <div class="canal"><span>{{contacto.canal2_etiqueta}}</span><b>{{contacto.canal2_valor}}</b></div>
+        <div class="canal"><span>Instagram</span><b>@marlacarealestate</b></div>
+      </div>
+    </div>
+    <div class="cta-llamada">
+      <h3>{{contacto.cta_titulo}}</h3>
+      <p>{{contacto.cta_texto}}</p>
+      <ul>
+        <li>{{contacto.cta_p1}}</li>
+        <li>{{contacto.cta_p2}}</li>
+        <li>{{contacto.cta_p3}}</li>
+      </ul>
+      <div class="cta-botones">
+        <a class="boton boton-tinta" href="{{url_agendar}}">{{contacto.cta_boton}}</a>
+        <a class="boton boton-linea-tinta" href="https://wa.me/6281125506159?text={{nav.wa_mensaje|url}}" target="_blank" rel="noopener">{{contacto.cta_wa}}</a>
+      </div>
+      <p class="cta-nota">{{contacto.cta_nota}}</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="envoltura pie-rejilla">
+    <div>
+      <a class="marca" href="#inicio" style="color:var(--hueso)"><picture><source type="image/avif" srcset="{{base}}img/opt/palmas-oro-640.avif 640w, {{base}}img/opt/palmas-oro-714.avif 714w" sizes="114px"><source type="image/webp" srcset="{{base}}img/opt/palmas-oro-640.webp 640w, {{base}}img/opt/palmas-oro-714.webp 714w" sizes="114px"><img src="{{base}}img/palmas-oro.png" width="114" height="64" alt="" loading="lazy" decoding="async"></picture><span class="marca-texto"><b>MARLACA</b><span>Real Estate</span></span></a>
+      <p style="margin-top:18px;max-width:34ch">{{pie.descripcion}}</p>
+      <a class="alquiler" href="https://marlacavillaslombok.com" target="_blank" rel="noopener">{{pie.alquiler}}</a>
+    </div>
+    <div><h4>{{pie.col1_titulo}}</h4><ul><li><a href="#villas">{{pie.col1_li1}}</a></li><li><a href="#numeros">{{pie.col1_li2}}</a></li><li><a href="#compra">{{pie.col1_li3}}</a></li><li><a href="#preguntas">{{pie.col1_li4}}</a></li></ul></div>
+    <div><h4>{{pie.col2_titulo}}</h4><ul><li><a href="#trayectoria">{{pie.col2_li1}}</a></li><li><a href="#caso">{{pie.col2_li2}}</a></li><li><a href="#equipo">{{pie.col2_li3}}</a></li><li><a href="#visita">{{pie.col2_li4}}</a></li></ul></div>
+    <div><h4>{{pie.col3_titulo}}</h4><ul><li><a href="https://www.instagram.com/marlacarealestate" target="_blank" rel="noopener">Instagram</a></li><li><a href="#contacto">LinkedIn</a></li><li><a href="#contacto">YouTube</a></li><li><a href="https://www.instagram.com/marlacavillaslombok" target="_blank" rel="noopener">{{pie.col3_li4}}</a></li></ul></div>
+  </div>
+  <div class="envoltura descargo">
+    <p>{{pie.descargo}}</p>
+    <p class="pie-legal"><a href="{{url_cookies}}">{{pie.cookies_politica}}</a><a href="{{url_cookies}}#configurar" data-mrl-consent>{{pie.cookies_configurar}}</a></p>
+    <p>{{pie.copyright}}</p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/6281125506159?text={{nav.wa_mensaje|url}}" target="_blank" rel="noopener" aria-label="{{nav.wa_aria|attr}}"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.6a8 8 0 0 1-11.9 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z"/><path d="M9.2 8.6c.2-.4.4-.4.7-.4s.4 0 .6.4l.7 1.4c.1.3 0 .5-.2.7l-.5.6c.6 1.1 1.6 2 2.8 2.6l.6-.7c.2-.2.4-.2.7-.1l1.4.7c.3.1.4.3.4.5 0 .5-.4 1.2-1.1 1.4-.8.2-2.2 0-3.9-1.1-1.8-1.1-3-2.8-3.3-4-.1-.6.1-1.1.1-1.4Z"/></svg></a>
+<script>
+(function(){
+  var root=document.documentElement;
+  // Textos y formato numérico del idioma (los inyecta fuente/generar.py desde fuente/textos/<idioma>.json)
+  var FMT={{formato_json}},TXT={{js_json}};
+  function reduce(){return window.matchMedia('(prefers-reduced-motion: reduce)').matches}
+
+  // Aparición al hacer scroll: un solo observador; sin JS todo queda visible (la clase .js solo la pone el script)
+  var RV='.cabecera,.tipo,.bienestar,.hito,.prueba,.paso,.fee,.pasos-compra li,.legal,.indicador,.razon,.obra .foto,.preguntas details,.collage .foto,.caso>.foto,.caso>div,.datos-caso div,.comparativa,.escenarios,.cuenta>*,.lombok>div:first-child,.equipo>*,.visita>*,.contacto>*,.dos-col>*,.villas-intro>*';
+  var CNT='.prueba b,.datos-caso b,.fee b,.indicador b';
+  /*fmt*/
+  function agrupa(s){return s.replace(/\B(?=(\d{3})+(?!\d))/g,FMT.miles)}
+  function num(x,d){return x.toFixed(d).replace('.',FMT.decimal)}
+  function eur(x){return FMT.euro.replace('{n}',agrupa(String(x)))}
+  // Analiza un texto numérico según FMT (decimal y miles del idioma): prefijo + número + sufijo. null si no es un número simple (p. ej. '7/7')
+  function analiza(t){
+    var m=/^([^\d]*?)(\d(?:[\d.,\u00a0\u202f ]*\d)?)([^\d]*)$/.exec(t);
+    if(!m)return null;
+    var s=m[2],i=s.lastIndexOf(FMT.decimal),ent=i>-1?s.slice(0,i):s,fr=i>-1?s.slice(i+1):'';
+    if(!/^\d{1,3}(?:[^\d]\d{3})+$|^\d+$/.test(ent)||/\D/.test(fr))return null;
+    return {pre:m[1],suf:m[3],miles:/\D/.test(ent),dec:fr.length,fin:parseFloat(ent.replace(/\D/g,'')+(fr?'.'+fr:''))};
+  }
+  function formatea(p,x){var n=x.toFixed(p.dec).split('.');return p.pre+(p.miles?agrupa(n[0]):n[0])+(p.dec?FMT.decimal+n[1]:'')+p.suf}
+  /*fin fmt*/
+  function cuenta(el){
+    if(el.dataset.cuenta)return;
+    var t=el.textContent.trim(),p=analiza(t);
+    if(!p||reduce())return;
+    el.dataset.cuenta='1';
+    el.textContent=formatea(p,0);
+    var d=el.closest('.rv'),D=1300;
+    setTimeout(function(){
+      var t0=performance.now();
+      (function f(ts){
+        var k=Math.min((ts-t0)/D,1);
+        el.textContent=k<1?formatea(p,p.fin*(1-Math.pow(1-k,4))):t;
+        if(k<1)requestAnimationFrame(f);
+      })(t0);
+    },d?(parseInt(d.style.getPropertyValue('--d'))||0)+150:150);
+  }
+  if('IntersectionObserver' in window){
+    var grupos=new Map();
+    var nodos=[].slice.call(document.querySelectorAll(RV)).filter(function(n){return !n.closest('.portada')});
+    var ro=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var n=e.target;ro.unobserve(n);
+      n.classList.add('visto');
+      (n.matches(CNT)?[n]:[].slice.call(n.querySelectorAll(CNT))).forEach(cuenta);
+      // al terminar se retira la clase para que los efectos hover (transform) no choquen con la transición de aparición
+      setTimeout(function(){n.classList.remove('rv','visto');n.style.removeProperty('--d')},(parseInt(n.style.getPropertyValue('--d'))||0)+1500);
+    })},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    nodos.forEach(function(n){
+      var g=n.parentNode,i=grupos.get(g)||0;grupos.set(g,i+1);
+      n.style.setProperty('--d',Math.min(i,6)*80+'ms');
+      n.classList.add('rv');ro.observe(n);
+    });
+  }
+
+  var nav=document.getElementById('nav');
+  var menu=document.getElementById('menu'),ham=document.getElementById('hamburguesa');
+  function alScroll(){nav.classList.toggle('solida',window.scrollY>40||menu.classList.contains('abierto'))}
+  [].forEach.call(menu.children,function(li,i){li.style.setProperty('--i',i)});
+  function abre(a){menu.classList.toggle('abierto',a);root.classList.toggle('bloq',a);ham.setAttribute('aria-expanded',a);ham.setAttribute('aria-label',a?TXT.menu_cerrar:TXT.menu_abrir);alScroll()}
+  ham.addEventListener('click',function(){abre(!menu.classList.contains('abierto'))});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))abre(false)});
+  // Selector de idioma: se cierra al pulsar fuera o con Escape (antes que el menú)
+  var idi=menu.querySelector('.idiomas details');
+  document.addEventListener('click',function(e){if(idi.open&&!idi.contains(e.target))idi.open=false});
+  document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;if(idi.open){idi.open=false;idi.querySelector('summary').focus();return}if(menu.classList.contains('abierto')){abre(false);ham.focus()}});
+  var ancho=window.matchMedia('(min-width:1141px)');
+  (ancho.addEventListener?ancho.addEventListener('change',function(e){if(e.matches)abre(false)}):ancho.addListener(function(e){if(e.matches)abre(false)}));
+  window.addEventListener('scroll',alScroll,{passive:true});alScroll();
+
+  var v=document.getElementById('video-portada');
+  var quieto=reduce();
+  // Portada: se elige la fuente según el ancho (720p en móvil, 1280 hasta 1600px) antes de la primera carga; la fuente por defecto del marcado es la completa
+  if(v && !quieto){
+    var sv=v.querySelector('source');
+    if(sv){if(window.matchMedia('(max-width:768px)').matches)sv.src='{{base}}video/opt/lombok-720.mp4';else if(window.matchMedia('(max-width:1600px)').matches)sv.src='{{base}}video/opt/lombok-1280.mp4'}
+    v.preload='auto';v.load();v.play&&v.play().catch(function(){});
+  }
+  // Clips de sección: se reproducen solo cuando están a la vista
+  var clips=document.querySelectorAll('video.clip');
+  if(!quieto && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){var c=e.target;
+      if(e.isIntersecting){if(c.preload==='none'){c.preload='auto';c.load()}c.play().catch(function(){})}else{c.pause()}})},{rootMargin:'200px 0px',threshold:0.15});
+    clips.forEach(function(c){io.observe(c)});
+  }
+
+  // Fuente única de números (Excel de escenarios de Marlaca IV, 24-sep-2026)
+  var E=[{t:149,o:75.5,a:41100,d:10400,f:51500,n:18159,r:9.1},{t:160,o:81.7,a:47800,d:11500,f:59300,n:23111,r:7.1},{t:175,o:88.5,a:56400,d:13100,f:69500,n:29723,r:5.6}];
+  var MAX=69500/0.95;
+  function pon(i){
+    var e=E[i];
+    document.querySelectorAll('.escenario').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.esc==i)});
+    document.getElementById('t-tarifa').textContent=eur(e.t);
+    document.getElementById('t-ocup').textContent=TXT.porcentaje.replace('{n}',num(e.o,1));
+    document.getElementById('t-aloj').textContent=eur(e.a);
+    document.getElementById('t-desa').textContent=eur(e.d);
+    document.getElementById('t-fact').textContent=eur(e.f);
+    document.getElementById('t-neto').textContent=eur(e.n);
+    document.getElementById('t-rec').textContent=TXT.recupero.replace('{n}',num(e.r,1));
+    document.getElementById('b-fact').textContent=eur(e.f);
+    document.getElementById('b-neto').textContent=eur(e.n);
+    document.getElementById('i-fact').style.transform='scaleX('+(e.f/MAX).toFixed(3)+')';
+    document.getElementById('i-neto').style.transform='scaleX('+(e.n/MAX).toFixed(3)+')';
+  }
+  document.querySelectorAll('.escenario').forEach(function(b){b.addEventListener('click',function(){pon(+b.dataset.esc)})});
+  pon(1);
+})();
+</script>
+
+</body></html>

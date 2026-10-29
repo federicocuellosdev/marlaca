@@ -1,0 +1,12 @@
+<header class="nav solida" id="nav">
+  <div class="envoltura">
+    <a class="marca" href="{{url_inicio}}" aria-label="{{nav.marca_aria}}">
+      <picture><source type="image/avif" srcset="{{base}}img/opt/palmas-blanco-640.avif 640w, {{base}}img/opt/palmas-blanco-714.avif 714w" sizes="114px"><source type="image/webp" srcset="{{base}}img/opt/palmas-blanco-640.webp 640w, {{base}}img/opt/palmas-blanco-714.webp 714w" sizes="114px"><img src="{{base}}img/palmas-blanco.png" width="114" height="64" alt=""></picture>
+      <span class="marca-texto"><b>MARLACA</b><span>Real Estate</span></span>
+    </a>
+    <ul class="menu">
+      <li class="volver"><a href="{{url_inicio}}">{{nav.volver}}</a></li>
+      <li class="idiomas"><details><summary aria-label="{{nav.idioma}}: {{idioma_nombre}}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9.25"/><path d="M2.75 12h18.5M12 2.75c2.4 2.5 3.6 5.6 3.6 9.25s-1.2 6.75-3.6 9.25M12 2.75C9.6 5.25 8.4 8.35 8.4 12s1.2 6.75 3.6 9.25"/></svg><span aria-hidden="true">{{idioma_sigla}}</span><svg class="flecha" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></summary><ul>{{selector_idiomas}}</ul></details></li>
+    </ul>
+  </div>
+</header>

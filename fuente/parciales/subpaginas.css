@@ -1,0 +1,16 @@
+/* Reinicio mínimo + cabecera y pie compartidos por agendar, gracias y cookies */
+:root{color-scheme:light;box-sizing:border-box}
+body{margin:0;padding:0}
+[hidden]:not([hidden=until-found i]){display:none!important}
+body{padding-top:calc(76px + env(safe-area-inset-top,0px))}
+.nav .menu{gap:16px}
+.nav .volver a{opacity:.86}
+@media (max-width:640px){.nav .volver{display:none}}
+.pie-cab{display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px;padding-block:48px 28px}
+.pie-cab p{max-width:46ch}
+.pie-legal{display:flex;flex-wrap:wrap;gap:6px 22px}
+.pie-legal a{text-decoration:underline;text-underline-offset:.2em}
+.cab-pagina{padding-block:clamp(48px,7vw,88px) clamp(40px,6vw,64px)}
+.cab-pagina h1{font-size:clamp(34px,5vw,60px);margin-top:16px;max-width:20ch}
+.cab-pagina .entradilla{margin-top:20px}
+.cuerpo{padding-block:clamp(40px,6vw,80px)}

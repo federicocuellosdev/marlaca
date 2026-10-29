@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- Generado por fuente/generar.py a partir de fuente/gracias.html y fuente/textos/*.json. No editar a mano. -->
+<html lang="{{lang}}" data-pagina="gracias"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{{gracias.meta_titulo|attr}}</title>
+<meta name="description" content="{{gracias.meta_descripcion|attr}}">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#131210">
+<link rel="icon" href="data:,">
+<link rel="canonical" href="{{url}}">
+{{hreflang_tags}}
+<link rel="preload" as="font" type="font/woff2" crossorigin href="{{base}}fonts/plus-jakarta-sans-latin-400-normal.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="{{base}}fonts/playfair-display-latin-400-normal.woff2">
+<style>
+<!--#incluir fuentes.css-->
+</style>
+<style>
+<!--#incluir base.css-->
+<!--#incluir subpaginas.css-->
+.gracias{min-height:60vh;display:flex;align-items:center}
+.gracias .envoltura{width:100%}
+.gracias-in{max-width:680px}
+.gracias h1{font-size:clamp(34px,5vw,56px);margin:18px 0 22px}
+.gracias p.cuerpo-p{font-size:18px;color:var(--gris);line-height:1.7}
+.gracias .boton{margin-top:32px}
+</style>
+<!--#incluir consentimiento.html-->
+</head><body>
+<!--#incluir cabecera.html-->
+
+<main>
+<section class="cuerpo gracias">
+  <div class="envoltura">
+    <div class="gracias-in">
+      <span class="etiqueta">{{gracias.etiqueta}}</span>
+      <h1 id="t-title">{{gracias_js.llamada_t}}</h1>
+      <p class="cuerpo-p" id="t-text">{{gracias_js.llamada_p}}</p>
+      <a class="boton boton-tinta" href="{{url_inicio}}">{{gracias.boton}}</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!--#incluir pie.html-->
+
+<script>
+(function(){
+  var TXT = {{js_json}};
+  var MSG = {
+    llamada: [TXT.llamada_t, TXT.llamada_p],
+    info: [TXT.info_t, TXT.info_p],
+    espera: [TXT.espera_t, TXT.espera_p]
+  };
+  var r = new URLSearchParams(location.search).get('r');
+  if(MSG.hasOwnProperty(r)){ document.getElementById('t-title').textContent = MSG[r][0]; document.getElementById('t-text').textContent = MSG[r][1]; }
+})();
+</script>
+</body></html>

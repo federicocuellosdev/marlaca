@@ -1,0 +1,356 @@
+<!doctype html>
+<!-- Generado por fuente/generar.py a partir de fuente/agendar.html y fuente/textos/*.json. No editar a mano. -->
+<html lang="{{lang}}" data-pagina="agendar"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{{agendar.meta_titulo|attr}}</title>
+<meta name="description" content="{{agendar.meta_descripcion|attr}}">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#131210">
+<link rel="icon" href="data:,">
+<link rel="canonical" href="{{url}}">
+{{hreflang_tags}}
+<link rel="preload" as="font" type="font/woff2" crossorigin href="{{base}}fonts/plus-jakarta-sans-latin-400-normal.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="{{base}}fonts/playfair-display-latin-400-normal.woff2">
+<style>
+<!--#incluir fuentes.css-->
+</style>
+<style>
+<!--#incluir base.css-->
+<!--#incluir subpaginas.css-->
+/* ---------- Agendar: cuestionario de 4 pasos ---------- */
+.onb{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:clamp(28px,5vw,64px);align-items:start}
+@media (max-width:900px){.onb{grid-template-columns:1fr}}
+.quiz{background:#fff;border:1px solid var(--linea);border-radius:var(--r);padding:clamp(22px,4vw,40px);min-width:0}
+.quiz-top{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.quiz-count{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--oro-texto);white-space:nowrap}
+.quiz-bar{flex:1;height:2px;background:var(--linea)}
+.quiz-bar span{display:block;height:100%;width:0;background:var(--oro-texto);transition:width .35s var(--ease)}
+.qstep{border:0;margin:0;padding:0;min-width:0}
+.qstep legend{font-family:var(--display);font-size:clamp(26px,3.4vw,34px);line-height:1.15;letter-spacing:-.01em;padding:0;margin-bottom:22px;text-wrap:balance}
+.qopts{display:grid;gap:10px}
+.qopt{position:relative;display:block;cursor:pointer}
+.qopt input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;min-height:0}
+.qopt span{display:flex;justify-content:space-between;align-items:baseline;gap:6px 16px;flex-wrap:wrap;padding:16px 18px;border:1px solid rgba(27,25,22,.24);border-radius:var(--r);background:#fff;font-size:16px;line-height:1.45;transition:border-color .2s,background-color .2s,box-shadow .2s}
+.qopt small{font-size:12.5px;letter-spacing:.04em;color:var(--gris)}
+.qopt:hover span{border-color:var(--oro-texto)}
+.qopt input:focus-visible+span{outline:2px solid var(--oro-texto);outline-offset:2px}
+.qopt input:checked+span{border-color:var(--tinta);background:var(--arena);box-shadow:inset 0 0 0 1px var(--tinta)}
+.qhint{color:var(--gris);margin:-8px 0 20px}
+.form-row{display:grid;grid-template-columns:1fr;gap:16px}
+.field{display:grid;gap:6px;font-size:13px;font-weight:600;letter-spacing:.02em}
+.field>label{font-size:13px;font-weight:600}
+input[type=text],input[type=tel],input[type=email],select{font:inherit;font-weight:400;font-size:16px;min-height:48px;padding:0 14px;border:1px solid rgba(27,25,22,.24);border-radius:var(--r);background:#fff;color:var(--tinta);width:100%;transition:border-color .2s,box-shadow .2s}
+input[type=text]:focus,input[type=tel]:focus,input[type=email]:focus,select:focus{outline:2px solid var(--oro-texto);outline-offset:0;border-color:transparent}
+.tel{display:flex;min-width:0}
+.tel select{flex:0 0 auto;width:auto;max-width:42%;border-right:0;border-top-right-radius:0;border-bottom-right-radius:0;padding-right:6px;cursor:pointer}
+.tel input{flex:1;min-width:0;border-top-left-radius:0;border-bottom-left-radius:0}
+.form-note{font-size:12.5px;line-height:1.6;color:var(--gris);margin-top:16px}
+.quiz .boton{margin-top:20px}
+.quiz .boton:disabled{opacity:.6;cursor:default}
+.qerr{margin-top:16px;padding:14px 16px;background:#f7e9e4;border-left:3px solid #9b3b2a;border-radius:var(--r);font-size:14.5px}
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:24px;min-height:28px}
+.qback{background:none;border:0;padding:8px 0;cursor:pointer;font:600 13px/1 var(--texto);letter-spacing:.04em;color:var(--gris)}
+.qback:hover{color:var(--tinta)}
+.qback:focus-visible{outline:2px solid var(--oro-texto);outline-offset:3px}
+.qtime{font-size:12.5px;letter-spacing:.04em;color:var(--gris);margin-left:auto}
+.aside{border-top:1px solid var(--linea);padding-top:20px;display:grid;gap:18px}
+.aside h2{font-size:24px}
+.aside ol{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.aside li{font-size:14.5px;color:var(--gris);line-height:1.55}
+.aside li b{display:block;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--oro-texto);margin-bottom:3px}
+.aside .fine{font-size:13px;color:var(--gris);border-top:1px solid var(--linea);padding-top:16px}
+@media (prefers-reduced-motion:reduce){.quiz-bar span{transition:none}}
+</style>
+<!--#incluir consentimiento.html-->
+</head><body>
+<!--#incluir cabecera.html-->
+
+<main>
+<section class="banda oscura cab-pagina">
+  <div class="envoltura">
+    <span class="etiqueta">{{agendar.etiqueta}}</span>
+    <h1>{{agendar.h1}}</h1>
+    <p class="entradilla">{{agendar.entradilla}}</p>
+  </div>
+</section>
+
+<section class="cuerpo">
+  <div class="envoltura onb">
+    <form class="quiz" id="form-llamada" name="llamada-lucia" method="POST" data-netlify="true" netlify-honeypot="empresa" novalidate>
+      <input type="hidden" name="form-name" value="llamada-lucia">
+      <input type="hidden" name="calificacion" id="q-calificacion" value="">
+      <input type="hidden" name="puntaje" id="q-puntaje" value="">
+      <input type="hidden" name="ruta" id="q-ruta" value="">
+      <input type="hidden" name="alerta" id="q-alerta" value="">
+      <input type="hidden" name="whatsapp" id="q-whatsapp" value="">
+      <input type="hidden" name="utm_source" id="q-utm_source" value="">
+      <input type="hidden" name="utm_medium" id="q-utm_medium" value="">
+      <input type="hidden" name="utm_campaign" id="q-utm_campaign" value="">
+      <input type="hidden" name="utm_content" id="q-utm_content" value="">
+      <input type="hidden" name="utm_term" id="q-utm_term" value="">
+      <input type="hidden" name="fbclid" id="q-fbclid" value="">
+      <input type="hidden" name="gclid" id="q-gclid" value="">
+      <input type="hidden" name="origen" id="q-origen" value="">
+      <input type="hidden" name="subject" id="q-subject" value="Nuevo lead Marlaca Stays">
+      <p hidden><label>No completar: <input name="empresa"></label></p>
+
+      <div class="quiz-top">
+        <span class="quiz-count" id="q-count" aria-live="polite"></span>
+        <div class="quiz-bar" aria-hidden="true"><span id="q-bar"></span></div>
+      </div>
+
+      <fieldset class="qstep" data-step="1">
+        <legend>{{agendar.q1}}</legend>
+        <div class="qopts">
+          <label class="qopt"><input type="radio" name="opcion" value="Villa completa"><span>{{agendar.q1_o1}}<small>{{agendar.q1_o1_n}}</small></span></label>
+          <label class="qopt"><input type="radio" name="opcion" value="Participación"><span>{{agendar.q1_o2}}<small>{{agendar.q1_o2_n}}</small></span></label>
+          <label class="qopt"><input type="radio" name="opcion" value="No lo sé"><span>{{agendar.q1_o3}}<small>{{agendar.q1_o3_n}}</small></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="qstep" data-step="2" hidden>
+        <legend>{{agendar.q2}}</legend>
+        <div class="qopts">
+          <label class="qopt"><input type="radio" name="presupuesto" value="Menos de 36.800 €"><span>{{agendar.q2_o1}}</span></label>
+          <label class="qopt"><input type="radio" name="presupuesto" value="36.800 – 165.000 €"><span>{{agendar.q2_o2}}</span></label>
+          <label class="qopt"><input type="radio" name="presupuesto" value="165.000 – 300.000 €"><span>{{agendar.q2_o3}}</span></label>
+          <label class="qopt"><input type="radio" name="presupuesto" value="Más de 300.000 €"><span>{{agendar.q2_o4}}</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="qstep" data-step="3" hidden>
+        <legend>{{agendar.q3}}</legend>
+        <div class="qopts">
+          <label class="qopt"><input type="radio" name="horizonte" value="Próximos 3 meses"><span>{{agendar.q3_o1}}</span></label>
+          <label class="qopt"><input type="radio" name="horizonte" value="Este año o principios del próximo"><span>{{agendar.q3_o2}}</span></label>
+          <label class="qopt"><input type="radio" name="horizonte" value="Más adelante"><span>{{agendar.q3_o3}}</span></label>
+          <label class="qopt"><input type="radio" name="horizonte" value="Solo me informo"><span>{{agendar.q3_o4}}</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="qstep" data-step="4" hidden>
+        <legend>{{agendar.q4}}</legend>
+        <p class="qhint">{{agendar.q4_hint}}</p>
+        <div class="form-row">
+          <div class="field">
+            <label for="f-nombre">{{agendar.f_nombre}}</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-telefono">{{agendar.f_whatsapp}}</label>
+            <div class="tel">
+              <select id="f-prefijo" name="prefijo" aria-label="{{agendar.f_prefijo|attr}}">
+                <option value="+34" selected>🇪🇸 +34</option>
+                <option value="+351">🇵🇹 +351</option>
+                <option value="+33">🇫🇷 +33</option>
+                <option value="+39">🇮🇹 +39</option>
+                <option value="+49">🇩🇪 +49</option>
+                <option value="+31">🇳🇱 +31</option>
+                <option value="+32">🇧🇪 +32</option>
+                <option value="+41">🇨🇭 +41</option>
+                <option value="+44">🇬🇧 +44</option>
+                <option value="+353">🇮🇪 +353</option>
+                <option value="+376">🇦🇩 +376</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+52">🇲🇽 +52</option>
+                <option value="+54">🇦🇷 +54</option>
+                <option value="+56">🇨🇱 +56</option>
+                <option value="+57">🇨🇴 +57</option>
+                <option value="+971">🇦🇪 +971</option>
+              </select>
+              <input id="f-telefono" name="telefono" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="600 000 000" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-email">{{agendar.f_email}}</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+        <p class="form-note">{{agendar.nota_envio}}</p>
+        <p class="form-note" style="margin-top:8px">{{agendar.nota_datos}} <a href="{{url_cookies}}">{{pie.cookies_politica}}</a>.</p>
+        <button class="boton boton-tinta" type="submit" id="f-submit">{{agendar.enviar}}</button>
+        <p class="qerr" id="q-err" role="alert" hidden></p>
+      </fieldset>
+
+      <div class="quiz-nav" id="q-nav">
+        <button type="button" class="qback" id="q-back" hidden>{{agendar.atras}}</button>
+        <span class="qtime" id="q-time">{{agendar.tiempo}}</span>
+      </div>
+    </form>
+    <aside class="aside">
+      <h2>{{agendar.aside_t}}</h2>
+      <ol>
+        <li><b>{{agendar.aside_1_t}}</b>{{agendar.aside_1_p}}</li>
+        <li><b>{{agendar.aside_2_t}}</b>{{agendar.aside_2_p}}</li>
+        <li><b>{{agendar.aside_3_t}}</b>{{agendar.aside_3_p}}</li>
+      </ol>
+      <p class="fine">{{agendar.aside_fine}}</p>
+    </aside>
+  </div>
+</section>
+</main>
+
+<!--#incluir pie.html-->
+
+<script>
+/* ================== CONFIGURACIÓN ==================
+   URL del Apps Script publicado como aplicación web (termina en /exec).
+   Vacío = solo se envía a break-api (Kommo). */
+var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycby7C719ZkZGymDN-EiG58qfiFf_Wq1wTGmNgQJpZEr-5opzH27m0kkQ4uByF068J0L6/exec';
+/* =================================================== */
+(function(){
+  var TXT = {{js_json}};
+  var PREVIEW = /*PREVIEW*/false;
+  var form = document.getElementById('form-llamada');
+  var steps = Array.prototype.slice.call(form.querySelectorAll('.qstep'));
+  var TOTAL_Q = 3;
+  var cur = 1;
+  var count = document.getElementById('q-count');
+  var bar = document.getElementById('q-bar');
+  var back = document.getElementById('q-back');
+  var err = document.getElementById('q-err');
+  var btn = document.getElementById('f-submit');
+  var params = new URLSearchParams(location.search);
+
+  function set(id, v){ var el = document.getElementById(id); if(el) el.value = v; }
+
+  // Origen de la visita: UTMs, identificadores de clic y página de entrada
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'].forEach(function(k){
+    set('q-' + k, params.get(k) || '');
+  });
+  set('q-origen', params.get('from') || (document.referrer ? document.referrer.split('?')[0] : 'directo'));
+
+  function show(n, focus){
+    cur = n;
+    steps.forEach(function(s){ s.hidden = Number(s.getAttribute('data-step')) !== n; });
+    count.textContent = n <= TOTAL_Q ? TXT.contador.replace('{n}', n).replace('{total}', TOTAL_Q) : TXT.ultimo;
+    bar.style.width = ((n - 1) / (TOTAL_Q + 1) * 100) + '%';
+    back.hidden = n === 1;
+    if(focus){
+      var first = steps[n - 1].querySelector('input:checked') || steps[n - 1].querySelector('input:not([type=hidden]),select');
+      if(first) first.focus({preventScroll:true});
+    }
+  }
+
+  steps.forEach(function(s){
+    s.querySelectorAll('input[type=radio]').forEach(function(r){
+      r.addEventListener('change', function(){
+        var n = Number(s.getAttribute('data-step'));
+        setTimeout(function(){ if(cur === n) show(n + 1, true); }, 220);
+      });
+    });
+  });
+  back.addEventListener('click', function(){ if(cur > 1) show(cur - 1, true); });
+
+  function val(name){
+    var r = form.querySelector('input[name="' + name + '"]:checked');
+    return r ? r.value : '';
+  }
+
+  // Puntaje interno: 0-6. Nunca se muestra al usuario.
+  // (Se quitaron las preguntas de experiencia y de si conoce Lombok/Bali:
+  //  los cortes A/B/C se reescalaron de 7 y 4 sobre 10 a 5 y 3 sobre 6.)
+  // Los valores van SIEMPRE en español, sea cual sea el idioma de la página: así llegan a Kommo y a la hoja.
+  var PTS = {
+    presupuesto: {'Menos de 36.800 €':0, '36.800 – 165.000 €':2, '165.000 – 300.000 €':3, 'Más de 300.000 €':3},
+    horizonte:   {'Próximos 3 meses':3, 'Este año o principios del próximo':2, 'Más adelante':1, 'Solo me informo':0}
+  };
+
+  function qualify(){
+    var p = 0;
+    Object.keys(PTS).forEach(function(k){ p += PTS[k][val(k)] || 0; });
+    var tier = p >= 5 ? 'A' : (p >= 3 ? 'B' : 'C');
+    var route, code, alert = '';
+    if(val('presupuesto') === 'Menos de 36.800 €'){ route = 'Lista de espera'; code = 'espera'; tier = 'C'; }
+    else if(tier === 'C'){ route = 'Información por correo'; code = 'info'; }
+    else { route = 'Llamada con Lucía'; code = 'llamada'; }
+    if(val('opcion') === 'Villa completa' && (val('presupuesto') === '36.800 – 165.000 €' || val('presupuesto') === 'Menos de 36.800 €')){
+      alert = 'Presupuesto por debajo de la villa: presentar la participación';
+    }
+    return {p:p, tier:tier, route:route, code:code, alert:alert};
+  }
+
+  // Si llega desde un botón de la landing con ?opcion=villa|participacion, salta a la pregunta 2
+  var pre = params.get('opcion');
+  if(pre === 'villa' || pre === 'participacion'){
+    var r = form.querySelector('input[name=opcion][value="' + (pre === 'villa' ? 'Villa completa' : 'Participación') + '"]');
+    if(r){ r.checked = true; cur = 2; }
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = document.getElementById('f-nombre').value.trim();
+    var prefijo = document.getElementById('f-prefijo').value;
+    var w = document.getElementById('f-telefono').value.replace(/\D/g, '').replace(/^0+/, '');
+    var m = document.getElementById('f-email').value.trim();
+    var problems = [];
+    if(!n) problems.push(TXT.p_nombre);
+    if(prefijo === '+34' ? !/^[6789]\d{8}$/.test(w) : w.length < 6) problems.push(prefijo === '+34' ? TXT.p_movil : TXT.p_whatsapp);
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m)) problems.push(TXT.p_email);
+    if(problems.length){
+      var list = problems.length > 1 ? problems.slice(0,-1).join(', ') + TXT.y + problems[problems.length-1] : problems[0];
+      err.textContent = (problems.length > 1 ? TXT.faltan : TXT.falta_uno).replace('{lista}', list);
+      err.hidden = false; return;
+    }
+    err.hidden = true;
+    var q = qualify();
+    set('q-calificacion', q.tier);
+    set('q-puntaje', q.p + '/6');
+    set('q-ruta', q.route);
+    set('q-alerta', q.alert);
+    set('q-whatsapp', prefijo + ' ' + w);
+    set('q-subject', '[' + q.tier + ' · ' + q.p + '/6] ' + q.route + ' — ' + n + ' — ' + (val('opcion') || 'sin opción') + (q.alert ? ' ⚠ ' + q.alert : ''));
+
+    btn.disabled = true; btn.textContent = TXT.enviando;
+    var body = new URLSearchParams(new FormData(form)).toString();
+    var tracking = {};
+    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','fbclid','gclid'].forEach(function(k){
+      var v = params.get(k); if(v) tracking[k] = v;
+    });
+    if(document.referrer) tracking.referer = document.referrer;
+    tracking.landing = location.href;
+    var kommoPayload = {
+      nombre: n, email: m, prefijo: prefijo, telefono: w,
+      opcion: val('opcion'), presupuesto: val('presupuesto'), horizonte: val('horizonte'),
+      calificacion: q.tier, puntaje: q.p + '/6', ruta: q.route, alerta: q.alert,
+      tracking: tracking
+    };
+    // Kommo (break-api) y respaldo en la hoja: NO son seguimiento, son la solicitud del usuario; se envían siempre.
+    var jobs = [];
+    if(!PREVIEW){
+      jobs.push(fetch('https://break-api.onrender.com/marlaca/form', {
+        method:'POST', headers:{'Content-Type':'application/json; charset=utf-8'}, body: JSON.stringify(kommoPayload)
+      }).then(function(r){ if(!r.ok) throw new Error('kommo ' + r.status); return 'kommo'; }));
+      if(SHEET_ENDPOINT){
+        // Respaldo: Google Sheet (no-cors siempre resuelve)
+        jobs.push(fetch(SHEET_ENDPOINT, {method:'POST', mode:'no-cors', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: body})
+          .then(function(){ return 'sheet'; }));
+      }
+    }
+    (jobs.length ? Promise.allSettled(jobs) : Promise.resolve([{status:'fulfilled'}])).then(function(res){
+      var okAny = res.some(function(x){ return x.status === 'fulfilled'; });
+      if(!okAny) throw new Error('sin destino');
+      // Seguimiento: solo con el consentimiento correspondiente (web/js/consentimiento.js)
+      var C = (window.MRL && window.MRL.consent()) || {a:false, m:false};
+      var eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+      var custom = {content_name:'llamada-lucia', content_category:q.route, value:q.p, currency:'EUR'};
+      if(C.m && window.fbq){ fbq('track', 'Lead', custom, {eventID: eventId}); }
+      if(C.a && window.gtag){ gtag('event', 'generate_lead', {currency:'EUR', value:q.p, form_name:'llamada-lucia', lead_route:q.route, lead_tier:q.tier}); }
+      if(C.m){
+        window.MRL.capi({
+          event_name:'Lead', event_id:eventId, event_source_url:location.href,
+          user_data:{ email:m, phone:prefijo+w, first_name:n.split(' ')[0], fbp:window.MRL.cookie('_fbp'), fbc:window.MRL.cookie('_fbc') },
+          custom_data:custom
+        });
+      }
+      window.location.href = '{{url_gracias}}?r=' + q.code;
+    }).catch(function(){
+      err.textContent = TXT.error_envio;
+      err.hidden = false; btn.disabled = false; btn.textContent = TXT.enviar;
+    });
+  });
+
+  show(cur, false);
+})();
+</script>
+</body></html>

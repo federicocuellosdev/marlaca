@@ -1,0 +1,116 @@
+<!doctype html>
+<!-- Generado por fuente/generar.py a partir de fuente/cookies.html y fuente/textos/*.json. No editar a mano. -->
+<html lang="{{lang}}" data-pagina="cookies"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{{cookies.meta_titulo|attr}}</title>
+<meta name="description" content="{{cookies.meta_descripcion|attr}}">
+<meta name="theme-color" content="#131210">
+<link rel="icon" href="data:,">
+<link rel="canonical" href="{{url}}">
+{{hreflang_tags}}
+<meta property="og:title" content="{{cookies.meta_titulo|attr}}">
+<meta property="og:description" content="{{cookies.meta_descripcion|attr}}">
+<meta property="og:locale" content="{{locale}}">
+{{og_alternos}}
+<meta property="og:url" content="{{url}}">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="{{base}}fonts/plus-jakarta-sans-latin-400-normal.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="{{base}}fonts/playfair-display-latin-400-normal.woff2">
+<style>
+<!--#incluir fuentes.css-->
+</style>
+<style>
+<!--#incluir base.css-->
+<!--#incluir subpaginas.css-->
+.legal-doc{max-width:860px}
+.legal-doc section{padding-block:clamp(22px,3vw,34px);border-bottom:1px solid var(--linea);scroll-margin-top:96px}
+.legal-doc section:first-child{padding-top:0}
+.legal-doc h2{font-size:clamp(26px,2.6vw,32px);margin-bottom:14px}
+.legal-doc h3{font-size:19px;margin:20px 0 6px;font-family:var(--texto);font-weight:600;letter-spacing:0}
+.legal-doc p{color:#3b362f;line-height:1.75;max-width:70ch}
+.legal-doc p+p{margin-top:12px}
+.legal-doc a{color:var(--oro-texto);text-underline-offset:.2em}
+.legal-doc a:hover{color:var(--tinta)}
+.legal-doc .boton{margin-top:18px}
+.legal-doc .boton{color:var(--hueso)}
+.fecha{margin-top:22px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gris-osc)}
+.tabla-ck{width:100%;border-collapse:collapse;margin-top:18px;font-size:14.5px}
+.tabla-ck th{text-align:left;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gris);padding:10px 12px;border-bottom:1px solid var(--tinta)}
+.tabla-ck td{padding:14px 12px;border-bottom:1px solid var(--linea);vertical-align:top;line-height:1.55}
+.tabla-ck code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--arena);padding:2px 6px;border-radius:3px;word-break:break-word}
+@media (max-width:760px){
+  .tabla-ck,.tabla-ck tbody,.tabla-ck tr,.tabla-ck td{display:block;width:100%}
+  .tabla-ck thead{position:absolute;left:-10000px}
+  .tabla-ck tr{border:1px solid var(--linea);border-radius:var(--r);padding:6px 0;margin-bottom:12px;background:#fff}
+  .tabla-ck td{border:0;padding:8px 14px}
+  .tabla-ck td::before{content:attr(data-label);display:block;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gris);margin-bottom:2px}
+}
+</style>
+<!--#incluir consentimiento.html-->
+</head><body>
+<!--#incluir cabecera.html-->
+
+<main>
+<section class="banda oscura cab-pagina">
+  <div class="envoltura">
+    <span class="etiqueta">{{cookies.etiqueta}}</span>
+    <h1>{{cookies.h1}}</h1>
+    <p class="entradilla">{{cookies.intro}}</p>
+    <p class="fecha">{{cookies.actualizacion}}</p>
+  </div>
+</section>
+
+<section class="cuerpo">
+  <div class="envoltura legal-doc">
+    <section id="que-son">
+      <h2>{{cookies.s1_t}}</h2>
+      <p>{{cookies.s1_p}}</p>
+    </section>
+    <section id="responsable">
+      <h2>{{cookies.s2_t}}</h2>
+      <p>{{cookies.s2_p}}</p>
+    </section>
+    <section id="categorias">
+      <h2>{{cookies.s3_t}}</h2>
+      <p>{{cookies.s3_p}}</p>
+      <h3>{{cookies.s3_tec_t}}</h3>
+      <p>{{cookies.s3_tec_p}}</p>
+      <h3>{{cookies.s3_ana_t}}</h3>
+      <p>{{cookies.s3_ana_p}}</p>
+      <h3>{{cookies.s3_pub_t}}</h3>
+      <p>{{cookies.s3_pub_p}}</p>
+    </section>
+    <section id="tabla">
+      <h2>{{cookies.s4_t}}</h2>
+      <p>{{cookies.s4_p}}</p>
+      <table class="tabla-ck">
+        <thead><tr><th scope="col">{{cookies.th_nombre}}</th><th scope="col">{{cookies.th_proveedor}}</th><th scope="col">{{cookies.th_finalidad}}</th><th scope="col">{{cookies.th_duracion}}</th><th scope="col">{{cookies.th_categoria}}</th></tr></thead>
+        <tbody>
+          <tr><td data-label="{{cookies.th_nombre|attr}}"><code>mrl_consent</code> (localStorage)</td><td data-label="{{cookies.th_proveedor|attr}}">{{cookies.propia}}</td><td data-label="{{cookies.th_finalidad|attr}}">{{cookies.r1_f}}</td><td data-label="{{cookies.th_duracion|attr}}">{{cookies.r1_d}}</td><td data-label="{{cookies.th_categoria|attr}}">{{cookies.cat_tecnica}}</td></tr>
+          <tr><td data-label="{{cookies.th_nombre|attr}}"><code>_ga</code></td><td data-label="{{cookies.th_proveedor|attr}}">Google LLC</td><td data-label="{{cookies.th_finalidad|attr}}">{{cookies.r2_f}}</td><td data-label="{{cookies.th_duracion|attr}}">{{cookies.r2_d}}</td><td data-label="{{cookies.th_categoria|attr}}">{{cookies.cat_analitica}}</td></tr>
+          <tr><td data-label="{{cookies.th_nombre|attr}}"><code>_ga_&lt;ID&gt;</code></td><td data-label="{{cookies.th_proveedor|attr}}">Google LLC</td><td data-label="{{cookies.th_finalidad|attr}}">{{cookies.r3_f}}</td><td data-label="{{cookies.th_duracion|attr}}">{{cookies.r3_d}}</td><td data-label="{{cookies.th_categoria|attr}}">{{cookies.cat_analitica}}</td></tr>
+          <tr><td data-label="{{cookies.th_nombre|attr}}"><code>_fbp</code></td><td data-label="{{cookies.th_proveedor|attr}}">Meta Platforms, Inc.</td><td data-label="{{cookies.th_finalidad|attr}}">{{cookies.r4_f}}</td><td data-label="{{cookies.th_duracion|attr}}">{{cookies.r4_d}}</td><td data-label="{{cookies.th_categoria|attr}}">{{cookies.cat_publicidad}}</td></tr>
+          <tr><td data-label="{{cookies.th_nombre|attr}}"><code>_fbc</code></td><td data-label="{{cookies.th_proveedor|attr}}">Meta Platforms, Inc.</td><td data-label="{{cookies.th_finalidad|attr}}">{{cookies.r5_f}}</td><td data-label="{{cookies.th_duracion|attr}}">{{cookies.r5_d}}</td><td data-label="{{cookies.th_categoria|attr}}">{{cookies.cat_publicidad}}</td></tr>
+          <tr><td data-label="{{cookies.th_nombre|attr}}"><code>mrl_eng_s</code>, <code>mrl_eng_fired</code> (sessionStorage)</td><td data-label="{{cookies.th_proveedor|attr}}">{{cookies.propia}}</td><td data-label="{{cookies.th_finalidad|attr}}">{{cookies.r6_f}}</td><td data-label="{{cookies.th_duracion|attr}}">{{cookies.r6_d}}</td><td data-label="{{cookies.th_categoria|attr}}">{{cookies.cat_publicidad}}</td></tr>
+          <tr><td data-label="{{cookies.th_nombre|attr}}"><code>fr</code></td><td data-label="{{cookies.th_proveedor|attr}}">Meta Platforms, Inc. (facebook.com)</td><td data-label="{{cookies.th_finalidad|attr}}">{{cookies.r7_f}}</td><td data-label="{{cookies.th_duracion|attr}}">{{cookies.r7_d}}</td><td data-label="{{cookies.th_categoria|attr}}">{{cookies.cat_publicidad}}</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="transferencias">
+      <h2>{{cookies.s5_t}}</h2>
+      <p>{{cookies.s5_p}}</p>
+    </section>
+    <section id="configurar">
+      <h2>{{cookies.s6_t}}</h2>
+      <p>{{cookies.s6_p}}</p>
+      <button class="boton boton-tinta" type="button" data-mrl-consent>{{cookies.s6_boton}}</button>
+    </section>
+    <section id="mas-informacion">
+      <h2>{{cookies.s7_t}}</h2>
+      <p>{{cookies.s7_p}}</p>
+    </section>
+  </div>
+</section>
+</main>
+
+<!--#incluir pie.html-->
+</body></html>
