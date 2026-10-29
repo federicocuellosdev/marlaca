@@ -12,6 +12,8 @@
   'use strict';
 
   var GA_ID = 'G-CHY8EL3KB8';
+  /* Medición entre dominios con la web oficial: GA4 añade el parámetro _gl a los enlaces entre estos dominios (solo con analítica aceptada) */
+  var GA_DOMINIOS = ['marlacarealestate.com', 'marlaca-realestate.com'];
   var PX_ID = '1072809952125181';
   var CAPI_URL = 'https://break-api.onrender.com/marlaca/capi';
   var KEY = 'mrl_consent';
@@ -78,7 +80,7 @@
     window.gtag = function () { window.dataLayer.push(arguments); };
     gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
     gtag('js', new Date());
-    gtag('config', GA_ID);
+    gtag('config', GA_ID, { linker: { domains: GA_DOMINIOS } });
     var s = doc.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
