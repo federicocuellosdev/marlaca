@@ -21,7 +21,7 @@ RAIZ = os.path.dirname(AQUI)
 SALIDA = os.path.join(RAIZ, "web")   # lo que publica el hosting
 TEXTOS = os.path.join(AQUI, "textos")
 PARCIALES = os.path.join(AQUI, "parciales")
-DOMINIO = "https://marlacarealestate.com"
+DOMINIO = "https://marlaca-realestate.com"
 IDIOMAS = [("es", "ES", "Español"), ("en", "EN", "English"), ("fr", "FR", "Français"), ("it", "IT", "Italiano")]
 BASE_LANG = "es"  # idioma de referencia (raíz del sitio)
 
